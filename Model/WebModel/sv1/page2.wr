@@ -1,0 +1,34 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="520" gr:y="150" id="sv1#page2" name="User Details">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv1#page2#dau1" name="Registered User" entity="User" displayAttributes="userName password email User#att28 User#att29 User#att30">
+      <Selector id="sv1#page2#dau1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page2#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page2#dau1">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att28"/>
+          <layout:Attribute attribute="User#att29"/>
+          <layout:Attribute attribute="User#att30"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

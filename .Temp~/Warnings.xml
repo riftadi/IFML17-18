@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Warnings> 
+  <Warning error="false" xpath="id('sv2#page4#inu1')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Authored Publications"> 
+    <Message>Sorting attribute are unspecified for the component 'Authored Publications'</Message> 
+  </Warning> 
+</Warnings>

@@ -1,0 +1,39 @@
+[10 Oct 2017 21:31:07] DEBUG Executing SQL script
+[10 Oct 2017 21:31:07] INFO ================================================================================
+[10 Oct 2017 21:31:07] INFO outputPath= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/RollbackSQL.xml'
+[10 Oct 2017 21:31:07] INFO onError= 'stop'
+[10 Oct 2017 21:31:07] INFO statementSeparator= ';'
+[10 Oct 2017 21:31:07] INFO derby.system.home= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/.metadata/.plugins/com.webratio.commons.db/derby'
+[10 Oct 2017 21:31:07] INFO password= ''
+[10 Oct 2017 21:31:07] INFO url= 'jdbc:postgresql://localhost:5432/ifml1718'
+[10 Oct 2017 21:31:07] INFO username= 'riftadi'
+[10 Oct 2017 21:31:07] INFO autoCommit= 'false'
+[10 Oct 2017 21:31:07] INFO outputLogPath= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/RollbackSQL.xml.log'
+[10 Oct 2017 21:31:07] INFO driverClass= 'org.postgresql.Driver'
+[10 Oct 2017 21:31:07] INFO encoding= ''
+[10 Oct 2017 21:31:07] INFO eventSocketPort= '64108'
+[10 Oct 2017 21:31:07] INFO sqlScript= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/RollbackSQL.sql'
+[10 Oct 2017 21:31:07] INFO ================================================================================
+[10 Oct 2017 21:31:07] INFO Connecting to the Database...
+[10 Oct 2017 21:31:08] INFO Database connection estabilished
+[10 Oct 2017 21:31:08] INFO transaction isolation: 2
+[10 Oct 2017 21:31:08] DEBUG ================================================================================
+[10 Oct 2017 21:31:08] DEBUG Executing SQL script file: /Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/RollbackSQL.sql
+[10 Oct 2017 21:31:08] DEBUG Executing statement:  drop table "public"."publications"
+[10 Oct 2017 21:31:08] ERROR Could not execute statement:  drop table "public"."publications"
+org.postgresql.util.PSQLException: ERROR: table "publications" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2477)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2190)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:300)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:428)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:354)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:301)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:287)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:264)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:260)
+	at com.webratio.commons.db.utils.DBUtils.execute(DBUtils.java:523)
+	at com.webratio.commons.db.utils.DBUtils.executeScriptFiles(DBUtils.java:442)
+	at com.webratio.commons.db.utils.DBUtils.main(DBUtils.java:257)
+[10 Oct 2017 21:31:08] ERROR SQL SCRIPT EXECUTION FAILED
+[10 Oct 2017 21:31:08] INFO Database connection closed
+[10 Oct 2017 21:31:08] DEBUG Total time: 286 milliseconds

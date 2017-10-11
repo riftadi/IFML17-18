@@ -1,0 +1,35 @@
+[11 Oct 2017 10:19:27] DEBUG Executing SQL script
+[11 Oct 2017 10:19:27] INFO ================================================================================
+[11 Oct 2017 10:19:27] INFO outputPath= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.xml'
+[11 Oct 2017 10:19:27] INFO onError= 'stop'
+[11 Oct 2017 10:19:27] INFO statementSeparator= ';'
+[11 Oct 2017 10:19:27] INFO derby.system.home= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/.metadata/.plugins/com.webratio.commons.db/derby'
+[11 Oct 2017 10:19:27] INFO password= ''
+[11 Oct 2017 10:19:27] INFO url= 'jdbc:postgresql://localhost:5432/ifml1718'
+[11 Oct 2017 10:19:27] INFO username= 'riftadi'
+[11 Oct 2017 10:19:27] INFO autoCommit= 'false'
+[11 Oct 2017 10:19:27] INFO outputLogPath= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.xml.log'
+[11 Oct 2017 10:19:27] INFO driverClass= 'org.postgresql.Driver'
+[11 Oct 2017 10:19:27] INFO encoding= ''
+[11 Oct 2017 10:19:27] INFO eventSocketPort= '59683'
+[11 Oct 2017 10:19:27] INFO sqlScript= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.sql'
+[11 Oct 2017 10:19:27] INFO ================================================================================
+[11 Oct 2017 10:19:27] INFO Connecting to the Database...
+[11 Oct 2017 10:19:27] INFO Database connection estabilished
+[11 Oct 2017 10:19:27] INFO transaction isolation: 2
+[11 Oct 2017 10:19:27] DEBUG ================================================================================
+[11 Oct 2017 10:19:27] DEBUG Executing SQL script file: /Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.sql
+[11 Oct 2017 10:19:27] DEBUG Executing statement:  create table "public"."notifications" ( "notification_oid"  int4  not null, "timestamp"  timestamp, "isprocessed"  bool, primary key ("notification_oid") )
+[11 Oct 2017 10:19:27] DEBUG Executing statement:    alter table "public"."publications"  add column  "isclaimed"  bool
+[11 Oct 2017 10:19:27] DEBUG Executing statement:  alter table "public"."publications"  add column  "abstract"  text
+[11 Oct 2017 10:19:27] DEBUG Executing statement:    alter table "public"."notifications"  add column  "user_oid_user"  int4
+[11 Oct 2017 10:19:27] DEBUG Executing statement:  alter table "public"."notifications"   add constraint fk_notifications_user foreign key ("user_oid_user") references "public"."user" ("oid_user")
+[11 Oct 2017 10:19:27] DEBUG Executing statement:    alter table "public"."notifications"  add column  "publications_oid_publication"  int4
+[11 Oct 2017 10:19:27] DEBUG Executing statement:  alter table "public"."notifications"   add constraint fk_notifications_publications foreign key ("publications_oid_publication") references "public"."publications" ("oid_publication")
+[11 Oct 2017 10:19:27] DEBUG Executing statement:    alter table "public"."publications_keywords"   add constraint fk_publications_keywords_publi foreign key ("publications_oid_publication") references "public"."publications" ("oid_publication")
+[11 Oct 2017 10:19:27] DEBUG Executing statement:    alter table "public"."list_of_authors"   add constraint fk_list_of_authors_publication foreign key ("publications_oid_publication") references "public"."publications" ("oid_publication")
+[11 Oct 2017 10:19:27] DEBUG Executing statement:    alter table "public"."collections_publications"   add constraint fk_collections_publications_pu foreign key ("publications_oid_publication") references "public"."publications" ("oid_publication")
+[11 Oct 2017 10:19:27] DEBUG ================================================================================
+[11 Oct 2017 10:19:27] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[11 Oct 2017 10:19:27] INFO Database connection closed
+[11 Oct 2017 10:19:27] DEBUG Total time: 394 milliseconds

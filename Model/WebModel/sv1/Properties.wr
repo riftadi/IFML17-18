@@ -1,0 +1,11 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Home" homePage="sv1#page1">
+  <OperationUnits>
+    <CreateUnit gr:x="380" gr:y="170" id="sv1#cru1" name="Add User" entity="User" customDescriptor="false">
+      <OKLink id="sv1#cru1#oln4" name="OKFlow4" to="sv1#page2#dau1" automaticCoupling="true"/>
+      <KOLink id="sv1#cru1#kln3" name="KOFlow3" to="sv1#page3" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModuleInstanceUnit gr:x="50" gr:y="380" id="sv1#miu1" action="true" moduleId="mov1#opm1">
+      <KOLink id="sv1#miu1#kln4" name="KOFlow4" to="sv1#page3" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</SiteView>

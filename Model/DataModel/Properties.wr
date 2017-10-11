@@ -1,0 +1,184 @@
+<DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
+  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="85" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att28 User#att29 User#att30 User#att31" db:database="db2" db:table="user">
+    <Attribute name="oid_user" id="userOID" type="integer" key="true" db:column="oid_user"/>
+    <Attribute name="userName" id="userName" type="string" db:column="username"/>
+    <Attribute name="password" id="password" type="password" db:column="password"/>
+    <Attribute name="email" id="email" type="string" db:column="email"/>
+    <Attribute id="User#att28" name="Name" type="string" db:column="name"/>
+    <Attribute id="User#att29" name="Affiliation" type="string" db:column="affiliation"/>
+    <Attribute id="User#att30" name="Timestamp" type="timestamp" db:column="timestamp"/>
+    <Attribute id="User#att31" name="Reputation" type="float" db:column="reputation"/>
+  </Entity>
+  <Entity id="Group" name="Group" duration="persistent" gr:x="315" gr:y="100" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
+    <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
+  </Entity>
+  <Entity id="Module" name="Module" duration="persistent" gr:x="605" gr:y="85" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db2" db:table="module">
+    <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
+    <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
+  </Entity>
+  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group" db:database="db2" db:table="user_group">
+    <RelationshipRole1 id="User2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Group2User" name="users" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44" db:database="db2" db:table="user">
+    <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module" db:database="db2" db:table="group">
+    <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1">
+      <db:JoinColumn attribute="groupOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41" db:database="db2" db:table="group_module">
+    <RelationshipRole1 id="Group2Module" name="modules" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Module2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <db:Database id="db2" name="db" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ifml1718" username="riftadi" schema="public">
+  </db:Database>
+  <Entity gr:x="210" gr:y="330" id="ent2" name="Publications" duration="persistent" attributeOrder="ent2#att2 ent2#att5 ent2#att6 ent2#att7 ent2#att11 ent2#att16 ent2#att1 ent2#att4 ent2#att12" db:database="db2" db:table="publications">
+    <Attribute id="ent2#att2" key="true" name="oid_publication" type="integer" db:column="oid_publication"/>
+    <Attribute id="ent2#att5" name="Title" type="string" db:column="title"/>
+    <Attribute id="ent2#att6" name="Venue" type="string" db:column="venue"/>
+    <Attribute id="ent2#att7" name="Year" type="text" db:column="year"/>
+    <Attribute id="ent2#att11" name="PDF_file" type="blob" contentType="application/pdf" db:column="pdf_file"/>
+    <Attribute id="ent2#att16" name="Timestamp" type="timestamp" db:column="timestamp"/>
+    <Attribute id="ent2#att1" name="Owner Name" type="string" derivationQuery="simpleImported::Self.rel14#role27.User#att28"/>
+    <Attribute id="ent2#att4" name="Abstract" type="text" contentType="text/html" db:column="abstract"/>
+    <Attribute id="ent2#att12" name="isClaimed" type="boolean" db:column="isclaimed"/>
+  </Entity>
+  <Entity gr:x="515" gr:y="430" id="ent3" name="Collections" duration="persistent" attributeOrder="ent3#att3 ent3#att20 ent3#att21 ent3#att23" db:database="db2" db:table="collections">
+    <Attribute id="ent3#att3" key="true" name="oid_collection" type="integer" db:column="oid_collection"/>
+    <Attribute id="ent3#att20" name="Title" type="string" db:column="title"/>
+    <Attribute id="ent3#att21" name="Description" type="string" db:column="description"/>
+    <Attribute id="ent3#att23" name="Timestamp" type="timestamp" db:column="timestamp"/>
+  </Entity>
+  <Entity gr:x="20" gr:y="575" id="ent4" name="Keywords" duration="persistent" attributeOrder="ent4#att9 ent4#att10 ent4#att18" db:database="db2" db:table="keywords">
+    <Attribute id="ent4#att9" key="true" name="oid_keyword" type="integer" db:column="oid_keyword"/>
+    <Attribute id="ent4#att10" name="Name" type="string" db:column="name"/>
+    <Attribute id="ent4#att18" name="Timestamp" type="timestamp" db:column="timestamp"/>
+  </Entity>
+  <Entity gr:x="520" gr:y="235" id="ent5" name="Comments" duration="persistent" attributeOrder="ent5#att24 ent5#att25 ent5#att26 ent5#att27" db:database="db2" db:table="comments">
+    <Attribute id="ent5#att24" key="true" name="oid_comment" type="integer" db:column="oid_comment"/>
+    <Attribute id="ent5#att25" name="Title" type="string" db:column="title"/>
+    <Attribute id="ent5#att26" name="Content" type="text" contentType="text/html" db:column="content"/>
+    <Attribute id="ent5#att27" name="Timestamp" type="timestamp" db:column="timestamp"/>
+  </Entity>
+  <Relationship id="rel4" name="Collections_Publications" sourceEntity="ent3" targetEntity="ent2" db:database="db2" db:table="collections_publications">
+    <RelationshipRole1 id="rel4#role7" name="CollectionsToPublications" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="collections_oid_collection"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="PublicationsToCollections" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="publications_oid_publication"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel8" name="Collections_Keywords" sourceEntity="ent3" targetEntity="ent4" gr:bendpoints="-203,136,272,5" db:database="db2" db:table="collections_keywords">
+    <RelationshipRole1 id="rel8#role15" name="CollectionsToKeywords" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="collections_oid_collection"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel8#role16" name="KeywordsToCollections" maxCard="N">
+      <db:JoinColumn attribute="ent4#att9" name="keywords_oid_keyword"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel10" name="Comments_Publications" sourceEntity="ent5" targetEntity="ent2" db:database="db2" db:table="publications">
+    <RelationshipRole1 id="rel10#role19" name="CommentsToPublications" maxCard="1">
+      <db:JoinColumn attribute="ent5#att24" name="comments_oid_comment"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel10#role20" name="PublicationsToComments" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="oid_publication"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel11" name="Publications_Keywords" sourceEntity="ent2" targetEntity="ent4" db:database="db2" db:table="publications_keywords">
+    <RelationshipRole1 id="rel11#role21" name="PublicationsToKeywords" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="publications_oid_publication"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel11#role22" name="KeywordsToPublications" maxCard="N">
+      <db:JoinColumn attribute="ent4#att9" name="keywords_oid_keyword"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel12" name="List_of_Authors" sourceEntity="ent2" targetEntity="User" gr:bendpoints="-53,-136,122,138" db:database="db2" db:table="list_of_authors">
+    <RelationshipRole1 id="rel12#role23" name="PublicationAuthor" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="publications_oid_publication"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel12#role24" name="AuthoredBy" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel14" name="Own_publications" sourceEntity="ent2" targetEntity="User" gr:bendpoints="-104,-108,71,166" db:database="db2" db:table="publications">
+    <RelationshipRole1 id="rel14#role27" name="PublicationOwner" maxCard="1">
+      <db:JoinColumn attribute="ent2#att2" name="oid_publication"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel14#role28" name="OwnedBy" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel15" name="Owner_of_comment" sourceEntity="ent5" targetEntity="User" db:database="db2" db:table="user">
+    <RelationshipRole1 id="rel15#role29" name="CommentsToUser" maxCard="1">
+      <db:JoinColumn attribute="ent5#att24" name="comments_oid_comment"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel15#role30" name="UserToComments" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="oid_user"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel16" name="Shared_with" sourceEntity="ent3" targetEntity="User" gr:bendpoints="-149,-214,346,101" db:database="db2" db:table="collections">
+    <RelationshipRole1 id="rel16#role31" name="CollectionsToUser" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="oid_collection"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel16#role32" name="UserToCollections" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel17" name="Creator" sourceEntity="User" targetEntity="ent3" gr:bendpoints="310,138,-185,-177" db:database="db2" db:table="user">
+    <RelationshipRole1 id="rel17#role33" name="UserToCollections_2" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="oid_user"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel17#role34" name="CollectionsToUser_2" maxCard="1">
+      <db:JoinColumn attribute="ent3#att3" name="collections_oid_collection"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel18" name="User_Keywords" sourceEntity="User" targetEntity="ent4" db:database="db2" db:table="user_keywords">
+    <RelationshipRole1 id="rel18#role35" name="UserToKeywords" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel18#role36" name="KeywordsToUser" maxCard="N">
+      <db:JoinColumn attribute="ent4#att9" name="keywords_oid_keyword"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="800" gr:y="270" id="ent1" name="Notifications" duration="persistent" attributeOrder="ent1#att8 ent1#att13 ent1#att14" db:database="db2" db:table="notifications">
+    <Attribute id="ent1#att8" key="true" name="notification_oid" type="integer" db:column="notification_oid"/>
+    <Attribute id="ent1#att13" name="Timestamp" type="timestamp" db:column="timestamp"/>
+    <Attribute id="ent1#att14" name="isProcessed" type="boolean" db:column="isprocessed"/>
+  </Entity>
+  <Relationship id="rel1" name="Notifications_User" sourceEntity="ent1" targetEntity="User" gr:bendpoints="-137,-104,648,31" db:database="db2" db:table="notifications">
+    <RelationshipRole1 id="rel1#role1" name="NotificationsToUser" maxCard="1">
+      <db:JoinColumn attribute="ent1#att8" name="notification_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel1#role2" name="UserToNotifications" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel2" name="Notifications_Publications" sourceEntity="ent1" targetEntity="ent2" gr:bendpoints="-164,50,426,-70" db:database="db2" db:table="notifications">
+    <RelationshipRole1 id="rel2#role3" name="NotificationsToPublications" maxCard="1">
+      <db:JoinColumn attribute="ent1#att8" name="notification_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2#role4" name="PublicationsToNotifications" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="publications_oid_publication"/>
+    </RelationshipRole2>
+  </Relationship>
+</DataModel>

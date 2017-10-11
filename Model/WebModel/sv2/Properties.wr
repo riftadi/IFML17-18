@@ -1,0 +1,6 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Researcher" protected="true" homePage="sv2#page4" landmarks="sv2#miu2">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="745" gr:y="355" id="sv2#miu2" action="true" moduleId="mov1#opm2" landmark="true"/>
+    <CreateUnit gr:x="310" gr:y="445" id="sv2#cru2" name="Add Publication" entity="ent2"/>
+  </OperationUnits>
+</SiteView>
