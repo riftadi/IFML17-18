@@ -90,7 +90,7 @@
   </Relationship>
   <Relationship id="rel10" name="Comments_Publications" sourceEntity="ent5" targetEntity="ent2" db:database="db2" db:table="comments">
     <RelationshipRole1 id="rel10#role19" name="CommentsToPublications" maxCard="1">
-      <db:JoinColumn attribute="ent5#att24" name="comments_oid_comment"/>
+      <db:JoinColumn attribute="ent5#att24" name="oid_comment"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel10#role20" name="PublicationsToComments" maxCard="N">
       <db:JoinColumn attribute="ent2#att2" name="oid_publication"/>
@@ -122,7 +122,7 @@
   </Relationship>
   <Relationship id="rel15" name="Owner_of_comment" sourceEntity="ent5" targetEntity="User" db:database="db2" db:table="comments">
     <RelationshipRole1 id="rel15#role29" name="CommentsToUser" maxCard="1">
-      <db:JoinColumn attribute="ent5#att24" name="comments_oid_comment"/>
+      <db:JoinColumn attribute="ent5#att24" name="oid_comment"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel15#role30" name="UserToComments" maxCard="N">
       <db:JoinColumn attribute="userOID" name="oid_user"/>
@@ -136,10 +136,11 @@
       <db:JoinColumn attribute="ent4#att9" name="keywords_oid_keyword"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="800" gr:y="270" id="ent1" name="Notifications" duration="persistent" attributeOrder="ent1#att8 ent1#att13 ent1#att14" db:database="db2" db:table="notifications">
+  <Entity gr:x="800" gr:y="270" id="ent1" name="Notifications" duration="persistent" attributeOrder="ent1#att8 ent1#att13 ent1#att14 ent1#att15" db:database="db2" db:table="notifications">
     <Attribute id="ent1#att8" key="true" name="notification_oid" type="integer" db:column="notification_oid"/>
     <Attribute id="ent1#att13" name="Timestamp" type="timestamp" db:column="timestamp"/>
     <Attribute id="ent1#att14" name="isProcessed" type="boolean" db:column="isprocessed"/>
+    <Attribute id="ent1#att15" name="Content" type="text" contentType="text/plain" db:column="content"/>
   </Entity>
   <Relationship id="rel1" name="Notifications_User" sourceEntity="ent1" targetEntity="User" gr:bendpoints="-137,-104,648,31" db:database="db2" db:table="notifications">
     <RelationshipRole1 id="rel1#role1" name="NotificationsToUser" maxCard="1">

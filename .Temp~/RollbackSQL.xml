@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <DBError statementIndex="0">
-  <ErrorMessage>org.postgresql.util.PSQLException: ERROR: relation "public.comments" does not exist</ErrorMessage>
-  <Comment> Owner_of_comment [rel15]</Comment>
-  <Statement> alter table "public"."comments"   drop constraint "fk_comments_user"</Statement>
-  <ErrorMessage>org.postgresql.util.PSQLException: ERROR: relation "public.comments" does not exist</ErrorMessage>
-  <StackTrace>com.webratio.commons.db.DBException: org.postgresql.util.PSQLException: ERROR: relation "public.comments" does not exist
+  <ErrorMessage>org.postgresql.util.PSQLException: ERROR: column "content" of relation "notifications" does not exist</ErrorMessage>
+  <Comment> Notifications [ent1]</Comment>
+  <Statement> alter table "public"."notifications"   drop column  "content"</Statement>
+  <ErrorMessage>org.postgresql.util.PSQLException: ERROR: column "content" of relation "notifications" does not exist</ErrorMessage>
+  <StackTrace>com.webratio.commons.db.DBException: org.postgresql.util.PSQLException: ERROR: column "content" of relation "notifications" does not exist
 	at com.webratio.commons.db.utils.DBUtils.execute(DBUtils.java:546)
 	at com.webratio.commons.db.utils.DBUtils.executeScriptFiles(DBUtils.java:442)
 	at com.webratio.commons.db.utils.DBUtils.main(DBUtils.java:257)
-Caused by: org.postgresql.util.PSQLException: ERROR: relation "public.comments" does not exist
+Caused by: org.postgresql.util.PSQLException: ERROR: column "content" of relation "notifications" does not exist
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2477)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2190)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:300)
