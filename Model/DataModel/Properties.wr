@@ -63,22 +63,25 @@
     <Attribute id="ent2#att4" name="Abstract" type="text" contentType="text/html" db:column="abstract"/>
     <Attribute id="ent2#att12" name="isClaimed" type="boolean" db:column="isclaimed"/>
   </Entity>
-  <Entity gr:x="515" gr:y="430" id="ent3" name="Collections" duration="persistent" attributeOrder="ent3#att3 ent3#att20 ent3#att21 ent3#att23" db:database="db2" db:table="collections">
+  <Entity gr:x="515" gr:y="430" id="ent3" name="Collections" duration="persistent" attributeOrder="ent3#att3 ent3#att20 ent3#att21 ent3#att23 ent3#att22" db:database="db2" db:table="collections">
     <Attribute id="ent3#att3" key="true" name="oid_collection" type="integer" db:column="oid_collection"/>
     <Attribute id="ent3#att20" name="Title" type="string" db:column="title"/>
     <Attribute id="ent3#att21" name="Description" type="string" db:column="description"/>
     <Attribute id="ent3#att23" name="Timestamp" type="timestamp" db:column="timestamp"/>
+    <Attribute id="ent3#att22" name="Owner" type="string" derivationQuery="simpleImported::Self.rel5#role9.User#att28"/>
   </Entity>
   <Entity gr:x="20" gr:y="575" id="ent4" name="Keywords" duration="persistent" attributeOrder="ent4#att9 ent4#att10 ent4#att18" db:database="db2" db:table="keywords">
     <Attribute id="ent4#att9" key="true" name="oid_keyword" type="integer" db:column="oid_keyword"/>
     <Attribute id="ent4#att10" name="Name" type="string" db:column="name"/>
     <Attribute id="ent4#att18" name="Timestamp" type="timestamp" db:column="timestamp"/>
   </Entity>
-  <Entity gr:x="520" gr:y="235" id="ent5" name="Comments" duration="persistent" attributeOrder="ent5#att24 ent5#att25 ent5#att26 ent5#att27" db:database="db2" db:table="comments">
+  <Entity gr:x="520" gr:y="235" id="ent5" name="Comments" duration="persistent" attributeOrder="ent5#att24 ent5#att25 ent5#att26 ent5#att27 ent5#att17 ent5#att19" db:database="db2" db:table="comments">
     <Attribute id="ent5#att24" key="true" name="oid_comment" type="integer" db:column="oid_comment"/>
     <Attribute id="ent5#att25" name="Title" type="string" db:column="title"/>
     <Attribute id="ent5#att26" name="Content" type="text" contentType="text/html" db:column="content"/>
     <Attribute id="ent5#att27" name="Timestamp" type="timestamp" db:column="timestamp"/>
+    <Attribute id="ent5#att17" name="Commenter Name" type="string" derivationQuery="simpleImported::Self.rel15#role29.User#att28"/>
+    <Attribute id="ent5#att19" name="Publication Name" type="string" derivationQuery="simpleImported::Self.rel10#role19.ent2#att5"/>
   </Entity>
   <Relationship id="rel8" name="Collections_Keywords" sourceEntity="ent3" targetEntity="ent4" gr:bendpoints="-203,136,272,5" db:database="db2" db:table="collections_keywords">
     <RelationshipRole1 id="rel8#role15" name="CollectionsToKeywords" maxCard="N">

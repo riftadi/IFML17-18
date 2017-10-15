@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="110" gr:y="110" id="sv2#page4" name="Home (Researcher)" linkOrder="sv2#page4#ln4">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv2#page4#inu1" name="Owned Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1">
+    <IndexUnit gr:x="0" gr:y="0" id="sv2#page4#inu1" name="Owned Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1 rel12#role23.User#att28" distinct="true">
       <Selector id="sv2#page4#inu1#su3" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#page4#inu1#su3#rcond2" name="RoleCondition2" predicate="in" implied="false" role="rel14#role28"/>
       </Selector>
@@ -25,8 +25,8 @@
         <LinkParameter id="sv2#page4#enu3#ln8#par23" name="Authors_User.oid_user(PublicationAuthor)" source="sv2#page4#enu3#msfld1" target="sv2#cru2.rel12#role23.userOID"/>
         <LinkParameter id="sv2#page4#enu3#ln8#par28" name="First Author_User.oid_user(PublicationOwner)" source="sv2#page4#enu3#sfld1" target="sv2#cru2.rel14#role27.userOID"/>
       </Link>
-      <MultiSelectionField id="sv2#page4#enu3#msfld1" name="Other Authors" type="string" ajaxEventEnabled="false"/>
-      <SelectionField id="sv2#page4#enu3#sfld1" name="First Author" type="string"/>
+      <MultiSelectionField id="sv2#page4#enu3#msfld1" name="Authors" type="string" ajaxEventEnabled="false"/>
+      <SelectionField id="sv2#page4#enu3#sfld1" name="First Author (Owner)" type="string"/>
     </EntryUnit>
     <TimeUnit gr:x="250" gr:y="200" id="sv2#page4#tmu2" name="Time">
       <Link id="sv2#page4#tmu2#ln9" name="Flow9" to="sv2#page4#enu3" type="transport" validate="true">
@@ -50,6 +50,7 @@
           <layout:Attribute attribute="ent2#att6"/>
           <layout:Attribute attribute="ent2#att7"/>
           <layout:Attribute attribute="ent2#att1"/>
+          <layout:Attribute attribute="rel12#role23.User#att28"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

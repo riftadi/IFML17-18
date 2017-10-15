@@ -1,29 +1,38 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Administration" protected="true" homePage="sv3#page5" landmarks="sv3#miu3">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="940" gr:y="535" id="sv3#miu3" action="true" moduleId="mov1#opm2" landmark="true"/>
-    <DeleteUnit gr:x="620" gr:y="155" id="sv3#dlu1" name="Delete User" entity="User">
+    <DeleteUnit gr:x="535" gr:y="140" id="sv3#dlu1" name="Delete User" entity="User">
       <Selector id="sv3#dlu1#su2" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu1#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
+      <OKLink id="sv3#dlu1#oln7" name="OKFlow7" to="sv3#page5#inu2" automaticCoupling="true" gr:bendpoints="-187,-18,203,-33"/>
     </DeleteUnit>
     <DeleteUnit gr:x="650" gr:y="265" id="sv3#dlu2" name="Delete Publication" entity="ent2">
       <Selector id="sv3#dlu2#su4" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu2#su4#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv3#dlu2#oln5" name="OKFlow5" to="sv3#cru3">
-        <LinkParameter id="sv3#dlu2#oln5#par45" name="False_isProcessed" sourceValue="False" target="sv3#cru3.ent1#att14"/>
+        <LinkParameter id="sv3#dlu2#oln5#par45" name="False_isProcessed" sourceValue="false" target="sv3#cru3.ent1#att14"/>
         <LinkParameter id="sv3#dlu2#oln5#par46" name="oid_publication_PASSING_Publications.oid_publication(NotificationsToPublications)" sourceLinkParameter="sv3#page5#inu3#ln14#par44" target="sv3#cru3.rel2#role3.ent2#att2"/>
-        <LinkParameter id="sv3#dlu2#oln5#par47" name="Owner Name_PASSING_User.oid_user(NotificationsToUser)" sourceLinkParameter="sv3#page5#inu3#ln14#par43" target="sv3#cru3.rel1#role1.userOID"/>
+        <LinkParameter id="sv3#dlu2#oln5#par47" name="Owner Name_PASSING_User.oid_user(NotificationsToUser)" sourceLinkParameter="sv3#page5#inu3#ln14#par56" target="sv3#cru3.rel1#role1.userOID"/>
         <LinkParameter id="sv3#dlu2#oln5#par53" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv3#page5#inu3#ln14#par52" target="sv3#cru3.ent1#att13"/>
+        <LinkParameter id="sv3#dlu2#oln5#par54" name="Your publication is deleted by administrator. Please contact administrator for more info._Content" sourceValue="Your publication is deleted by administrator. Please contact administrator for more info." target="sv3#cru3.ent1#att15"/>
       </OKLink>
     </DeleteUnit>
-    <DeleteUnit gr:x="670" gr:y="365" id="sv3#dlu3" name="Delete Comment" entity="ent5">
+    <DeleteUnit gr:x="620" gr:y="390" id="sv3#dlu3" name="Delete Comment" entity="ent5">
       <Selector id="sv3#dlu3#su5" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu3#su5#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
+      <OKLink id="sv3#dlu3#oln6" name="OKFlow6" to="sv3#cru3">
+        <LinkParameter id="sv3#dlu3#oln6#par58" name="Your comment is deleted by administrator. Please contact administrator for more info._Content" sourceValue="Your comment is deleted by administrator. Please contact administrator for more info." target="sv3#cru3.ent1#att15"/>
+        <LinkParameter id="sv3#dlu3#oln6#par59" name="False_isProcessed" sourceValue="false" target="sv3#cru3.ent1#att14"/>
+        <LinkParameter id="sv3#dlu3#oln6#par61" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv3#page5#inu4#ln15#par51" target="sv3#cru3.ent1#att13"/>
+        <LinkParameter id="sv3#dlu3#oln6#par62" name="CommentsToUser.oid_user_PASSING_User.oid_user(NotificationsToUser)" sourceLinkParameter="sv3#page5#inu4#ln15#par60" target="sv3#cru3.rel1#role1.userOID"/>
+        <LinkParameter id="sv3#dlu3#oln6#par64" name="CommentsToPublications.oid_publication_PASSING_Publications.oid_publication(NotificationsToPublications)" sourceLinkParameter="sv3#page5#inu4#ln15#par63" target="sv3#cru3.rel2#role3.ent2#att2"/>
+      </OKLink>
     </DeleteUnit>
     <CreateUnit gr:x="880" gr:y="300" id="sv3#cru3" name="Add Notification" entity="ent1"/>
-    <TimeUnit gr:x="155" gr:y="280" id="sv3#tmu3" name="Time3" linkOrder="sv3#tmu3#ln17 sv3#tmu3#ln18">
+    <TimeUnit gr:x="125" gr:y="270" id="sv3#tmu3" name="Get Time">
       <Link id="sv3#tmu3#ln17" name="Flow17" to="sv3#page5#inu3" type="transport" validate="true">
         <LinkParameter id="sv3#tmu3#ln17#par48" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
       </Link>

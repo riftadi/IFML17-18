@@ -1,22 +1,29 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="95" gr:y="125" id="sv3#page5" name="Home (Administration)" linkOrder="sv3#page5#ln6">
   <ContentUnits>
-    <IndexUnit gr:x="15" gr:y="0" id="sv3#page5#inu2" name="List of Researchers" entity="User" displayAttributes="userName email User#att28 User#att29 User#att31" linkOrder="sv3#page5#inu2#ln13">
-      <Link id="sv3#page5#inu2#ln13" name="Delete Researcher" to="sv3#dlu1" automaticCoupling="true" type="normal" validate="true"/>
+    <IndexUnit gr:x="15" gr:y="0" id="sv3#page5#inu2" name="List of Researchers" entity="User" displayAttributes="userName email User#att28 User#att29 User#att31" linkOrder="sv3#page5#inu2#ln25">
+      <Link id="sv3#page5#inu2#ln25" name="Delete Researcher" to="sv3#dlu1" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
-    <IndexUnit gr:x="175" gr:y="110" id="sv3#page5#inu3" name="List of Publications" linkOrder="sv3#page5#inu3#ln14" entity="ent2">
-      <Link id="sv3#page5#inu3#ln14" name="Flow14" to="sv3#dlu2" type="normal" validate="true">
+    <IndexUnit gr:x="175" gr:y="110" id="sv3#page5#inu3" name="List of Publications" linkOrder="sv3#page5#inu3#ln14" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att16 ent2#att12 ent2#att1 rel12#role23.User#att28" distinct="true">
+      <Link id="sv3#page5#inu3#ln14" name="Delete Publication" to="sv3#dlu2" type="normal" validate="true">
         <LinkParameter id="sv3#page5#inu3#ln14#par42" name="oid_publication_KeyCondition3 [oid_publication]" source="data[].ent2#att2" target="sv3#dlu2#su4#kcond3.ent2#att2"/>
         <LinkParameter id="sv3#page5#inu3#ln14#par43" name="Owner Name_PASSING" source="data[].ent2#att1" passing="true"/>
         <LinkParameter id="sv3#page5#inu3#ln14#par44" name="oid_publication_PASSING" source="data[].ent2#att2" passing="true"/>
         <LinkParameter id="sv3#page5#inu3#ln14#par52" name="Current/Input Timestamp_PASSING" sourceLinkParameter="sv3#tmu3#ln17#par48" passing="true"/>
+        <LinkParameter id="sv3#page5#inu3#ln14#par56" name="PublicationOwner.oid_user_PASSING" source="data[].rel14#role27$userOID" passing="true"/>
       </Link>
+      <Selector id="sv3#page5#inu3#su8" defaultPolicy="fill" booleanOperator="and"/>
     </IndexUnit>
-    <IndexUnit gr:x="0" gr:y="215" id="sv3#page5#inu4" name="List of Comments" entity="ent5" linkOrder="sv3#page5#inu4#ln15">
-      <Link id="sv3#page5#inu4#ln15" name="Flow15" to="sv3#dlu3" type="normal" validate="true">
+    <IndexUnit gr:x="0" gr:y="215" id="sv3#page5#inu4" name="List of Comments" entity="ent5" linkOrder="sv3#page5#inu4#ln15" displayAttributes="ent5#att25 ent5#att26 ent5#att27 ent5#att17 ent5#att19">
+      <Link id="sv3#page5#inu4#ln15" name="Delete Comment" to="sv3#dlu3" type="normal" validate="true">
         <LinkParameter id="sv3#page5#inu4#ln15#par50" name="oid_comment_KeyCondition4 [oid_comment]" source="data[].ent5#att24" target="sv3#dlu3#su5#kcond4.ent5#att24"/>
         <LinkParameter id="sv3#page5#inu4#ln15#par51" name="Current/Input Timestamp_PASSING" sourceLinkParameter="sv3#tmu3#ln18#par49" passing="true"/>
+        <LinkParameter id="sv3#page5#inu4#ln15#par55" name="oid_comment_PASSING" source="data[].ent5#att24" passing="true"/>
+        <LinkParameter id="sv3#page5#inu4#ln15#par60" name="CommentsToUser.oid_user_PASSING" source="data[].rel15#role29_userOID" passing="true"/>
+        <LinkParameter id="sv3#page5#inu4#ln15#par63" name="CommentsToPublications.oid_publication_PASSING" source="data[].rel10#role19_ent2#att2" passing="true"/>
       </Link>
     </IndexUnit>
+    <IndexUnit gr:x="180" gr:y="300" id="sv3#page5#inu5" name="List of Collections" entity="ent3" distinct="true" displayAttributes="ent3#att20 ent3#att21 ent3#att22 rel6#role11.ent2#att5"/>
+    <IndexUnit gr:x="40" gr:y="390" id="sv3#page5#inu6" name="List of Keywords" entity="ent4" displayAttributes="ent4#att10"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -27,7 +34,7 @@
           <layout:Attribute attribute="User#att28"/>
           <layout:Attribute attribute="User#att29"/>
           <layout:Attribute attribute="User#att31"/>
-          <layout:Link link="sv3#page5#inu2#ln13"/>
+          <layout:Link link="sv3#page5#inu2#ln25"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -46,6 +53,13 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page5#inu3">
           <layout:Link link="sv3#page5#inu3#ln14"/>
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att16"/>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att1"/>
+          <layout:Attribute attribute="rel12#role23.User#att28"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -64,6 +78,50 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page5#inu4">
           <layout:Link link="sv3#page5#inu4#ln15"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att26"/>
+          <layout:Attribute attribute="ent5#att27"/>
+          <layout:Attribute attribute="ent5#att17"/>
+          <layout:Attribute attribute="ent5#att19"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page5#inu5">
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att21"/>
+          <layout:Attribute attribute="ent3#att22"/>
+          <layout:Attribute attribute="rel6#role11.ent2#att5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page5#inu6">
+          <layout:Attribute attribute="ent4#att10"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
