@@ -26,9 +26,9 @@
       <db:JoinColumn attribute="groupOID" name="group_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44" db:database="db2" db:table="user">
+  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44" db:database="db2" db:table="user" db:isView="false">
     <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
+      <db:JoinColumn attribute="userOID" name="oid_user"/>
     </RelationshipRole1>
     <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N">
       <db:JoinColumn attribute="groupOID" name="group_oid"/>
@@ -80,14 +80,6 @@
     <Attribute id="ent5#att26" name="Content" type="text" contentType="text/html" db:column="content"/>
     <Attribute id="ent5#att27" name="Timestamp" type="timestamp" db:column="timestamp"/>
   </Entity>
-  <Relationship id="rel4" name="Collections_Publications" sourceEntity="ent3" targetEntity="ent2" db:database="db2" db:table="collections_publications">
-    <RelationshipRole1 id="rel4#role7" name="CollectionsToPublications" maxCard="N">
-      <db:JoinColumn attribute="ent3#att3" name="collections_oid_collection"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel4#role8" name="PublicationsToCollections" maxCard="N">
-      <db:JoinColumn attribute="ent2#att2" name="publications_oid_publication"/>
-    </RelationshipRole2>
-  </Relationship>
   <Relationship id="rel8" name="Collections_Keywords" sourceEntity="ent3" targetEntity="ent4" gr:bendpoints="-203,136,272,5" db:database="db2" db:table="collections_keywords">
     <RelationshipRole1 id="rel8#role15" name="CollectionsToKeywords" maxCard="N">
       <db:JoinColumn attribute="ent3#att3" name="collections_oid_collection"/>
@@ -96,7 +88,7 @@
       <db:JoinColumn attribute="ent4#att9" name="keywords_oid_keyword"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel10" name="Comments_Publications" sourceEntity="ent5" targetEntity="ent2" db:database="db2" db:table="publications">
+  <Relationship id="rel10" name="Comments_Publications" sourceEntity="ent5" targetEntity="ent2" db:database="db2" db:table="comments">
     <RelationshipRole1 id="rel10#role19" name="CommentsToPublications" maxCard="1">
       <db:JoinColumn attribute="ent5#att24" name="comments_oid_comment"/>
     </RelationshipRole1>
@@ -128,28 +120,12 @@
       <db:JoinColumn attribute="userOID" name="user_oid_user"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel15" name="Owner_of_comment" sourceEntity="ent5" targetEntity="User" db:database="db2" db:table="user">
+  <Relationship id="rel15" name="Owner_of_comment" sourceEntity="ent5" targetEntity="User" db:database="db2" db:table="comments">
     <RelationshipRole1 id="rel15#role29" name="CommentsToUser" maxCard="1">
       <db:JoinColumn attribute="ent5#att24" name="comments_oid_comment"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel15#role30" name="UserToComments" maxCard="N">
       <db:JoinColumn attribute="userOID" name="oid_user"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel16" name="Shared_with" sourceEntity="ent3" targetEntity="User" gr:bendpoints="-149,-214,346,101" db:database="db2" db:table="collections">
-    <RelationshipRole1 id="rel16#role31" name="CollectionsToUser" maxCard="N">
-      <db:JoinColumn attribute="ent3#att3" name="oid_collection"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel16#role32" name="UserToCollections" maxCard="N">
-      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel17" name="Creator" sourceEntity="User" targetEntity="ent3" gr:bendpoints="310,138,-185,-177" db:database="db2" db:table="user">
-    <RelationshipRole1 id="rel17#role33" name="UserToCollections_2" maxCard="N">
-      <db:JoinColumn attribute="userOID" name="oid_user"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel17#role34" name="CollectionsToUser_2" maxCard="1">
-      <db:JoinColumn attribute="ent3#att3" name="collections_oid_collection"/>
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel18" name="User_Keywords" sourceEntity="User" targetEntity="ent4" db:database="db2" db:table="user_keywords">
@@ -178,6 +154,30 @@
       <db:JoinColumn attribute="ent1#att8" name="notification_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel2#role4" name="PublicationsToNotifications" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="publications_oid_publication"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel4" name="Collections_User" sourceEntity="ent3" targetEntity="User" gr:bendpoints="-142,-190,354,114" db:database="db2" db:table="collections_user">
+    <RelationshipRole1 id="rel4#role7" name="CollectionsToUser" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="collections_oid_collection"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="UserToCollections" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel5" name="Collections_User_2" sourceEntity="ent3" targetEntity="User" gr:bendpoints="-207,-168,289,136" db:database="db2" db:table="collections">
+    <RelationshipRole1 id="rel5#role9" name="CollectionsToUser_2" maxCard="1">
+      <db:JoinColumn attribute="ent3#att3" name="oid_collection"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="UserToCollections_2" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel6" name="Collections_Publications" sourceEntity="ent3" targetEntity="ent2" db:database="db2" db:table="collections_publications">
+    <RelationshipRole1 id="rel6#role11" name="CollectionsToPublications" maxCard="N">
+      <db:JoinColumn attribute="ent3#att3" name="collections_oid_collection"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="PublicationsToCollections" maxCard="N">
       <db:JoinColumn attribute="ent2#att2" name="publications_oid_publication"/>
     </RelationshipRole2>
   </Relationship>

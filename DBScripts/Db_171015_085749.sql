@@ -151,6 +151,21 @@ alter table "public"."comments"  add column  "oid_user"  int4;
 alter table "public"."comments"   add constraint fk_comments_user foreign key ("oid_user") references "public"."user" ("oid_user");
 
 
+-- Shared_with [rel16]
+create table "public"."collections" (
+   "oid_collection"  int4 not null,
+   "user_oid_user"  int4 not null,
+  primary key ("oid_collection", "user_oid_user")
+);
+alter table "public"."collections"   add constraint fk_collections_collections foreign key ("oid_collection") references "public"."collections" ("oid_collection");
+alter table "public"."collections"   add constraint fk_collections_user foreign key ("user_oid_user") references "public"."user" ("oid_user");
+
+
+-- Creator [rel17]
+alter table "public"."collections"  add column  "oid_user"  int4;
+alter table "public"."collections"   add constraint fk_collections_user_2 foreign key ("oid_user") references "public"."user" ("oid_user");
+
+
 -- User_Keywords [rel18]
 create table "public"."user_keywords" (
    "user_oid_user"  int4 not null,
@@ -166,22 +181,7 @@ alter table "public"."notifications"  add column  "publications_oid_publication"
 alter table "public"."notifications"   add constraint fk_notifications_publications foreign key ("publications_oid_publication") references "public"."publications" ("oid_publication");
 
 
--- Collections_User [rel4]
-create table "public"."collections_user" (
-   "collections_oid_collection"  int4 not null,
-   "user_oid_user"  int4 not null,
-  primary key ("collections_oid_collection", "user_oid_user")
-);
-alter table "public"."collections_user"   add constraint fk_collections_user_collection foreign key ("collections_oid_collection") references "public"."collections" ("oid_collection");
-alter table "public"."collections_user"   add constraint fk_collections_user_user foreign key ("user_oid_user") references "public"."user" ("oid_user");
-
-
--- Collections_User_2 [rel5]
-alter table "public"."collections"  add column  "user_oid_user"  int4;
-alter table "public"."collections"   add constraint fk_collections_user foreign key ("user_oid_user") references "public"."user" ("oid_user");
-
-
--- Collections_Publications [rel6]
+-- Collections_Publications [rel4]
 create table "public"."collections_publications" (
    "collections_oid_collection"  int4 not null,
    "publications_oid_publication"  int4 not null,
