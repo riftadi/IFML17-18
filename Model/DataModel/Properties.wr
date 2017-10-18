@@ -50,7 +50,7 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="db" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ifml1718" username="riftadi" schema="public">
+  <db:Database id="db2" name="db" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ifml1718" username="postgres" schema="public" cryptedPassword="true" password="cm9vdA==">
   </db:Database>
   <Entity gr:x="210" gr:y="330" id="ent2" name="Publications" duration="persistent" attributeOrder="ent2#att2 ent2#att5 ent2#att6 ent2#att7 ent2#att11 ent2#att16 ent2#att1 ent2#att4 ent2#att12" db:database="db2" db:table="publications">
     <Attribute id="ent2#att2" key="true" name="oid_publication" type="integer" db:column="oid_publication"/>
@@ -72,7 +72,7 @@
   </Entity>
   <Entity gr:x="20" gr:y="575" id="ent4" name="Keywords" duration="persistent" attributeOrder="ent4#att9 ent4#att10 ent4#att18" db:database="db2" db:table="keywords">
     <Attribute id="ent4#att9" key="true" name="oid_keyword" type="integer" db:column="oid_keyword"/>
-    <Attribute id="ent4#att10" name="Name" type="string" db:column="name"/>
+    <Attribute id="ent4#att10" name="Name" type="string" db:column="name" key="false"/>
     <Attribute id="ent4#att18" name="Timestamp" type="timestamp" db:column="timestamp"/>
   </Entity>
   <Entity gr:x="520" gr:y="235" id="ent5" name="Comments" duration="persistent" attributeOrder="ent5#att24 ent5#att25 ent5#att26 ent5#att27 ent5#att17 ent5#att19" db:database="db2" db:table="comments">

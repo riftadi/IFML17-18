@@ -1,11 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="110" gr:y="110" id="sv2#page4" name="Home (Researcher)" linkOrder="sv2#page4#ln4">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="95" gr:y="50" id="sv2#page4" name="Home (Researcher)" linkOrder="sv2#page4#ln4" ajaxEnabled="true">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv2#page4#inu1" name="Owned Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1 rel12#role23.User#att28" distinct="true">
       <Selector id="sv2#page4#inu1#su3" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#page4#inu1#su3#rcond2" name="RoleCondition2" predicate="in" implied="false" role="rel14#role28"/>
       </Selector>
     </IndexUnit>
-    <GetUnit gr:x="200" gr:y="15" id="sv2#page4#gtu1" name="GetCurrentUser" contextParameters="UserCtxParam">
+    <GetUnit gr:x="300" gr:y="20" id="sv2#page4#gtu1" name="GetCurrentUser" contextParameters="UserCtxParam">
       <Link id="sv2#page4#gtu1#ln5" name="Flow5" to="sv2#page4#inu1" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv2#page4#gtu1#ln7" name="Flow7" to="sv2#page4#enu3" type="transport" validate="true">
         <LinkParameter id="sv2#page4#gtu1#ln7#par15" name="UserCtxParam.oid_user_PASSING" source="sv2#page4#gtu1.UserCtxParam" passing="true"/>
@@ -28,12 +28,12 @@
       <MultiSelectionField id="sv2#page4#enu3#msfld1" name="Authors" type="string" ajaxEventEnabled="false"/>
       <SelectionField id="sv2#page4#enu3#sfld1" name="First Author (Owner)" type="string"/>
     </EntryUnit>
-    <TimeUnit gr:x="250" gr:y="200" id="sv2#page4#tmu2" name="Time">
+    <TimeUnit gr:x="140" gr:y="310" id="sv2#page4#tmu2" name="Time">
       <Link id="sv2#page4#tmu2#ln9" name="Flow9" to="sv2#page4#enu3" type="transport" validate="true">
         <LinkParameter id="sv2#page4#tmu2#ln9#par20" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
       </Link>
     </TimeUnit>
-    <SelectorUnit gr:x="220" gr:y="105" id="sv2#page4#seu1" name="Authors Selector" entity="User" distinctAttributes="email User#att28">
+    <SelectorUnit gr:x="565" gr:y="155" id="sv2#page4#seu1" name="Authors Selector" entity="User" distinctAttributes="email User#att28">
       <Link id="sv2#page4#seu1#ln10" name="Flow10" to="sv2#page4#enu3" type="transport" validate="true">
         <LinkParameter id="sv2#page4#seu1#ln10#par22" name="Name_Authors [label]" source="User#att28Array" target="sv2#page4#enu3#msfld1_label"/>
         <LinkParameter id="sv2#page4#seu1#ln10#par25" name="Name_First Author [label]" source="User#att28Array" target="sv2#page4#enu3#sfld1_label"/>
@@ -77,6 +77,264 @@
           <layout:Field field="sv2#page4#enu3#msfld1"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Grid containerType="cell">
+          <layout:Row>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

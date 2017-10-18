@@ -1,0 +1,296 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-70" gr:y="530" id="sv2#page18" name="Search" landmark="true" linkOrder="sv2#page18#ln74" ajaxEnabled="true" layout:frameLayout="WebRatio/Basic">
+  <ContentUnits>
+    <EntryUnit id="sv2#page18#enu9" name="Search in keywords, text" gr:x="140" gr:y="0" linkOrder="sv2#page18#enu9#ln91">
+      <Field id="sv2#page18#enu9#fld21" name="Text" type="string" modifiable="true"/>
+      <Link id="sv2#page18#enu9#ln91" name="Search" to="sv2#page18#alt6#page22#mciu20" type="normal" validate="true">
+        <LinkParameter id="sv2#page18#enu9#ln91#par123" name="Text_abstractcondition" source="sv2#page18#enu9#fld21" target="sv2#page18#alt6#page22#mciu20#su34#acond29"/>
+        <LinkParameter id="sv2#page18#enu9#ln91#par124" name="Text_keywordcondition" source="sv2#page18#enu9#fld21" target="sv2#page18#alt6#page22#mciu20#su34#acond28"/>
+        <LinkParameter id="sv2#page18#enu9#ln91#par125" name="Text_titlecondition" source="sv2#page18#enu9#fld21" target="sv2#page18#alt6#page22#mciu20#su34#acond30"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit id="sv2#page18#enu10" name="Search by author" gr:x="410" gr:y="0" linkOrder="sv2#page18#enu10#ln85">
+      <Field id="sv2#page18#enu10#fld22" name="Author" type="string" modifiable="true"/>
+      <Link id="sv2#page18#enu10#ln85" name="Search" to="sv2#page18#alt6#page19#mciu18" type="normal" validate="true">
+        <LinkParameter id="sv2#page18#enu10#ln85#par114" name="author_authorcondition" source="sv2#page18#enu10#fld22" target="sv2#page18#alt6#page19#mciu18#su31#acond22"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit gr:x="1050" gr:y="635" id="sv2#page18#gtu4" name="getcurruser" contextParameters="UserCtxParam">
+      <Link id="sv2#page18#gtu4#ln88" name="Flow88" to="sv2#page18#alt6#page19#alt7#page21#mciu19" type="transport" validate="true">
+        <LinkParameter id="sv2#page18#gtu4#ln88#par116" name="UserCtxParam.oid_user_Owns collection [oid_user]" source="sv2#page18#gtu4.UserCtxParam" target="sv2#page18#alt6#page19#alt7#page21#mciu19#su32#rcond13.userOID"/>
+      </Link>
+      <Link id="sv2#page18#gtu4#ln95" name="Flow95" to="sv2#page18#alt6#page22#alt8#page24#mciu21" type="transport" validate="true">
+        <LinkParameter id="sv2#page18#gtu4#ln95#par127" name="UserCtxParam.oid_user_owns [oid_user]" source="sv2#page18#gtu4.UserCtxParam" target="sv2#page18#alt6#page22#alt8#page24#mciu21#su35#rcond14.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#page18#enu9">
+          <layout:Field field="sv2#page18#enu9#fld21"/>
+          <layout:Link link="sv2#page18#enu9#ln91"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#page18#enu10">
+          <layout:Field field="sv2#page18#enu10#fld22"/>
+          <layout:Link link="sv2#page18#enu10#ln85"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Grid>
+          <layout:Row>
+            <layout:Cell colspan="6">
+              <layout:Unit unitId="sv2#page18#alt6#page19#mciu18">
+                <layout:Attribute attribute="ent2#att5"/>
+                <layout:Attribute attribute="ent2#att6"/>
+                <layout:Attribute attribute="ent2#att7"/>
+                <layout:Attribute attribute="ent2#att1"/>
+                <layout:Link link="sv2#page18#alt6#page19#mciu18#ln89"/>
+              </layout:Unit>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="6">
+              <layout:Unit unitId="sv2#page18#alt6#page19#alt7#page21#mciu19">
+                <layout:Attribute attribute="ent3#att20"/>
+                <layout:Link link="sv2#page18#alt6#page19#alt7#page21#mciu19#ln115"/>
+              </layout:Unit>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="6">
+              <layout:Unit unitId="sv2#page18#alt6#page22#mciu20">
+                <layout:Attribute attribute="ent2#att5"/>
+                <layout:Attribute attribute="ent2#att6"/>
+                <layout:Attribute attribute="ent2#att7"/>
+                <layout:Attribute attribute="ent2#att1"/>
+                <layout:Link link="sv2#page18#alt6#page22#mciu20#ln94"/>
+              </layout:Unit>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="6">
+              <layout:Unit unitId="sv2#page18#alt6#page22#alt8#page24#mciu21">
+                <layout:Attribute attribute="ent3#att20"/>
+                <layout:Link link="sv2#page18#alt6#page22#alt8#page24#mciu21#ln116"/>
+              </layout:Unit>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:SubPage pageId="sv2#page18#alt6#page25">
+                <layout:Grid containerType="grid">
+                  <layout:Row>
+                    <layout:Cell colspan="12"/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                    <layout:Cell/>
+                  </layout:Row>
+                </layout:Grid>
+              </layout:SubPage>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Alternative id="sv2#page18#alt6" name="Search alternative" defaultPage="sv2#page18#alt6#page25" gr:x="0" gr:y="80">
+    <Page id="sv2#page18#alt6#page19" name="Search by author" gr:x="315" gr:y="0">
+      <ContentUnits>
+        <MultiChoiceIndexUnit gr:x="0" gr:y="125" id="sv2#page18#alt6#page19#mciu18" name="Author search results" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1" linkOrder="sv2#page18#alt6#page19#mciu18#ln89">
+          <Selector id="sv2#page18#alt6#page19#mciu18#su31" defaultPolicy="emptyAlwaysApplied" booleanOperator="or">
+            <AttributesCondition id="sv2#page18#alt6#page19#mciu18#su31#acond22" name="authorcondition" predicate="contains" booleanOperator="or" implied="true" attributes="ent2#att1" ignoreCase="true"/>
+          </Selector>
+          <Link id="sv2#page18#alt6#page19#mciu18#ln89" name="Add to collection" to="sv2#page18#alt6#page19#alt7#page21#mciu19" type="normal" validate="true" newWindow="false">
+            <LinkParameter id="sv2#page18#alt6#page19#mciu18#ln89#par117" name="Checked oid_publication_PASSING" source="ent2#att2Checked" passing="true"/>
+          </Link>
+        </MultiChoiceIndexUnit>
+      </ContentUnits>
+      <Alternative id="sv2#page18#alt6#page19#alt7" name="Collection Alternative" gr:x="310" gr:y="0" defaultPage="sv2#page18#alt6#page19#alt7#page20">
+        <Page id="sv2#page18#alt6#page19#alt7#page20" name="Default" gr:x="35" gr:y="0">
+          <ContentUnits/>
+        </Page>
+        <Page id="sv2#page18#alt6#page19#alt7#page21" name="Select Collection" gr:x="0" gr:y="165">
+          <ContentUnits>
+            <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv2#page18#alt6#page19#alt7#page21#mciu19" name="Select collection" entity="ent3" displayAttributes="ent3#att20" linkOrder="sv2#page18#alt6#page19#alt7#page21#mciu19#ln115">
+              <Selector id="sv2#page18#alt6#page19#alt7#page21#mciu19#su32" defaultPolicy="fill" booleanOperator="and">
+                <RelationshipRoleCondition id="sv2#page18#alt6#page19#alt7#page21#mciu19#su32#rcond13" name="Owns collection" predicate="in" implied="false" role="rel5#role10"/>
+              </Selector>
+              <VRules/>
+              <PreSelector id="sv2#page18#alt6#page19#alt7#page21#mciu19#su37" booleanOperator="and"/>
+              <Link id="sv2#page18#alt6#page19#alt7#page21#mciu19#ln115" name="Add" to="sv2#cnu1" type="normal" validate="true">
+                <LinkParameter id="sv2#page18#alt6#page19#alt7#page21#mciu19#ln115#par160" name="Checked oid_collection_KeyCondition16 [oid_collection] [Collections] [Source]" source="ent3#att3Checked" target="sv2#cnu1#su49#kcond16.ent3#att3"/>
+                <LinkParameter id="sv2#page18#alt6#page19#alt7#page21#mciu19#ln115#par161" name="Checked oid_publication_PASSING_KeyCondition17 [oid_publication] [Publications] [Target]" sourceLinkParameter="sv2#page18#alt6#page19#mciu18#ln89#par117" target="sv2#cnu1#su50#kcond17.ent2#att2"/>
+              </Link>
+            </MultiChoiceIndexUnit>
+          </ContentUnits>
+        </Page>
+      </Alternative>
+    </Page>
+    <Page id="sv2#page18#alt6#page22" name="Search by text" gr:x="15" gr:y="450">
+      <ContentUnits>
+        <MultiChoiceIndexUnit gr:x="0" gr:y="125" id="sv2#page18#alt6#page22#mciu20" name="Text search result" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1" linkOrder="sv2#page18#alt6#page22#mciu20#ln94">
+          <Selector id="sv2#page18#alt6#page22#mciu20#su34" defaultPolicy="emptyAlwaysApplied" booleanOperator="or">
+            <AttributesCondition id="sv2#page18#alt6#page22#mciu20#su34#acond28" name="keywordcondition" predicate="contains" booleanOperator="or" implied="true" attributes="rel11#role21.ent4#att10" ignoreCase="true"/>
+            <AttributesCondition id="sv2#page18#alt6#page22#mciu20#su34#acond29" name="abstractcondition" predicate="contains" booleanOperator="or" implied="true" attributes="ent2#att4" ignoreCase="true"/>
+            <AttributesCondition id="sv2#page18#alt6#page22#mciu20#su34#acond30" name="titlecondition" predicate="contains" booleanOperator="or" implied="true" attributes="ent2#att5" ignoreCase="true"/>
+          </Selector>
+          <Link id="sv2#page18#alt6#page22#mciu20#ln94" name="Add to collection" to="sv2#page18#alt6#page22#alt8#page24#mciu21" type="normal" validate="true">
+            <LinkParameter id="sv2#page18#alt6#page22#mciu20#ln94#par126" name="Checked oid_publication_PASSING" source="ent2#att2Checked" passing="true"/>
+          </Link>
+        </MultiChoiceIndexUnit>
+      </ContentUnits>
+      <Alternative id="sv2#page18#alt6#page22#alt8" name="Collection Alternative" defaultPage="sv2#page18#alt6#page22#alt8#page23" gr:x="445" gr:y="0">
+        <Page id="sv2#page18#alt6#page22#alt8#page23" name="Default" gr:x="25" gr:y="0">
+          <ContentUnits/>
+        </Page>
+        <Page id="sv2#page18#alt6#page22#alt8#page24" name="Select collection" gr:x="0" gr:y="135">
+          <ContentUnits>
+            <MultiChoiceIndexUnit gr:x="0" gr:y="0" id="sv2#page18#alt6#page22#alt8#page24#mciu21" name="Select collection" entity="ent3" displayAttributes="ent3#att20" linkOrder="sv2#page18#alt6#page22#alt8#page24#mciu21#ln116">
+              <Selector id="sv2#page18#alt6#page22#alt8#page24#mciu21#su35" defaultPolicy="fill" booleanOperator="and">
+                <RelationshipRoleCondition id="sv2#page18#alt6#page22#alt8#page24#mciu21#su35#rcond14" name="owns" predicate="in" implied="false" role="rel5#role10"/>
+              </Selector>
+              <Link id="sv2#page18#alt6#page22#alt8#page24#mciu21#ln116" name="Add" to="sv2#cnu2" type="normal" validate="true">
+                <LinkParameter id="sv2#page18#alt6#page22#alt8#page24#mciu21#ln116#par162" name="Checked oid_collection_KeyCondition18 [oid_collection] [Collections] [Source]" source="ent3#att3Checked" target="sv2#cnu2#su51#kcond18.ent3#att3"/>
+                <LinkParameter id="sv2#page18#alt6#page22#alt8#page24#mciu21#ln116#par163" name="Checked oid_publication_PASSING_KeyCondition19 [oid_publication] [Publications] [Target]" sourceLinkParameter="sv2#page18#alt6#page22#mciu20#ln94#par126" target="sv2#cnu2#su52#kcond19.ent2#att2"/>
+              </Link>
+            </MultiChoiceIndexUnit>
+          </ContentUnits>
+        </Page>
+      </Alternative>
+    </Page>
+    <Page id="sv2#page18#alt6#page25" name="Default" gr:x="0" gr:y="45">
+      <ContentUnits/>
+    </Page>
+  </Alternative>
+  <Link id="sv2#page18#ln74" name="Logout" to="sv2#miu2" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

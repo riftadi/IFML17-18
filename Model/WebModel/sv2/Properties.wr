@@ -1,6 +1,57 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Researcher" protected="true" homePage="sv2#page4" landmarks="sv2#miu2">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Researcher" protected="true" homePage="sv2#page4" landmarks="sv2#page6 sv2#miu2 sv2#page18" layout:gridLayout="WRDefault/Empty">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="745" gr:y="355" id="sv2#miu2" action="true" moduleId="mov1#opm2" landmark="true"/>
-    <CreateUnit gr:x="310" gr:y="445" id="sv2#cru2" name="Add Publication" entity="ent2"/>
+    <ModuleInstanceUnit gr:x="1310" gr:y="150" id="sv2#miu2" action="true" moduleId="mov1#opm2" landmark="true"/>
+    <CreateUnit gr:x="560" gr:y="345" id="sv2#cru2" name="Add Publication" entity="ent2"/>
+    <CreateUnit gr:x="1480" gr:y="680" id="sv2#cru8" name="Add collection" entity="ent3"/>
+    <ModifyUnit gr:x="2140" gr:y="1005" id="sv2#mfu3" name="Edit collection details" entity="ent3">
+      <Selector id="sv2#mfu3#su41" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu3#su41#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+    <ModifyUnit gr:x="1740" gr:y="980" id="sv2#mfu4" name="Add keyword" entity="ent3">
+      <Selector id="sv2#mfu4#su42" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu4#su42#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+    <CreateUnit id="sv2#cru10" entity="ent4" gr:x="1940" gr:y="1000" name="New keyword">
+      <OKLink id="sv2#cru10#oln17" name="OKFlow17" to="sv2#mfu4" gr:bendpoints="-90,17,105,12">
+        <LinkParameter id="sv2#cru10#oln17#par150" name="Checked oid_collection_PASSING_KeyCondition10 [oid_collection]" sourceLinkParameter="sv2#page6#enu13#ln107#par139" target="sv2#mfu4#su42#kcond10.ent3#att3"/>
+        <LinkParameter id="sv2#cru10#oln17#par151" name="oid_keyword_Keywords.oid_keyword(CollectionsToKeywords)" source="ent4#att9Array" target="sv2#mfu4.rel8#role15.ent4#att9"/>
+      </OKLink>
+    </CreateUnit>
+    <DisconnectUnit gr:x="2350" gr:y="985" id="sv2#dcnu1" name="Remove from collection" relationship="rel6#role11">
+      <SourceSelector id="sv2#dcnu1#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dcnu1#su47#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#dcnu1#su48" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dcnu1#su48#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
+      </TargetSelector>
+    </DisconnectUnit>
+    <ConnectUnit gr:x="1150" gr:y="940" id="sv2#cnu1" name="Add to collection" relationship="rel6#role11">
+      <SourceSelector id="sv2#cnu1#su49" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu1#su49#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#cnu1#su50" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu1#su50#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv2#cnu1#oln18" name="OKFlow18" to="sv2#page18#alt6#page19#alt7#page20" automaticCoupling="true"/>
+    </ConnectUnit>
+    <ConnectUnit gr:x="1145" gr:y="1345" id="sv2#cnu2" name="Add to collection" relationship="rel6#role11">
+      <SourceSelector id="sv2#cnu2#su51" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu2#su51#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#cnu2#su52" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu2#su52#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv2#cnu2#oln19" name="OKFlow19" to="sv2#page18#alt6#page22#alt8#page23" automaticCoupling="true"/>
+    </ConnectUnit>
+    <ConnectUnit gr:x="2580" gr:y="980" id="sv2#cnu3" name="Share collection" relationship="rel4#role8">
+      <SourceSelector id="sv2#cnu3#su53" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu3#su53#kcond20" name="KeyCondition20" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#cnu3#su54" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu3#su54#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
+      </TargetSelector>
+    </ConnectUnit>
   </OperationUnits>
 </SiteView>
