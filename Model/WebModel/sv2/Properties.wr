@@ -1,7 +1,7 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Researcher" protected="true" homePage="sv2#page4" landmarks="sv2#page6 sv2#miu2 sv2#page18" layout:gridLayout="WRDefault/Empty">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="1310" gr:y="150" id="sv2#miu2" action="true" moduleId="mov1#opm2" landmark="true"/>
-    <CreateUnit gr:x="560" gr:y="345" id="sv2#cru2" name="Add Publication" entity="ent2"/>
+    <CreateUnit gr:x="560" gr:y="310" id="sv2#cru2" name="Add Publication" entity="ent2"/>
     <CreateUnit gr:x="1480" gr:y="680" id="sv2#cru8" name="Add collection" entity="ent3"/>
     <ModifyUnit gr:x="2140" gr:y="1005" id="sv2#mfu3" name="Edit collection details" entity="ent3">
       <Selector id="sv2#mfu3#su41" defaultPolicy="fill" booleanOperator="and">
@@ -53,5 +53,7 @@
         <KeyCondition id="sv2#cnu3#su54#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
       </TargetSelector>
     </ConnectUnit>
+    <CreateUnit gr:x="365" gr:y="300" id="sv2#cru5" name="Add Notification" entity="ent1"/>
+    <CreateUnit gr:x="80" gr:y="305" id="sv2#cru6" name="Create Comments" entity="ent5" bulk="true"/>
   </OperationUnits>
 </SiteView>
