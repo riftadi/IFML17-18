@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-120" gr:y="-80" id="sv2#page4" name="Home (Researcher)" linkOrder="sv2#page4#ln4" ajaxEnabled="true" layout:attributeLayout="Reports/Default">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-120" gr:y="-80" id="sv2#page4" name="Home (Researcher)" linkOrder="sv2#page4#ln4" ajaxEnabled="false" layout:attributeLayout="Reports/Default">
   <ContentUnits>
     <IndexUnit gr:x="165" gr:y="15" id="sv2#page4#inu1" name="Owned Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1 rel12#role23.User#att28 countDistinct(rel10#role20.ent5#att26)" distinct="true">
       <Selector id="sv2#page4#inu1#su3" defaultPolicy="fill" booleanOperator="and">
