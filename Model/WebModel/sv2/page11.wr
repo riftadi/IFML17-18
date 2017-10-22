@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2445" gr:y="215" id="sv2#page11" name="Edit Comment">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#page11#enu6" name="Edit Comment" entity="ent5" linkOrder="sv2#page11#enu6#ln38">
+      <Field id="sv2#page11#enu6#fld18" name="Title" type="string" modifiable="true" preloaded="true" attribute="ent5#att25"/>
+      <Field id="sv2#page11#enu6#fld23" name="Content" type="text" modifiable="true" contentType="text/html" preloaded="true" attribute="ent5#att26"/>
+      <Link id="sv2#page11#enu6#ln38" name="Save" to="sv2#mfu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page11#enu6#ln38#par86" name="Content_Content" source="sv2#page11#enu6#fld23" target="sv2#mfu1.ent5#att26"/>
+        <LinkParameter id="sv2#page11#enu6#ln38#par87" name="oid_comment_KeyCondition7 [oid_comment]" source="sv2#page11#enu6#fld27" target="sv2#mfu1#su18#kcond7.ent5#att24"/>
+        <LinkParameter id="sv2#page11#enu6#ln38#par88" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv2#page11#tmu6#ln37#par85" target="sv2#mfu1.ent5#att27"/>
+        <LinkParameter id="sv2#page11#enu6#ln38#par89" name="Title_Title" source="sv2#page11#enu6#fld18" target="sv2#mfu1.ent5#att25"/>
+      </Link>
+      <Field id="sv2#page11#enu6#fld27" name="oid_comment" type="integer" modifiable="false" hidden="true" preloaded="true" attribute="ent5#att24"/>
+    </EntryUnit>
+    <TimeUnit gr:x="145" gr:y="25" id="sv2#page11#tmu6" name="GetCurrentTime">
+      <Link id="sv2#page11#tmu6#ln37" name="Flow37" to="sv2#page11#enu6" type="transport" validate="true">
+        <LinkParameter id="sv2#page11#tmu6#ln37#par85" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page11#enu6">
+          <layout:Link link="sv2#page11#enu6#ln38"/>
+          <layout:Field field="sv2#page11#enu6#fld18"/>
+          <layout:Field field="sv2#page11#enu6#fld23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

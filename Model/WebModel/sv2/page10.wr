@@ -1,0 +1,72 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1900" gr:y="140" id="sv2#page10" name="Comments" landmark="true" linkOrder="sv2#page10#ln45">
+  <ContentUnits>
+    <IndexUnit gr:x="180" gr:y="0" id="sv2#page10#inu14" name="My Comments" entity="ent5" displayAttributes="ent5#att25 ent5#att26 ent5#att27 ent5#att19" linkOrder="sv2#page10#inu14#ln34 sv2#page10#inu14#ln36">
+      <Selector id="sv2#page10#inu14#su16" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page10#inu14#su16#rcond10" name="RoleCondition10" predicate="in" implied="false" role="rel15#role30"/>
+      </Selector>
+      <Link id="sv2#page10#inu14#ln34" name="Delete" to="sv2#dlu4" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#page10#inu14#ln36" name="Edit" to="sv2#page11#enu6" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+    <GetUnit gr:x="0" gr:y="95" id="sv2#page10#gtu6" name="GetCurrentUser" contextParameters="UserCtxParam">
+      <Link id="sv2#page10#gtu6#ln33" name="Flow33" to="sv2#page10#inu14" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#page10#gtu6#ln48" name="Flow48" to="sv2#page10#inu17" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <IndexUnit gr:x="175" gr:y="175" id="sv2#page10#inu17" name="Comments on Your Publications" entity="ent5" displayAttributes="ent5#att25 ent5#att26 ent5#att27 ent5#att17 ent5#att19" linkOrder="sv2#page10#inu17#ln49 sv2#page10#inu17#ln50">
+      <Selector id="sv2#page10#inu17#su22" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page10#inu17#su22#rcond15" name="RoleCondition15" predicate="in" implied="false" role="rel14#role28.rel10#role20"/>
+      </Selector>
+      <Link id="sv2#page10#inu17#ln49" name="Delete" to="sv2#dlu4" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#page10#inu17#ln50" name="Edit" to="sv2#page11#enu6" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page10#inu14">
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att26"/>
+          <layout:Attribute attribute="ent5#att27"/>
+          <layout:Attribute attribute="ent5#att19"/>
+          <layout:Link link="sv2#page10#inu14#ln34"/>
+          <layout:Link link="sv2#page10#inu14#ln36"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page10#inu17">
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att26"/>
+          <layout:Attribute attribute="ent5#att27"/>
+          <layout:Attribute attribute="ent5#att17"/>
+          <layout:Attribute attribute="ent5#att19"/>
+          <layout:Link link="sv2#page10#inu17#ln49"/>
+          <layout:Link link="sv2#page10#inu17#ln50"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page10#ln45" name="Logout" to="sv2#miu2" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

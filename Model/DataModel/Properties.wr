@@ -1,5 +1,5 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="85" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att28 User#att29 User#att30 User#att31" db:database="db2" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="85" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att28 User#att29 User#att30 User#att31 User#att32" db:database="db2" db:table="user">
     <Attribute name="oid_user" id="userOID" type="integer" key="true" db:column="oid_user"/>
     <Attribute name="userName" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
@@ -8,6 +8,7 @@
     <Attribute id="User#att29" name="Affiliation" type="string" db:column="affiliation"/>
     <Attribute id="User#att30" name="Timestamp" type="timestamp" db:column="timestamp"/>
     <Attribute id="User#att31" name="Reputation" type="float" db:column="reputation"/>
+    <Attribute id="User#att32" name="isExternal" type="boolean" db:column="isexternal"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="315" gr:y="100" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
@@ -50,7 +51,8 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="ifml" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ifml1718" username="postgres" schema="public" cryptedPassword="true" password="cG9zdGdyZXM="/>
+  <db:Database id="db2" name="db" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ifml1718" username="riftadi" schema="public">
+  </db:Database>
   <Entity gr:x="210" gr:y="330" id="ent2" name="Publications" duration="persistent" attributeOrder="ent2#att2 ent2#att5 ent2#att6 ent2#att7 ent2#att11 ent2#att16 ent2#att1 ent2#att4 ent2#att12" db:database="db2" db:table="publications">
     <Attribute id="ent2#att2" key="true" name="oid_publication" type="integer" db:column="oid_publication"/>
     <Attribute id="ent2#att5" name="Title" type="string" db:column="title"/>
@@ -138,11 +140,11 @@
       <db:JoinColumn attribute="ent4#att9" name="keywords_oid_keyword"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="800" gr:y="270" id="ent1" name="Notifications" duration="persistent" attributeOrder="ent1#att8 ent1#att13 ent1#att14 ent1#att32" db:database="db2" db:table="notifications">
+  <Entity gr:x="800" gr:y="270" id="ent1" name="Notifications" duration="persistent" attributeOrder="ent1#att8 ent1#att13 ent1#att14 ent1#att15" db:database="db2" db:table="notifications">
     <Attribute id="ent1#att8" key="true" name="notification_oid" type="integer" db:column="notification_oid"/>
     <Attribute id="ent1#att13" name="Timestamp" type="timestamp" db:column="timestamp"/>
     <Attribute id="ent1#att14" name="isProcessed" type="boolean" db:column="isprocessed"/>
-    <Attribute id="ent1#att32" name="ContentTitle" type="text"/>
+    <Attribute id="ent1#att15" name="Content" type="text" contentType="text/plain" db:column="content"/>
   </Entity>
   <Relationship id="rel1" name="Notifications_User" sourceEntity="ent1" targetEntity="User" gr:bendpoints="-137,-104,648,31" db:database="db2" db:table="notifications">
     <RelationshipRole1 id="rel1#role1" name="NotificationsToUser" maxCard="1">
@@ -152,7 +154,7 @@
       <db:JoinColumn attribute="userOID" name="user_oid_user"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel2" name="Notifications_Publications" sourceEntity="ent1" targetEntity="ent2" gr:bendpoints="-164,50,426,-70" db:database="db2" db:table="notifications">
+  <Relationship id="rel2" name="Notifications_Publications" sourceEntity="ent1" targetEntity="ent2" gr:bendpoints="-111,71,479,-39" db:database="db2" db:table="notifications">
     <RelationshipRole1 id="rel2#role3" name="NotificationsToPublications" maxCard="1">
       <db:JoinColumn attribute="ent1#att8" name="notification_oid"/>
     </RelationshipRole1>

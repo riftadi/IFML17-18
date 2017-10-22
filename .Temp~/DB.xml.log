@@ -1,152 +1,153 @@
-[22 Oct 2017 00:00:50] Building database metadata model
-[22 Oct 2017 00:00:50] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@23d256fa, includeTables=true, username=riftadi, outputLogPath=/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/DB.xml.log, readIndexes=null, driverClass=org.postgresql.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.PostgreSQLMetaDataProvider, outputPath=/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/.metadata/.plugins/com.webratio.commons.db/derby, url=jdbc:postgresql://localhost:5432/ifml1718, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=49226}
-[22 Oct 2017 00:00:50] URL: jdbc:postgresql://localhost:5432/ifml1718
-[22 Oct 2017 00:00:50] Product name: PostgreSQL
-[22 Oct 2017 00:00:50] Product version: 9.6.5
-[22 Oct 2017 00:00:50] Driver name: PostgreSQL JDBC Driver
-[22 Oct 2017 00:00:50] Driver version: 42.1.4.jre6
-[22 Oct 2017 00:00:50] Driver major version: 42
-[22 Oct 2017 00:00:50] Driver minor version: 1
-[22 Oct 2017 00:00:50] Identifier quote string: 1
-[22 Oct 2017 00:00:50] Retrieving schemas
-[22 Oct 2017 00:00:50]   Found schema: information_schema
-[22 Oct 2017 00:00:50]   Found schema: pg_catalog
-[22 Oct 2017 00:00:50]   Found schema: public
-[22 Oct 2017 00:00:50] Retrieving sequences
-[22 Oct 2017 00:00:50] Retrieving [TABLE, VIEW, SYNONYM] for schema 'information_schema'
-[22 Oct 2017 00:00:50] Retrieving [TABLE, VIEW, SYNONYM] for schema 'pg_catalog'
-[22 Oct 2017 00:00:50] Retrieving [TABLE, VIEW, SYNONYM] for schema 'public'
-[22 Oct 2017 00:00:50]   Found 'public.collections' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.collections_keywords' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.collections_publications' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.collections_user' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.comments' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.group' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.group_module' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.keywords' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.list_of_authors' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.module' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.notifications' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.publications' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.publications_keywords' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.user' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.user_group' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found 'public.user_keywords' [type = TABLE]
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.collections' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: oid_collection [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: title [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: description [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
-[22 Oct 2017 00:00:50]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.collections' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: oid_collection
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.collections_keywords' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: collections_oid_collection [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: keywords_oid_keyword [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.collections_keywords' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: collections_oid_collection
-[22 Oct 2017 00:00:50]   Found primary key column: keywords_oid_keyword
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.collections_publications' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: collections_oid_collection [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: publications_oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.collections_publications' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: collections_oid_collection
-[22 Oct 2017 00:00:50]   Found primary key column: publications_oid_publication
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.collections_user' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: collections_oid_collection [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.collections_user' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: collections_oid_collection
-[22 Oct 2017 00:00:50]   Found primary key column: user_oid_user
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.comments' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: oid_comment [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: title [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: content [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
-[22 Oct 2017 00:00:50]   Found column: oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.comments' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: oid_comment
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.group' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: groupname [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: module_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.group' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: oid
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.group_module' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: group_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: module_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.group_module' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: group_oid
-[22 Oct 2017 00:00:50]   Found primary key column: module_oid
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.keywords' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: oid_keyword [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: name [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.keywords' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: oid_keyword
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.list_of_authors' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: publications_oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.list_of_authors' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: publications_oid_publication
-[22 Oct 2017 00:00:50]   Found primary key column: user_oid_user
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.module' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: moduleid [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: modulename [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.module' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: oid
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.notifications' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: notification_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
-[22 Oct 2017 00:00:50]   Found column: isprocessed [type = bool][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: publications_oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: content [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.notifications' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: notification_oid
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.publications' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: title [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: venue [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: year [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: pdf_file [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
-[22 Oct 2017 00:00:50]   Found column: abstract [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: isclaimed [type = bool][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.publications' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: oid_publication
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.publications_keywords' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: publications_oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: keywords_oid_keyword [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.publications_keywords' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: publications_oid_publication
-[22 Oct 2017 00:00:50]   Found primary key column: keywords_oid_keyword
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.user' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: username [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: password [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: email [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: name [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: affiliation [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
-[22 Oct 2017 00:00:50]   Found column: reputation [type = float8][SQL/XOPEN type = 8][size = 17][dec. digits = 17]
-[22 Oct 2017 00:00:50]   Found column: group_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.user' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: oid_user
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.user_group' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: user_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: group_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.user_group' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: user_oid
-[22 Oct 2017 00:00:50]   Found primary key column: group_oid
-[22 Oct 2017 00:00:50] Retrieving columns for 'public.user_keywords' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50]   Found column: keywords_oid_keyword [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[22 Oct 2017 00:00:50] Retrieving primary keys for 'public.user_keywords' [type = TABLE]
-[22 Oct 2017 00:00:50]   Found primary key column: user_oid_user
-[22 Oct 2017 00:00:50]   Found primary key column: keywords_oid_keyword
-[22 Oct 2017 00:00:50] Database metadata retrieved (286 ms)
-[22 Oct 2017 00:00:50] Database connection closed
+[22 Oct 2017 20:26:44] Building database metadata model
+[22 Oct 2017 20:26:44] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@23d256fa, includeTables=true, username=riftadi, outputLogPath=/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/DB.xml.log, readIndexes=null, driverClass=org.postgresql.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.PostgreSQLMetaDataProvider, outputPath=/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/.metadata/.plugins/com.webratio.commons.db/derby, url=jdbc:postgresql://localhost:5432/ifml1718, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=53023}
+[22 Oct 2017 20:26:44] URL: jdbc:postgresql://localhost:5432/ifml1718
+[22 Oct 2017 20:26:44] Product name: PostgreSQL
+[22 Oct 2017 20:26:44] Product version: 9.6.5
+[22 Oct 2017 20:26:44] Driver name: PostgreSQL JDBC Driver
+[22 Oct 2017 20:26:44] Driver version: 42.1.4.jre6
+[22 Oct 2017 20:26:44] Driver major version: 42
+[22 Oct 2017 20:26:44] Driver minor version: 1
+[22 Oct 2017 20:26:44] Identifier quote string: 1
+[22 Oct 2017 20:26:44] Retrieving schemas
+[22 Oct 2017 20:26:44]   Found schema: information_schema
+[22 Oct 2017 20:26:44]   Found schema: pg_catalog
+[22 Oct 2017 20:26:44]   Found schema: public
+[22 Oct 2017 20:26:44] Retrieving sequences
+[22 Oct 2017 20:26:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'information_schema'
+[22 Oct 2017 20:26:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'pg_catalog'
+[22 Oct 2017 20:26:44] Retrieving [TABLE, VIEW, SYNONYM] for schema 'public'
+[22 Oct 2017 20:26:44]   Found 'public.collections' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.collections_keywords' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.collections_publications' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.collections_user' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.comments' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.group' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.group_module' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.keywords' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.list_of_authors' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.module' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.notifications' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.publications' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.publications_keywords' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.user' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.user_group' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found 'public.user_keywords' [type = TABLE]
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.collections' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: oid_collection [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: title [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: description [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
+[22 Oct 2017 20:26:44]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.collections' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: oid_collection
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.collections_keywords' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: collections_oid_collection [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: keywords_oid_keyword [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.collections_keywords' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: collections_oid_collection
+[22 Oct 2017 20:26:44]   Found primary key column: keywords_oid_keyword
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.collections_publications' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: collections_oid_collection [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: publications_oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.collections_publications' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: collections_oid_collection
+[22 Oct 2017 20:26:44]   Found primary key column: publications_oid_publication
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.collections_user' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: collections_oid_collection [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.collections_user' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: collections_oid_collection
+[22 Oct 2017 20:26:44]   Found primary key column: user_oid_user
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.comments' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: oid_comment [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: title [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: content [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
+[22 Oct 2017 20:26:44]   Found column: oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.comments' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: oid_comment
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.group' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: groupname [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: module_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.group' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: oid
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.group_module' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: group_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: module_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.group_module' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: group_oid
+[22 Oct 2017 20:26:44]   Found primary key column: module_oid
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.keywords' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: oid_keyword [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: name [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.keywords' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: oid_keyword
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.list_of_authors' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: publications_oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.list_of_authors' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: publications_oid_publication
+[22 Oct 2017 20:26:44]   Found primary key column: user_oid_user
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.module' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: moduleid [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: modulename [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.module' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: oid
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.notifications' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: notification_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
+[22 Oct 2017 20:26:44]   Found column: isprocessed [type = bool][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: publications_oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: content [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.notifications' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: notification_oid
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.publications' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: title [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: venue [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: year [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: pdf_file [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
+[22 Oct 2017 20:26:44]   Found column: abstract [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: isclaimed [type = bool][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.publications' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: oid_publication
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.publications_keywords' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: publications_oid_publication [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: keywords_oid_keyword [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.publications_keywords' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: publications_oid_publication
+[22 Oct 2017 20:26:44]   Found primary key column: keywords_oid_keyword
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.user' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: username [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: password [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: email [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: name [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: affiliation [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: timestamp [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
+[22 Oct 2017 20:26:44]   Found column: reputation [type = float8][SQL/XOPEN type = 8][size = 17][dec. digits = 17]
+[22 Oct 2017 20:26:44]   Found column: group_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: isexternal [type = bool][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.user' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: oid_user
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.user_group' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: user_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: group_oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.user_group' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: user_oid
+[22 Oct 2017 20:26:44]   Found primary key column: group_oid
+[22 Oct 2017 20:26:44] Retrieving columns for 'public.user_keywords' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44]   Found column: keywords_oid_keyword [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[22 Oct 2017 20:26:44] Retrieving primary keys for 'public.user_keywords' [type = TABLE]
+[22 Oct 2017 20:26:44]   Found primary key column: user_oid_user
+[22 Oct 2017 20:26:44]   Found primary key column: keywords_oid_keyword
+[22 Oct 2017 20:26:44] Database metadata retrieved (364 ms)
+[22 Oct 2017 20:26:44] Database connection closed

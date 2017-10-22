@@ -13,10 +13,9 @@
       </Selector>
       <OKLink id="sv3#dlu2#oln5" name="OKFlow5" to="sv3#cru3">
         <LinkParameter id="sv3#dlu2#oln5#par45" name="False_isProcessed" sourceValue="false" target="sv3#cru3.ent1#att14"/>
-        <LinkParameter id="sv3#dlu2#oln5#par46" name="oid_publication_PASSING_Publications.oid_publication(NotificationsToPublications)" sourceLinkParameter="sv3#page5#inu3#ln14#par44" target="sv3#cru3.rel2#role3.ent2#att2"/>
-        <LinkParameter id="sv3#dlu2#oln5#par47" name="Owner Name_PASSING_User.oid_user(NotificationsToUser)" sourceLinkParameter="sv3#page5#inu3#ln14#par56" target="sv3#cru3.rel1#role1.userOID"/>
-        <LinkParameter id="sv3#dlu2#oln5#par53" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv3#page5#inu3#ln14#par52" target="sv3#cru3.ent1#att13"/>
         <LinkParameter id="sv3#dlu2#oln5#par54" name="Your publication is deleted by administrator. Please contact administrator for more info._Content" sourceValue="Your publication is deleted by administrator. Please contact administrator for more info." target="sv3#cru3.ent1#att15"/>
+        <LinkParameter id="sv3#dlu2#oln5#par128" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv3#page5#inu19#ln64#par120" target="sv3#cru3.ent1#att13"/>
+        <LinkParameter id="sv3#dlu2#oln5#par129" name="PublicationOwner.oid_user_PASSING_User.oid_user(NotificationsToUser)" sourceLinkParameter="sv3#page5#inu19#ln64#par115" target="sv3#cru3.rel1#role1.userOID"/>
       </OKLink>
     </DeleteUnit>
     <DeleteUnit gr:x="620" gr:y="390" id="sv3#dlu3" name="Delete Comment" entity="ent5">
@@ -26,18 +25,18 @@
       <OKLink id="sv3#dlu3#oln6" name="OKFlow6" to="sv3#cru3">
         <LinkParameter id="sv3#dlu3#oln6#par58" name="Your comment is deleted by administrator. Please contact administrator for more info._Content" sourceValue="Your comment is deleted by administrator. Please contact administrator for more info." target="sv3#cru3.ent1#att15"/>
         <LinkParameter id="sv3#dlu3#oln6#par59" name="False_isProcessed" sourceValue="false" target="sv3#cru3.ent1#att14"/>
-        <LinkParameter id="sv3#dlu3#oln6#par61" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv3#page5#inu4#ln15#par51" target="sv3#cru3.ent1#att13"/>
         <LinkParameter id="sv3#dlu3#oln6#par62" name="CommentsToUser.oid_user_PASSING_User.oid_user(NotificationsToUser)" sourceLinkParameter="sv3#page5#inu4#ln15#par60" target="sv3#cru3.rel1#role1.userOID"/>
         <LinkParameter id="sv3#dlu3#oln6#par64" name="CommentsToPublications.oid_publication_PASSING_Publications.oid_publication(NotificationsToPublications)" sourceLinkParameter="sv3#page5#inu4#ln15#par63" target="sv3#cru3.rel2#role3.ent2#att2"/>
+        <LinkParameter id="sv3#dlu3#oln6#par122" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv3#page5#inu4#ln15#par121" target="sv3#cru3.ent1#att13"/>
       </OKLink>
     </DeleteUnit>
     <CreateUnit gr:x="880" gr:y="300" id="sv3#cru3" name="Add Notification" entity="ent1"/>
-    <TimeUnit gr:x="125" gr:y="270" id="sv3#tmu3" name="Get Time">
-      <Link id="sv3#tmu3#ln17" name="Flow17" to="sv3#page5#inu3" type="transport" validate="true">
-        <LinkParameter id="sv3#tmu3#ln17#par48" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
+    <TimeUnit gr:x="125" gr:y="270" id="sv3#tmu3" name="Get Time" linkOrder="sv3#tmu3#ln65 sv3#tmu3#ln66">
+      <Link id="sv3#tmu3#ln65" name="Flow65" to="sv3#page5#inu19" type="transport" validate="true">
+        <LinkParameter id="sv3#tmu3#ln65#par119" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
       </Link>
-      <Link id="sv3#tmu3#ln18" name="Flow18" to="sv3#page5#inu4" type="transport" validate="true">
-        <LinkParameter id="sv3#tmu3#ln18#par49" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
+      <Link id="sv3#tmu3#ln66" name="Flow66" to="sv3#page5#inu4" type="transport" validate="true">
+        <LinkParameter id="sv3#tmu3#ln66#par118" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
       </Link>
     </TimeUnit>
   </OperationUnits>

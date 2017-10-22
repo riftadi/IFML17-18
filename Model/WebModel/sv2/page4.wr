@@ -1,109 +1,17 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-120" gr:y="-80" id="sv2#page4" name="Home (Researcher)" linkOrder="sv2#page4#ln4" ajaxEnabled="false" layout:attributeLayout="Reports/Default">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-60" gr:y="5" id="sv2#page4" name="Home (Researcher)" linkOrder="sv2#page4#ln4" ajaxEnabled="true">
   <ContentUnits>
-    <IndexUnit gr:x="165" gr:y="15" id="sv2#page4#inu1" name="Owned Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1 rel12#role23.User#att28 countDistinct(rel10#role20.ent5#att26)" distinct="true">
-      <Selector id="sv2#page4#inu1#su3" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv2#page4#inu1#su3#rcond2" name="RoleCondition2" predicate="in" implied="false" role="rel14#role28"/>
+    <IndexUnit gr:x="0" gr:y="0" id="sv2#page4#inu18" name="Your Notifications" entity="ent1" displayAttributes="ent1#att15">
+      <Selector id="sv2#page4#inu18#su25" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page4#inu18#su25#rcond16" name="RoleCondition16" predicate="in" implied="false" role="rel1#role2"/>
       </Selector>
-      <Link id="sv2#page4#inu1#ln29" name="Flow29" to="sv2#page4#mciu2" type="transport" validate="true">
-        <LinkParameter id="sv2#page4#inu1#ln29#par94" name="PublicationAuthor.Name_PASSING" source="data[].rel12#role23$User#att28" passing="true"/>
-      </Link>
-      <Link id="sv2#page4#inu1#ln34" name="Comment" to="sv2#page4#mdu2" type="transport" validate="true">
-        <LinkParameter id="sv2#page4#inu1#ln34#par106" name="Owner Name_PASSING" source="data[].ent2#att1" passing="true"/>
-      </Link>
     </IndexUnit>
-    <GetUnit gr:x="465" gr:y="0" id="sv2#page4#gtu1" name="GetCurrentUser" contextParameters="UserCtxParam">
-      <Link id="sv2#page4#gtu1#ln5" name="Flow5" to="sv2#page4#inu1" automaticCoupling="true" type="transport" validate="true"/>
-      <Link id="sv2#page4#gtu1#ln7" name="Flow7" to="sv2#page4#enu3" type="transport" validate="true">
-        <LinkParameter id="sv2#page4#gtu1#ln7#par15" name="UserCtxParam.oid_user_PASSING" source="sv2#page4#gtu1.UserCtxParam" passing="true"/>
-      </Link>
-      <Link id="sv2#page4#gtu1#ln2" name="Flow2" to="sv2#page4#mciu2" type="transport" validate="true">
-        <LinkParameter id="sv2#page4#gtu1#ln2#par5" name="UserCtxParam.oid_user_Max Results" source="sv2#page4#gtu1.UserCtxParam" target="sv2#page4#mciu2.maxResults"/>
-        <LinkParameter id="sv2#page4#gtu1#ln2#par14" name="UserCtxParam.oid_user_PASSING" source="sv2#page4#gtu1.UserCtxParam" passing="true"/>
-      </Link>
-      <Link id="sv2#page4#gtu1#ln38" name="Flow38" to="sv2#page4#mdu2" automaticCoupling="true" type="transport" validate="true"/>
-      <Link id="sv2#page4#gtu1#ln16" name="Flow16" to="sv2#page4#enu4" type="transport" validate="true">
-        <LinkParameter id="sv2#page4#gtu1#ln16#par9" name="UserCtxParam.oid_user_PASSING" source="sv2#page4#gtu1.UserCtxParam" passing="true"/>
-      </Link>
+    <GetUnit gr:x="185" gr:y="125" id="sv2#page4#gtu7" name="GetCurrentUser" contextParameters="UserCtxParam">
+      <Link id="sv2#page4#gtu7#ln60" name="Flow60" to="sv2#page4#inu18" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <EntryUnit gr:x="225" gr:y="150" id="sv2#page4#enu3" name="Add Publication" linkOrder="sv2#page4#enu3#ln8" fieldOrder="sv2#page4#enu3#fld8 sv2#page4#enu3#fld9 sv2#page4#enu3#fld10 sv2#page4#enu3#fld11 sv2#page4#enu3#sfld1 sv2#page4#enu3#msfld1">
-      <Field id="sv2#page4#enu3#fld8" name="Title" type="string" modifiable="true"/>
-      <Field id="sv2#page4#enu3#fld9" name="Venue" type="string" modifiable="true"/>
-      <Field id="sv2#page4#enu3#fld10" name="Year" type="string" modifiable="true"/>
-      <Field id="sv2#page4#enu3#fld11" name="PDF File" type="blob" modifiable="true" contentType="application/pdf"/>
-      <Link id="sv2#page4#enu3#ln8" name="Add" to="sv2#cru2" type="normal" validate="true">
-        <LinkParameter id="sv2#page4#enu3#ln8#par16" name="PDF File_PDF_file" source="sv2#page4#enu3#fld11" target="sv2#cru2.ent2#att11"/>
-        <LinkParameter id="sv2#page4#enu3#ln8#par17" name="Title_Title" source="sv2#page4#enu3#fld8" target="sv2#cru2.ent2#att5"/>
-        <LinkParameter id="sv2#page4#enu3#ln8#par18" name="Venue_Venue" source="sv2#page4#enu3#fld9" target="sv2#cru2.ent2#att6"/>
-        <LinkParameter id="sv2#page4#enu3#ln8#par19" name="Year_Year" source="sv2#page4#enu3#fld10" target="sv2#cru2.ent2#att7"/>
-        <LinkParameter id="sv2#page4#enu3#ln8#par21" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv2#page4#tmu2#ln9#par20" target="sv2#cru2.ent2#att16"/>
-        <LinkParameter id="sv2#page4#enu3#ln8#par23" name="Authors_User.oid_user(PublicationAuthor)" source="sv2#page4#enu3#msfld1" target="sv2#cru2.rel12#role23.userOID"/>
-        <LinkParameter id="sv2#page4#enu3#ln8#par28" name="First Author_User.oid_user(PublicationOwner)" source="sv2#page4#enu3#sfld1" target="sv2#cru2.rel14#role27.userOID"/>
-      </Link>
-      <MultiSelectionField id="sv2#page4#enu3#msfld1" name="Authors" type="string" ajaxEventEnabled="false"/>
-      <SelectionField id="sv2#page4#enu3#sfld1" name="First Author (Owner)" type="string"/>
-    </EntryUnit>
-    <TimeUnit gr:x="355" gr:y="310" id="sv2#page4#tmu2" name="Time">
-      <Link id="sv2#page4#tmu2#ln9" name="Flow9" to="sv2#page4#enu3" type="transport" validate="true">
-        <LinkParameter id="sv2#page4#tmu2#ln9#par20" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
-      </Link>
-      <Link id="sv2#page4#tmu2#ln13" name="Flow13" to="sv2#page4#enu4" type="transport" validate="true">
-        <LinkParameter id="sv2#page4#tmu2#ln13#par8" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
-      </Link>
-    </TimeUnit>
-    <SelectorUnit gr:x="730" gr:y="190" id="sv2#page4#seu1" name="Authors Selector" entity="User" distinctAttributes="email User#att28">
-      <Link id="sv2#page4#seu1#ln10" name="Flow10" to="sv2#page4#enu3" type="transport" validate="true">
-        <LinkParameter id="sv2#page4#seu1#ln10#par22" name="Name_Authors [label]" source="User#att28Array" target="sv2#page4#enu3#msfld1_label"/>
-        <LinkParameter id="sv2#page4#seu1#ln10#par25" name="Name_First Author [label]" source="User#att28Array" target="sv2#page4#enu3#sfld1_label"/>
-        <LinkParameter id="sv2#page4#seu1#ln10#par26" name="oid_user_First Author [output]" source="userOIDArray" target="sv2#page4#enu3#sfld1_output"/>
-        <LinkParameter id="sv2#page4#seu1#ln10#par27" name="oid_user_Other Authors [output]" source="userOIDArray" target="sv2#page4#enu3#msfld1_output"/>
-      </Link>
-    </SelectorUnit>
-    <MultiChoiceIndexUnit gr:x="665" gr:y="65" id="sv2#page4#mciu2" name="Notifications" entity="ent1" displayAttributes="ent1#att13 ent1#att32">
-      <Selector id="sv2#page4#mciu2#su6" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv2#page4#mciu2#su6#kcond5" name="FirstAuthor" predicate="in" implied="false"/>
-        <AttributesCondition id="sv2#page4#mciu2#su6#acond4" name="AttCondition4" predicate="eq" booleanOperator="or" implied="false" attributes="count(rel2#role3.rel12#role23.userOID) rel1#role1.userOID"/>
-      </Selector>
-      <VRules>
-        <CheckedUnitItemsValidationRule id="sv2#page4#mciu2#ckd1" name="Checked Items1" predicate="min" itemCount="1"/>
-      </VRules>
-      <SortAttribute attribute="ent1#att13" order="descending"/>
-    </MultiChoiceIndexUnit>
-    <EntryUnit gr:x="0" gr:y="155" id="sv2#page4#enu4" name="Add Comment" entity="ent5" customDescriptor="false" linkOrder="sv2#page4#enu4#ln23" fieldOrder="sv2#page4#enu4#fld14 sv2#page4#enu4#fld13 sv2#page4#enu4#sfld2">
-      <Link id="sv2#page4#enu4#ln23" name="Add" to="sv2#cru6" type="normal" validate="true" newWindow="false">
-        <LinkParameter id="sv2#page4#enu4#ln23#par111" name="Content_Content" source="sv2#page4#enu4#fld13" target="sv2#cru6.ent5#att26"/>
-        <LinkParameter id="sv2#page4#enu4#ln23#par113" name="Title_Title" source="sv2#page4#enu4#fld14" target="sv2#cru6.ent5#att25"/>
-        <LinkParameter id="sv2#page4#enu4#ln23#par115" name="Comments Object_PASSING" source="entityBean" passing="true"/>
-        <LinkParameter id="sv2#page4#enu4#ln23#par118" name="Content_PASSING" source="sv2#page4#enu4#fld13" passing="true"/>
-        <LinkParameter id="sv2#page4#enu4#ln23#par119" name="Key [oid_comment]_PASSING" source="key.ent5#att24" passing="true"/>
-        <LinkParameter id="sv2#page4#enu4#ln23#par120" name="Title_PASSING" source="sv2#page4#enu4#fld14" passing="true"/>
-        <LinkParameter id="sv2#page4#enu4#ln23#par10" name="Publication_Publications.oid_publication(CommentsToPublications)" source="sv2#page4#enu4#sfld2" target="sv2#cru6.rel10#role19.ent2#att2"/>
-        <LinkParameter id="sv2#page4#enu4#ln23#par13" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv2#page4#tmu2#ln13#par8" target="sv2#cru6.ent5#att27"/>
-        <LinkParameter id="sv2#page4#enu4#ln23#par24" name="UserCtxParam.oid_user_PASSING_User.oid_user(CommentsToUser)" sourceLinkParameter="sv2#page4#gtu1#ln16#par9" target="sv2#cru6.rel15#role29.userOID"/>
-      </Link>
-      <Field id="sv2#page4#enu4#fld13" name="Content" type="text" modifiable="true" contentType="text/plain" attribute="ent5#att26"/>
-      <Field id="sv2#page4#enu4#fld14" name="Title" type="string" modifiable="true" attribute="ent5#att25"/>
-      <SelectionField id="sv2#page4#enu4#sfld2" name="Publication" type="string"/>
-    </EntryUnit>
-    <MultiDataUnit gr:x="60" gr:y="340" id="sv2#page4#mdu2" name="View Comments" entity="ent5" displayAttributes="ent5#att26 ent5#att27 ent5#att25" distinct="true"/>
-    <SelectorUnit gr:x="0" gr:y="35" id="sv2#page4#seu2" name="Publication Selector" entity="ent2">
-      <Link id="sv2#page4#seu2#ln12" name="Flow12" to="sv2#page4#enu4" type="transport" validate="true">
-        <LinkParameter id="sv2#page4#seu2#ln12#par6" name="Title_Publication [label]" source="ent2#att5Array" target="sv2#page4#enu4#sfld2_label"/>
-        <LinkParameter id="sv2#page4#seu2#ln12#par7" name="oid_publication_Publication [output]" source="ent2#att2Array" target="sv2#page4#enu4#sfld2_output"/>
-      </Link>
-    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page4#inu1">
-          <layout:Attribute attribute="ent2#att5"/>
-          <layout:Attribute attribute="ent2#att6"/>
-          <layout:Attribute attribute="ent2#att7"/>
-          <layout:Attribute attribute="ent2#att1"/>
-          <layout:Attribute attribute="rel12#role23.User#att28"/>
-          <layout:Attribute attribute="countDistinct(rel10#role20.ent5#att26)"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -117,17 +25,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page4#enu3">
-          <layout:Field field="sv2#page4#enu3#fld8"/>
-          <layout:Field field="sv2#page4#enu3#fld9"/>
-          <layout:Field field="sv2#page4#enu3#fld10"/>
-          <layout:Field field="sv2#page4#enu3#fld11"/>
-          <layout:Field field="sv2#page4#enu3#sfld1"/>
-          <layout:Field field="sv2#page4#enu3#msfld1"/>
-          <layout:Link link="sv2#page4#enu3#ln8"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -372,9 +270,8 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page4#mciu2">
-          <layout:Attribute attribute="ent1#att13"/>
-          <layout:Attribute attribute="ent1#att32"/>
+        <layout:Unit unitId="sv2#page4#inu18">
+          <layout:Attribute attribute="ent1#att15"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -391,47 +288,6 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page4#enu4">
-          <layout:Link link="sv2#page4#enu4#ln23"/>
-          <layout:Field field="sv2#page4#enu4#fld14"/>
-          <layout:Field field="sv2#page4#enu4#fld13"/>
-          <layout:Field field="sv2#page4#enu4#sfld2"/>
-        </layout:Unit>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page4#mdu2">
-          <layout:Attribute attribute="ent5#att26"/>
-          <layout:Attribute attribute="ent5#att27"/>
-          <layout:Attribute attribute="ent5#att25"/>
-        </layout:Unit>
-      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

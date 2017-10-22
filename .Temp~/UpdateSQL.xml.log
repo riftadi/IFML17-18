@@ -1,26 +1,26 @@
-[15 Oct 2017 10:27:50] DEBUG Executing SQL script
-[15 Oct 2017 10:27:50] INFO ================================================================================
-[15 Oct 2017 10:27:50] INFO outputPath= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.xml'
-[15 Oct 2017 10:27:50] INFO onError= 'stop'
-[15 Oct 2017 10:27:50] INFO statementSeparator= ';'
-[15 Oct 2017 10:27:50] INFO derby.system.home= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/.metadata/.plugins/com.webratio.commons.db/derby'
-[15 Oct 2017 10:27:50] INFO password= ''
-[15 Oct 2017 10:27:50] INFO url= 'jdbc:postgresql://localhost:5432/ifml1718'
-[15 Oct 2017 10:27:50] INFO username= 'riftadi'
-[15 Oct 2017 10:27:50] INFO autoCommit= 'false'
-[15 Oct 2017 10:27:50] INFO outputLogPath= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.xml.log'
-[15 Oct 2017 10:27:50] INFO driverClass= 'org.postgresql.Driver'
-[15 Oct 2017 10:27:50] INFO encoding= ''
-[15 Oct 2017 10:27:50] INFO eventSocketPort= '58824'
-[15 Oct 2017 10:27:50] INFO sqlScript= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.sql'
-[15 Oct 2017 10:27:50] INFO ================================================================================
-[15 Oct 2017 10:27:50] INFO Connecting to the Database...
-[15 Oct 2017 10:27:50] INFO Database connection estabilished
-[15 Oct 2017 10:27:50] INFO transaction isolation: 2
-[15 Oct 2017 10:27:50] DEBUG ================================================================================
-[15 Oct 2017 10:27:50] DEBUG Executing SQL script file: /Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.sql
-[15 Oct 2017 10:27:50] DEBUG Executing statement:  alter table "public"."notifications"  add column  "content"  text
-[15 Oct 2017 10:27:50] DEBUG ================================================================================
-[15 Oct 2017 10:27:50] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[15 Oct 2017 10:27:50] INFO Database connection closed
-[15 Oct 2017 10:27:50] DEBUG Total time: 262 milliseconds
+[22 Oct 2017 20:26:42] DEBUG Executing SQL script
+[22 Oct 2017 20:26:42] INFO ================================================================================
+[22 Oct 2017 20:26:42] INFO outputPath= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.xml'
+[22 Oct 2017 20:26:42] INFO onError= 'stop'
+[22 Oct 2017 20:26:42] INFO statementSeparator= ';'
+[22 Oct 2017 20:26:42] INFO derby.system.home= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/.metadata/.plugins/com.webratio.commons.db/derby'
+[22 Oct 2017 20:26:42] INFO password= ''
+[22 Oct 2017 20:26:42] INFO url= 'jdbc:postgresql://localhost:5432/ifml1718'
+[22 Oct 2017 20:26:42] INFO username= 'riftadi'
+[22 Oct 2017 20:26:42] INFO autoCommit= 'false'
+[22 Oct 2017 20:26:42] INFO outputLogPath= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.xml.log'
+[22 Oct 2017 20:26:42] INFO driverClass= 'org.postgresql.Driver'
+[22 Oct 2017 20:26:42] INFO encoding= ''
+[22 Oct 2017 20:26:42] INFO eventSocketPort= '53011'
+[22 Oct 2017 20:26:42] INFO sqlScript= '/Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.sql'
+[22 Oct 2017 20:26:42] INFO ================================================================================
+[22 Oct 2017 20:26:42] INFO Connecting to the Database...
+[22 Oct 2017 20:26:42] INFO Database connection estabilished
+[22 Oct 2017 20:26:42] INFO transaction isolation: 2
+[22 Oct 2017 20:26:42] DEBUG ================================================================================
+[22 Oct 2017 20:26:42] DEBUG Executing SQL script file: /Users/riftadi/Documents/TUD Workdir/Web ScEng/WebRatio/IFML17-18/.Temp~/UpdateSQL.sql
+[22 Oct 2017 20:26:42] DEBUG Executing statement:  alter table "public"."user"  add column  "isexternal"  bool
+[22 Oct 2017 20:26:42] DEBUG ================================================================================
+[22 Oct 2017 20:26:42] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[22 Oct 2017 20:26:42] INFO Database connection closed
+[22 Oct 2017 20:26:42] DEBUG Total time: 329 milliseconds

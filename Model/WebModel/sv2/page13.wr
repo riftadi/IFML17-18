@@ -1,0 +1,85 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2785" gr:y="150" id="sv2#page13" name="Collection Details" linkOrder="sv2#page13#ln76">
+  <ContentUnits>
+    <DataUnit gr:x="50" gr:y="0" id="sv2#page13#dau4" name="Collection Details" entity="ent3" displayAttributes="ent3#att20 ent3#att21 ent3#att23">
+      <Selector id="sv2#page13#dau4#su36" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page13#dau4#su36#kcond25" name="KeyCondition25" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page13#dau4#ln73" name="Flow73" to="sv2#page13#pwu1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#page13#dau4#ln75" name="Flow75" to="sv2#page13#inu21" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <PowerIndexUnit gr:x="0" gr:y="210" id="sv2#page13#pwu1" name="Publications in This Collection" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att11 ent2#att1 ent2#att4">
+      <Selector id="sv2#page13#pwu1#su39" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page13#pwu1#su39#rcond23" name="RoleCondition23" predicate="in" implied="false" role="rel6#role11"/>
+      </Selector>
+    </PowerIndexUnit>
+    <IndexUnit gr:x="190" gr:y="105" id="sv2#page13#inu21" name="Keywords in This Collection" entity="ent4" displayAttributes="ent4#att10">
+      <Selector id="sv2#page13#inu21#su43" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page13#inu21#su43#rcond24" name="RoleCondition24" predicate="in" implied="false" role="rel8#role15"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page13#dau4">
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att21"/>
+          <layout:Attribute attribute="ent3#att23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page13#pwu1">
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att11"/>
+          <layout:Attribute attribute="ent2#att1"/>
+          <layout:Attribute attribute="ent2#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page13#inu21">
+          <layout:Attribute attribute="ent4#att10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page13#ln76" name="Back to Collections" to="sv2#page6" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

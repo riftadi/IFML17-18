@@ -23,6 +23,7 @@
         <LinkParameter id="sv1#page1#enu2#ln11#par36" name="0_Reputation" sourceValue="0" target="sv1#cru1.User#att31"/>
         <LinkParameter id="sv1#page1#enu2#ln11#par37" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv1#page1#tmu1#ln1#par4" target="sv1#cru1.User#att30"/>
         <LinkParameter id="sv1#page1#enu2#ln11#par38" name="Username_userName" source="sv1#page1#enu2#fld6" target="sv1#cru1.userName"/>
+        <LinkParameter id="sv1#page1#enu2#ln11#par136" name="false_isExternal" sourceValue="false" target="sv1#cru1.User#att32"/>
       </Link>
     </EntryUnit>
     <TimeUnit gr:x="120" gr:y="165" id="sv1#page1#tmu1" name="Time">

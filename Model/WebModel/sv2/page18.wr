@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-100" gr:y="500" id="sv2#page18" name="Search" landmark="true" linkOrder="sv2#page18#ln74" ajaxEnabled="true" layout:frameLayout="WebRatio/Basic">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-70" gr:y="530" id="sv2#page18" name="Search" landmark="true" linkOrder="sv2#page18#ln74" ajaxEnabled="true" layout:frameLayout="WebRatio/Basic">
   <ContentUnits>
-    <EntryUnit id="sv2#page18#enu9" name="Search in keywords, text" gr:x="0" gr:y="0" linkOrder="sv2#page18#enu9#ln91">
+    <EntryUnit id="sv2#page18#enu9" name="Search in keywords, text" gr:x="140" gr:y="0" linkOrder="sv2#page18#enu9#ln91">
       <Field id="sv2#page18#enu9#fld21" name="Text" type="string" modifiable="true"/>
       <Link id="sv2#page18#enu9#ln91" name="Search" to="sv2#page18#alt6#page22#mciu20" type="normal" validate="true">
         <LinkParameter id="sv2#page18#enu9#ln91#par123" name="Text_abstractcondition" source="sv2#page18#enu9#fld21" target="sv2#page18#alt6#page22#mciu20#su34#acond29"/>
@@ -8,13 +8,13 @@
         <LinkParameter id="sv2#page18#enu9#ln91#par125" name="Text_titlecondition" source="sv2#page18#enu9#fld21" target="sv2#page18#alt6#page22#mciu20#su34#acond30"/>
       </Link>
     </EntryUnit>
-    <EntryUnit id="sv2#page18#enu10" name="Search by author" gr:x="270" gr:y="0" linkOrder="sv2#page18#enu10#ln85">
+    <EntryUnit id="sv2#page18#enu10" name="Search by author" gr:x="410" gr:y="0" linkOrder="sv2#page18#enu10#ln85">
       <Field id="sv2#page18#enu10#fld22" name="Author" type="string" modifiable="true"/>
       <Link id="sv2#page18#enu10#ln85" name="Search" to="sv2#page18#alt6#page19#mciu18" type="normal" validate="true">
         <LinkParameter id="sv2#page18#enu10#ln85#par114" name="author_authorcondition" source="sv2#page18#enu10#fld22" target="sv2#page18#alt6#page19#mciu18#su31#acond22"/>
       </Link>
     </EntryUnit>
-    <GetUnit gr:x="910" gr:y="635" id="sv2#page18#gtu4" name="getcurruser" contextParameters="UserCtxParam">
+    <GetUnit gr:x="1050" gr:y="635" id="sv2#page18#gtu4" name="getcurruser" contextParameters="UserCtxParam">
       <Link id="sv2#page18#gtu4#ln88" name="Flow88" to="sv2#page18#alt6#page19#alt7#page21#mciu19" type="transport" validate="true">
         <LinkParameter id="sv2#page18#gtu4#ln88#par116" name="UserCtxParam.oid_user_Owns collection [oid_user]" source="sv2#page18#gtu4.UserCtxParam" target="sv2#page18#alt6#page19#alt7#page21#mciu19#su32#rcond13.userOID"/>
       </Link>
@@ -223,7 +223,7 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Alternative id="sv2#page18#alt6" name="Search alternative" defaultPage="sv2#page18#alt6#page25" gr:x="5" gr:y="75">
+  <Alternative id="sv2#page18#alt6" name="Search alternative" defaultPage="sv2#page18#alt6#page25" gr:x="0" gr:y="80">
     <Page id="sv2#page18#alt6#page19" name="Search by author" gr:x="315" gr:y="0">
       <ContentUnits>
         <MultiChoiceIndexUnit gr:x="0" gr:y="125" id="sv2#page18#alt6#page19#mciu18" name="Author search results" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1" linkOrder="sv2#page18#alt6#page19#mciu18#ln89">

@@ -1,7 +1,6 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Researcher" protected="true" homePage="sv2#page4" landmarks="sv2#page6 sv2#miu2 sv2#page18" layout:gridLayout="WRDefault/Empty">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Researcher" protected="true" homePage="sv2#page4" landmarks="sv2#page6 sv2#miu2 sv2#page18 sv2#page7 sv2#page10" layout:gridLayout="WRDefault/Empty">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="1310" gr:y="150" id="sv2#miu2" action="true" moduleId="mov1#opm2" landmark="true"/>
-    <CreateUnit gr:x="560" gr:y="310" id="sv2#cru2" name="Add Publication" entity="ent2"/>
+    <ModuleInstanceUnit gr:x="1190" gr:y="540" id="sv2#miu2" action="true" moduleId="mov1#opm2" landmark="true"/>
     <CreateUnit gr:x="1480" gr:y="680" id="sv2#cru8" name="Add collection" entity="ent3"/>
     <ModifyUnit gr:x="2140" gr:y="1005" id="sv2#mfu3" name="Edit collection details" entity="ent3">
       <Selector id="sv2#mfu3#su41" defaultPolicy="fill" booleanOperator="and">
@@ -53,7 +52,115 @@
         <KeyCondition id="sv2#cnu3#su54#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
       </TargetSelector>
     </ConnectUnit>
-    <CreateUnit gr:x="365" gr:y="300" id="sv2#cru5" name="Add Notification" entity="ent1"/>
-    <CreateUnit gr:x="80" gr:y="305" id="sv2#cru6" name="Create Comments" entity="ent5" bulk="true"/>
+    <CreateUnit gr:x="1315" gr:y="400" id="sv2#cru4" name="AddComment" entity="ent5">
+      <OKLink id="sv2#cru4#oln8" name="OKFlow8" to="sv2#page8#dau2">
+        <LinkParameter id="sv2#cru4#oln8#par84" name="oid_publication_PASSING_KeyCondition5 [oid_publication]" sourceLinkParameter="sv2#page8#enu5#ln30#par83" target="sv2#page8#dau2#su11#kcond5.ent2#att2"/>
+      </OKLink>
+    </CreateUnit>
+    <DeleteUnit gr:x="2385" gr:y="100" id="sv2#dlu4" name="Delete Comment" entity="ent5">
+      <Selector id="sv2#dlu4#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dlu4#su17#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#dlu4#oln9" name="OKFlow9" to="sv2#page10" automaticCoupling="true"/>
+    </DeleteUnit>
+    <ModifyUnit gr:x="2470" gr:y="370" id="sv2#mfu1" name="Update Comment" entity="ent5">
+      <Selector id="sv2#mfu1#su18" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu1#su18#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#mfu1#oln10" name="OKFlow10" to="sv2#page10" automaticCoupling="true"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="500" gr:y="350" id="sv2#cru5" name="Add Publication" entity="ent2">
+      <OKLink id="sv2#cru5#oln58" name="OKFlow58" to="sv2#lpu3">
+        <LinkParameter id="sv2#cru5#oln58#par216" name="Authors_PASSING" sourceLinkParameter="sv2#page7#enu7#ln54#par215" passing="true"/>
+        <LinkParameter id="sv2#cru5#oln58#par226" name="Current/Input Timestamp_PASSING" sourceLinkParameter="sv2#page7#enu7#ln54#par223" passing="true"/>
+        <LinkParameter id="sv2#cru5#oln58#par227" name="Key [oid_publication]_PASSING" sourceLinkParameter="sv2#page7#enu7#ln54#par224" passing="true"/>
+        <LinkParameter id="sv2#cru5#oln58#par228" name="UserCtxParam.oid_user_PASSING" sourceLinkParameter="sv2#page7#enu7#ln54#par225" passing="true"/>
+        <LinkParameter id="sv2#cru5#oln58#par242" name="Authors_PASSING_Input Array" sourceLinkParameter="sv2#page7#enu7#ln54#par215" target="sv2#lpu3.array"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit gr:x="490" gr:y="10" id="sv2#cru6" name="Add Ext Author" entity="User">
+      <OKLink id="sv2#cru6#oln13" name="OKFlow13" to="sv2#page7" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="490" gr:y="150" id="sv2#cru7" name="Add Keyword" entity="ent4">
+      <OKLink id="sv2#cru7#oln14" name="OKFlow14" to="sv2#page7" automaticCoupling="true"/>
+    </CreateUnit>
+    <DeleteUnit gr:x="1245" gr:y="220" id="sv2#dlu7" name="Delete Publication" entity="ent2">
+      <Selector id="sv2#dlu7#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dlu7#su24#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#dlu7#oln15" name="OKFlow15" to="sv2#page7" automaticCoupling="true"/>
+    </DeleteUnit>
+    <DisconnectUnit gr:x="3080" gr:y="825" id="sv2#dcnu2" name="Delete Publication from Collection" relationship="rel6#role12">
+      <SourceSelector id="sv2#dcnu2#su45" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dcnu2#su45#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#dcnu2#su46" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dcnu2#su46#kcond27" name="KeyCondition27" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv2#dcnu2#oln20" name="OKFlow20" to="sv2#page12" automaticCoupling="true"/>
+    </DisconnectUnit>
+    <ConnectUnit gr:x="2810" gr:y="810" id="sv2#cnu5" name="Add Publications to Collection" relationship="rel6#role12">
+      <SourceSelector id="sv2#cnu5#su61" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu5#su61#kcond34" name="KeyCondition34" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv2#cnu5#su62" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#cnu5#su62#kcond35" name="KeyCondition35" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv2#cnu5#oln41" name="OKFlow41" to="sv2#miu5">
+        <LinkParameter id="sv2#cnu5#oln41#par200" name="Source oid_publication [Publications]_Publications oid Array" target="sv2#miu5.mov2#opm3#icu3#icp3" source="sourceent2#att2"/>
+      </OKLink>
+    </ConnectUnit>
+    <ModuleInstanceUnit gr:x="2805" gr:y="955" id="sv2#miu5" action="true" moduleId="mov2#opm3">
+      <OKLink id="sv2#miu5#oln49" name="OKFlow49" to="sv2#page6" automaticCoupling="true"/>
+      <KOLink id="sv2#miu5#kln11" name="KOFlow11" to="sv2#page14#mssu2">
+        <LinkParameter id="sv2#miu5#kln11#par202" name="Message_Shown Messages" source="mov2#opm3#kocu3#ocp2" target="sv2#page14#mssu2.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <LoopUnit gr:x="355" gr:y="300" id="sv2#lpu3" name="Author Loop">
+      <OKLink id="sv2#lpu3#oln59" name="OKFlow59" to="sv2#seu9" code="next">
+        <LinkParameter id="sv2#lpu3#oln59#par217" name="Next Element_KeyCondition39 [oid_user]" source="next" target="sv2#seu9#su68#kcond39.userOID"/>
+        <LinkParameter id="sv2#lpu3#oln59#par229" name="Authors_PASSING" sourceLinkParameter="sv2#cru5#oln58#par216" passing="true"/>
+        <LinkParameter id="sv2#lpu3#oln59#par230" name="Current/Input Timestamp_PASSING" sourceLinkParameter="sv2#cru5#oln58#par226" passing="true"/>
+        <LinkParameter id="sv2#lpu3#oln59#par231" name="Key [oid_publication]_PASSING" sourceLinkParameter="sv2#cru5#oln58#par227" passing="true"/>
+        <LinkParameter id="sv2#lpu3#oln59#par232" name="UserCtxParam.oid_user_PASSING" sourceLinkParameter="sv2#cru5#oln58#par228" passing="true"/>
+      </OKLink>
+      <OKLink id="sv2#lpu3#oln63" name="OKFlow63" to="sv2#page7" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+    <SwitchUnit gr:x="165" gr:y="455" id="sv2#switch3" name="isExternal">
+      <Case value="true"/>
+      <Case value="false"/>
+      <OKLink id="sv2#switch3#oln61" name="OKFlow61" to="sv2#mlu1" code="true">
+        <LinkParameter id="sv2#switch3#oln61#par222" name="email_PASSING_Mail - To" sourceLinkParameter="sv2#seu9#oln60#par219" target="sv2#mlu1.to"/>
+      </OKLink>
+      <OKLink id="sv2#switch3#oln64" name="OKFlow64" to="sv2#cru9" code="false">
+        <LinkParameter id="sv2#switch3#oln64#par236" name="You have a new publication authorization request._Content" sourceValue="You have a new publication authorization request." target="sv2#cru9.ent1#att15"/>
+        <LinkParameter id="sv2#switch3#oln64#par237" name="false_isProcessed" sourceValue="false" target="sv2#cru9.ent1#att14"/>
+        <LinkParameter id="sv2#switch3#oln64#par238" name="_Publications.oid_publication(NotificationsToPublications)" target="sv2#cru9.rel2#role3.ent2#att2" sourceLinkParameter="sv2#seu9#oln60#par241"/>
+        <LinkParameter id="sv2#switch3#oln64#par239" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv2#seu9#oln60#par234" target="sv2#cru9.ent1#att13"/>
+        <LinkParameter id="sv2#switch3#oln64#par240" name="oid_user_PASSING_User.oid_user(NotificationsToUser)" sourceLinkParameter="sv2#seu9#oln60#par221" target="sv2#cru9.rel1#role1.userOID"/>
+      </OKLink>
+    </SwitchUnit>
+    <SelectorUnit gr:x="145" gr:y="315" id="sv2#seu9" name="Author Selector" entity="User">
+      <Selector id="sv2#seu9#su68" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#seu9#su68#kcond39" name="KeyCondition39" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#seu9#oln60" name="OKFlow60" to="sv2#switch3">
+        <LinkParameter id="sv2#seu9#oln60#par218" name="isExternal_Switch" source="User#att32Array" target="sv2#switch3.switch"/>
+        <LinkParameter id="sv2#seu9#oln60#par219" name="email_PASSING" source="emailArray" passing="true"/>
+        <LinkParameter id="sv2#seu9#oln60#par220" name="Name_PASSING" source="User#att28Array" passing="true"/>
+        <LinkParameter id="sv2#seu9#oln60#par221" name="oid_user_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="sv2#seu9#oln60#par233" name="Authors_PASSING" sourceLinkParameter="sv2#lpu3#oln59#par229" passing="true"/>
+        <LinkParameter id="sv2#seu9#oln60#par234" name="Current/Input Timestamp_PASSING" sourceLinkParameter="sv2#lpu3#oln59#par230" passing="true"/>
+        <LinkParameter id="sv2#seu9#oln60#par235" name="UserCtxParam.oid_user_PASSING" sourceLinkParameter="sv2#lpu3#oln59#par232" passing="true"/>
+        <LinkParameter id="sv2#seu9#oln60#par241" name="Key [oid_publication]_PASSING" sourceLinkParameter="sv2#lpu3#oln59#par231" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <MailUnit gr:x="545" gr:y="460" id="sv2#mlu1" name="Mail1" format="plainText">
+      <OKLink id="sv2#mlu1#oln62" name="OKFlow62" to="sv2#lpu3" automaticCoupling="true"/>
+      <KOLink id="sv2#mlu1#kln13" name="KOFlow13" to="sv2#lpu3" automaticCoupling="true" gr:bendpoints="-98,-51,87,79"/>
+    </MailUnit>
+    <CreateUnit gr:x="315" gr:y="385" id="sv2#cru9" name="Add Notification" entity="ent1">
+      <OKLink id="sv2#cru9#oln65" name="OKFlow65" to="sv2#lpu3" automaticCoupling="true"/>
+    </CreateUnit>
   </OperationUnits>
 </SiteView>

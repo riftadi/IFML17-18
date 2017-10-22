@@ -1,0 +1,122 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1470" gr:y="60" id="sv2#page8" name="Publication Details" linkOrder="sv2#page8#ln44">
+  <ContentUnits>
+    <DataUnit gr:x="25" gr:y="0" id="sv2#page8#dau2" name="Publication Details" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att11 ent2#att16 ent2#att1 ent2#att4">
+      <Selector id="sv2#page8#dau2#su11" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page8#dau2#su11#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page8#dau2#ln29" name="Flow29" to="sv2#page8#enu5" type="transport" validate="true">
+        <LinkParameter id="sv2#page8#dau2#ln29#par69" name="oid_publication_PASSING" source="data.ent2#att2" passing="true"/>
+      </Link>
+      <Link id="sv2#page8#dau2#ln32" name="Flow32" to="sv2#page8#mdu2" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <EntryUnit gr:x="0" gr:y="140" id="sv2#page8#enu5" name="Add Comment" entity="ent5" linkOrder="sv2#page8#enu5#ln30">
+      <Field id="sv2#page8#enu5#fld16" name="Title" type="string" modifiable="true"/>
+      <Field id="sv2#page8#enu5#fld17" name="Content" type="text" modifiable="true" contentType="text/html"/>
+      <Link id="sv2#page8#enu5#ln30" name="Add Comment" to="sv2#cru4" type="normal" validate="true">
+        <LinkParameter id="sv2#page8#enu5#ln30#par72" name="Content_Content" source="sv2#page8#enu5#fld17" target="sv2#cru4.ent5#att26"/>
+        <LinkParameter id="sv2#page8#enu5#ln30#par73" name="oid_publication_PASSING_Publications.oid_publication(CommentsToPublications)" sourceLinkParameter="sv2#page8#dau2#ln29#par69" target="sv2#cru4.rel10#role19.ent2#att2"/>
+        <LinkParameter id="sv2#page8#enu5#ln30#par80" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv2#page8#tmu5#ln31#par71" target="sv2#cru4.ent5#att27"/>
+        <LinkParameter id="sv2#page8#enu5#ln30#par81" name="Title_Title" source="sv2#page8#enu5#fld16" target="sv2#cru4.ent5#att25"/>
+        <LinkParameter id="sv2#page8#enu5#ln30#par82" name="UserCtxParam.oid_user_PASSING_User.oid_user(CommentsToUser)" sourceLinkParameter="sv2#page8#gtu5#ln28#par70" target="sv2#cru4.rel15#role29.userOID"/>
+        <LinkParameter id="sv2#page8#enu5#ln30#par83" name="oid_publication_PASSING" sourceLinkParameter="sv2#page8#dau2#ln29#par69" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit gr:x="140" gr:y="215" id="sv2#page8#gtu5" name="GetCurrentUser" contextParameters="UserCtxParam">
+      <Link id="sv2#page8#gtu5#ln28" name="Flow28" to="sv2#page8#enu5" type="transport" validate="true">
+        <LinkParameter id="sv2#page8#gtu5#ln28#par70" name="UserCtxParam.oid_user_PASSING" source="sv2#page8#gtu5.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <TimeUnit gr:x="65" gr:y="300" id="sv2#page8#tmu5" name="GetCurrentTime">
+      <Link id="sv2#page8#tmu5#ln31" name="Flow31" to="sv2#page8#enu5" type="transport" validate="true">
+        <LinkParameter id="sv2#page8#tmu5#ln31#par71" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
+      </Link>
+    </TimeUnit>
+    <MultiDataUnit gr:x="220" gr:y="115" id="sv2#page8#mdu2" name="Comments" entity="ent5" displayAttributes="ent5#att25 ent5#att26 ent5#att27 ent5#att17">
+      <Selector id="sv2#page8#mdu2#su15" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page8#mdu2#su15#rcond9" name="RoleCondition9" predicate="in" implied="false" role="rel10#role20"/>
+      </Selector>
+    </MultiDataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page8#dau2">
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att11"/>
+          <layout:Attribute attribute="ent2#att16"/>
+          <layout:Attribute attribute="ent2#att1"/>
+          <layout:Attribute attribute="ent2#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page8#enu5">
+          <layout:Field field="sv2#page8#enu5#fld16"/>
+          <layout:Field field="sv2#page8#enu5#fld17"/>
+          <layout:Link link="sv2#page8#enu5#ln30"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page8#mdu2">
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att26"/>
+          <layout:Attribute attribute="ent5#att27"/>
+          <layout:Attribute attribute="ent5#att17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page8#ln44" name="Logout" to="sv2#miu2" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

@@ -1,0 +1,96 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2740" gr:y="535" id="sv2#page12" name="Manage Publications in Collection">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv2#page12#dau3" name="Collection Details" entity="ent3" displayAttributes="ent3#att20 ent3#att21">
+      <Selector id="sv2#page12#dau3#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page12#dau3#su26#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page12#dau3#ln69" name="Flow69" to="sv2#page12#mciu1" type="transport" validate="true">
+        <LinkParameter id="sv2#page12#dau3#ln69#par138" name="oid_collection_PASSING" source="data.ent3#att3" passing="true"/>
+      </Link>
+      <Link id="sv2#page12#dau3#ln71" name="Flow71" to="sv2#page12#inu20" type="transport" validate="true">
+        <LinkParameter id="sv2#page12#dau3#ln71#par142" name="oid_collection_RoleCondition20 [oid_collection]" source="data.ent3#att3" target="sv2#page12#inu20#su33#rcond20.ent3#att3"/>
+        <LinkParameter id="sv2#page12#dau3#ln71#par143" name="oid_collection_PASSING" source="data.ent3#att3" passing="true"/>
+      </Link>
+    </DataUnit>
+    <MultiChoiceIndexUnit gr:x="25" gr:y="120" id="sv2#page12#mciu1" name="Add Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att1" linkOrder="sv2#page12#mciu1#ln87">
+      <Selector id="sv2#page12#mciu1#su30" defaultPolicy="fill" booleanOperator="and"/>
+      <Link id="sv2#page12#mciu1#ln87" name="Flow87" to="sv2#cnu5" type="normal" validate="true">
+        <LinkParameter id="sv2#page12#mciu1#ln87#par190" name="Checked oid_publication_KeyCondition34 [oid_publication] [Publications] [Source]" source="ent2#att2Checked" target="sv2#cnu5#su61#kcond34.ent2#att2"/>
+        <LinkParameter id="sv2#page12#mciu1#ln87#par191" name="oid_collection_PASSING_KeyCondition35 [oid_collection] [Collections] [Target]" sourceLinkParameter="sv2#page12#dau3#ln69#par138" target="sv2#cnu5#su62#kcond35.ent3#att3"/>
+        <LinkParameter id="sv2#page12#mciu1#ln87#par206" name="Checked oid_publication_PASSING" source="ent2#att2Checked" passing="true"/>
+      </Link>
+    </MultiChoiceIndexUnit>
+    <IndexUnit gr:x="190" gr:y="15" id="sv2#page12#inu20" name="Publications in This Collection" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1" linkOrder="sv2#page12#inu20#ln78">
+      <Selector id="sv2#page12#inu20#su33" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page12#inu20#su33#rcond20" name="RoleCondition20" predicate="in" implied="false" role="rel6#role11"/>
+      </Selector>
+      <Link id="sv2#page12#inu20#ln78" name="Remove from Collection" to="sv2#dcnu2" type="normal" validate="true">
+        <LinkParameter id="sv2#page12#inu20#ln78#par144" name="oid_publication_KeyCondition26 [oid_publication] [Publications] [Source]" source="data[].ent2#att2" target="sv2#dcnu2#su45#kcond26.ent2#att2"/>
+        <LinkParameter id="sv2#page12#inu20#ln78#par145" name="oid_collection_PASSING_KeyCondition27 [oid_collection] [Collections] [Target]" sourceLinkParameter="sv2#page12#dau3#ln71#par143" target="sv2#dcnu2#su46#kcond27.ent3#att3"/>
+      </Link>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#dau3">
+          <layout:Attribute attribute="ent3#att20"/>
+          <layout:Attribute attribute="ent3#att21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#mciu1">
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att1"/>
+          <layout:Link link="sv2#page12#mciu1#ln87"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#inu20">
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att1"/>
+          <layout:Link link="sv2#page12#inu20#ln78"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

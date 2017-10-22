@@ -1,0 +1,54 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="145" gr:y="120" id="mov2#opm3" name="Increment Reputations">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#opm3#icu3" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov2#opm3#icu3#icp3" name="Publications oid Array"/>
+      <Link id="mov2#opm3#icu3#ln79" name="Flow79" to="mov2#opm3#lpu1" type="transport" validate="true">
+        <LinkParameter id="mov2#opm3#icu3#ln79#par146" name="Publications oid Array_Input Array" source="mov2#opm3#icu3#icp3" target="mov2#opm3#lpu1.array"/>
+      </Link>
+    </InputCollectorUnit>
+    <LoopUnit gr:x="395" gr:y="70" id="mov2#opm3#lpu1" name="Loop Publications">
+      <OKLink id="mov2#opm3#lpu1#oln52" name="OKFlow52" to="mov2#opm3#okcu2" automaticCoupling="true" code="end"/>
+      <OKLink id="mov2#opm3#lpu1#oln55" name="OKFlow55" to="mov2#opm3#seu8" code="next">
+        <LinkParameter id="mov2#opm3#lpu1#oln55#par208" name="Next Element_RoleCondition27 [oid_publication]" source="next" target="mov2#opm3#seu8#su67#rcond27.ent2#att2"/>
+      </OKLink>
+    </LoopUnit>
+    <MathUnit gr:x="800" gr:y="235" id="mov2#opm3#mathu1" name="ReputationIncrementer" resultType="float">
+      <MathVariable id="mov2#opm3#mathu1#mathv2" name="OldReputation"/>
+      <OKLink id="mov2#opm3#mathu1#oln26" name="OKFlow26" to="mov2#opm3#mfu5">
+        <LinkParameter id="mov2#opm3#mathu1#oln26#par171" name="Result_Reputation" source="result" target="mov2#opm3#mfu5.User#att31"/>
+        <LinkParameter id="mov2#opm3#mathu1#oln26#par214" name="Next Element_PASSING_KeyCondition31 [oid_user]" sourceLinkParameter="mov2#opm3#lpu2#oln57#par213" target="mov2#opm3#mfu5#su58#kcond31.userOID"/>
+      </OKLink>
+      <KOLink id="mov2#opm3#mathu1#kln7" name="KOFlow7" to="mov2#opm3#lpu2" automaticCoupling="true" gr:bendpoints="-118,15,92,15"/>
+    </MathUnit>
+    <LoopUnit gr:x="615" gr:y="235" id="mov2#opm3#lpu2" name="Loop Authors">
+      <OKLink id="mov2#opm3#lpu2#oln51" name="OKFlow51" to="mov2#opm3#lpu1" automaticCoupling="true" code="end"/>
+      <SecondaryArray id="mov2#opm3#lpu2#lsa1" name="RepArray"/>
+      <OKLink id="mov2#opm3#lpu2#oln57" name="OKFlow57" to="mov2#opm3#mathu1" code="next">
+        <LinkParameter id="mov2#opm3#lpu2#oln57#par211" name="OldReputation + 1_Expression" sourceValue="OldReputation + 1" target="mov2#opm3#mathu1.expr"/>
+        <LinkParameter id="mov2#opm3#lpu2#oln57#par212" name="Next Element (SecondaryArray1)_OldReputation" source="mov2#opm3#lpu2#lsa1" target="mov2#opm3#mathu1#mathv2"/>
+        <LinkParameter id="mov2#opm3#lpu2#oln57#par213" name="Next Element_PASSING" source="next" passing="true"/>
+      </OKLink>
+    </LoopUnit>
+    <ModifyUnit gr:x="820" gr:y="345" id="mov2#opm3#mfu5" name="Update Reputation" entity="User">
+      <Selector id="mov2#opm3#mfu5#su58" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm3#mfu5#su58#kcond31" name="KeyCondition31" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov2#opm3#mfu5#kln8" name="KOFlow8" to="mov2#opm3#lpu2" gr:bendpoints="-126,-55,94,70"/>
+      <OKLink id="mov2#opm3#mfu5#oln50" name="OKFlow50" to="mov2#opm3#lpu2" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="1035" gr:y="65" id="mov2#opm3#okcu2" name="OK Port2"/>
+    <KOCollectorUnit gr:x="1035" gr:y="280" id="mov2#opm3#kocu3" name="KO Port3">
+      <OutputCollectorParameter id="mov2#opm3#kocu3#ocp2" name="Message"/>
+    </KOCollectorUnit>
+    <SelectorUnit gr:x="395" gr:y="330" id="mov2#opm3#seu8" name="Authors Selector" entity="User" distinctAttributes="userOID User#att31">
+      <Selector id="mov2#opm3#seu8#su67" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov2#opm3#seu8#su67#rcond27" name="RoleCondition27" predicate="in" implied="false" role="rel12#role23"/>
+      </Selector>
+      <OKLink id="mov2#opm3#seu8#oln56" name="OKFlow56" to="mov2#opm3#lpu2">
+        <LinkParameter id="mov2#opm3#seu8#oln56#par209" name="oid_user_Input Array" source="userOIDArray" target="mov2#opm3#lpu2.array"/>
+        <LinkParameter id="mov2#opm3#seu8#oln56#par210" name="Reputation_SecondaryArray1" source="User#att31Array" target="mov2#opm3#lpu2#lsa1"/>
+      </OKLink>
+      <KOLink id="mov2#opm3#seu8#kln12" name="KOFlow12" to="mov2#opm3#lpu1" automaticCoupling="true" gr:bendpoints="17,-146,12,129"/>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>
