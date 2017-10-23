@@ -68,7 +68,7 @@
       <Link id="sv2#page7#enu11#ln56" name="Add" to="sv2#cru6" type="normal" validate="true">
         <LinkParameter id="sv2#page7#enu11#ln56#par108" name="Email_email" source="sv2#page7#enu11#fld35" target="sv2#cru6.email"/>
         <LinkParameter id="sv2#page7#enu11#ln56#par109" name="Name_Name" source="sv2#page7#enu11#fld34" target="sv2#cru6.User#att28"/>
-        <LinkParameter id="sv2#page7#enu11#ln56#par137" name="true_isExternal" sourceValue="true" target="sv2#cru6.User#att32"/>
+        <LinkParameter id="sv2#page7#enu11#ln56#par137" name="true_isExternal" sourceValue="1" target="sv2#cru6.User#att32"/>
       </Link>
     </EntryUnit>
     <EntryUnit gr:x="0" gr:y="130" id="sv2#page7#enu14" name="Add Keyword" linkOrder="sv2#page7#enu14#ln58">

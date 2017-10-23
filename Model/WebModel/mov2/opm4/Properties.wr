@@ -1,0 +1,56 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="425" gr:y="125" id="mov2#opm4" name="Decrement Reputations">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#opm4#icu4" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov2#opm4#icu4#icp4" name="publication_oid"/>
+      <OKLink id="mov2#opm4#icu4#oln22" name="OKFlow22" to="mov2#opm4#seu5">
+        <LinkParameter id="mov2#opm4#icu4#oln22#par13" name="publication_oid_RoleCondition2 [oid_publication]" source="mov2#opm4#icu4#icp4" target="mov2#opm4#seu5#su7#rcond2.ent2#att2"/>
+        <LinkParameter id="mov2#opm4#icu4#oln22#par21" name="publication_oid_PASSING" source="mov2#opm4#icu4#icp4" passing="true"/>
+        <LinkParameter id="mov2#opm4#icu4#oln22#par24" name="collection_oid_PASSING" source="mov2#opm4#icu4#icp5" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2#opm4#icu4#icp5" name="collection_oid"/>
+    </InputCollectorUnit>
+    <SelectorUnit gr:x="295" gr:y="210" id="mov2#opm4#seu5" name="Authors Selector" entity="User">
+      <Selector id="mov2#opm4#seu5#su7" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov2#opm4#seu5#su7#rcond2" name="RoleCondition2" predicate="in" implied="false" role="rel12#role23"/>
+      </Selector>
+      <OKLink id="mov2#opm4#seu5#oln23" name="OKFlow23" to="mov2#opm4#lpu4">
+        <LinkParameter id="mov2#opm4#seu5#oln23#par14" name="oid_user_Input Array" source="userOIDArray" target="mov2#opm4#lpu4.array"/>
+        <LinkParameter id="mov2#opm4#seu5#oln23#par15" name="Reputation_RepArray" source="User#att31Array" target="mov2#opm4#lpu4#lsa2"/>
+        <LinkParameter id="mov2#opm4#seu5#oln23#par22" name="publication_oid_PASSING" sourceLinkParameter="mov2#opm4#icu4#oln22#par21" passing="true"/>
+        <LinkParameter id="mov2#opm4#seu5#oln23#par25" name="collection_oid_PASSING" sourceLinkParameter="mov2#opm4#icu4#oln22#par24" passing="true"/>
+      </OKLink>
+      <KOLink id="mov2#opm4#seu5#kln5" name="KOFlow5" to="mov2#opm4#kocu4" automaticCoupling="true"/>
+    </SelectorUnit>
+    <LoopUnit gr:x="490" gr:y="90" id="mov2#opm4#lpu4" name="Author Loop">
+      <SecondaryArray id="mov2#opm4#lpu4#lsa2" name="RepArray"/>
+      <OKLink id="mov2#opm4#lpu4#oln24" name="OKFlow24" to="mov2#opm4#mathu2" code="next">
+        <LinkParameter id="mov2#opm4#lpu4#oln24#par16" name="OldReputation - 1_Expression" sourceValue="OldReputation - 1" target="mov2#opm4#mathu2.expr"/>
+        <LinkParameter id="mov2#opm4#lpu4#oln24#par17" name="Next Element (RepArray)_OldReputation" source="mov2#opm4#lpu4#lsa2" target="mov2#opm4#mathu2#mathv1"/>
+        <LinkParameter id="mov2#opm4#lpu4#oln24#par18" name="Next Element_PASSING" source="next" passing="true"/>
+      </OKLink>
+      <OKLink id="mov2#opm4#lpu4#oln28" name="OKFlow28" to="mov2#opm4#okcu3" code="end">
+        <LinkParameter id="mov2#opm4#lpu4#oln28#par27" name="collection_oid_PASSING_collection_oid" sourceLinkParameter="mov2#opm4#seu5#oln23#par25" target="mov2#opm4#okcu3#ocp3"/>
+        <LinkParameter id="mov2#opm4#lpu4#oln28#par28" name="publication_oid_PASSING_publication_oid" sourceLinkParameter="mov2#opm4#seu5#oln23#par22" target="mov2#opm4#okcu3#ocp4"/>
+      </OKLink>
+    </LoopUnit>
+    <MathUnit gr:x="635" gr:y="175" id="mov2#opm4#mathu2" name="Decrement 1" resultType="float">
+      <MathVariable id="mov2#opm4#mathu2#mathv1" name="OldReputation"/>
+      <OKLink id="mov2#opm4#mathu2#oln25" name="OKFlow25" to="mov2#opm4#mfu2">
+        <LinkParameter id="mov2#opm4#mathu2#oln25#par19" name="Next Element_PASSING_KeyCondition11 [oid_user]" sourceLinkParameter="mov2#opm4#lpu4#oln24#par18" target="mov2#opm4#mfu2#su8#kcond11.userOID"/>
+        <LinkParameter id="mov2#opm4#mathu2#oln25#par20" name="Result_Reputation" source="result" target="mov2#opm4#mfu2.User#att31"/>
+      </OKLink>
+    </MathUnit>
+    <ModifyUnit gr:x="485" gr:y="330" id="mov2#opm4#mfu2" name="Update Author" entity="User">
+      <Selector id="mov2#opm4#mfu2#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm4#mfu2#su8#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#opm4#mfu2#oln27" name="OKFlow27" to="mov2#opm4#lpu4" automaticCoupling="true"/>
+      <KOLink id="mov2#opm4#mfu2#kln6" name="KOFlow6" to="mov2#opm4#kocu4" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="765" gr:y="75" id="mov2#opm4#okcu3" name="OK Port3">
+      <OutputCollectorParameter id="mov2#opm4#okcu3#ocp3" name="collection_oid"/>
+      <OutputCollectorParameter id="mov2#opm4#okcu3#ocp4" name="publication_oid"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="785" gr:y="235" id="mov2#opm4#kocu4" name="KO Port4"/>
+  </OperationUnits>
+</OperationModule>

@@ -8,7 +8,7 @@
     <Attribute id="User#att29" name="Affiliation" type="string" db:column="affiliation"/>
     <Attribute id="User#att30" name="Timestamp" type="timestamp" db:column="timestamp"/>
     <Attribute id="User#att31" name="Reputation" type="float" db:column="reputation"/>
-    <Attribute id="User#att32" name="isExternal" type="boolean" db:column="isexternal"/>
+    <Attribute id="User#att32" name="isExternal" type="integer" db:column="isexternal"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="315" gr:y="100" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>

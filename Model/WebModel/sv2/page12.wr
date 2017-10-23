@@ -14,19 +14,19 @@
     </DataUnit>
     <MultiChoiceIndexUnit gr:x="25" gr:y="120" id="sv2#page12#mciu1" name="Add Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att1" linkOrder="sv2#page12#mciu1#ln87">
       <Selector id="sv2#page12#mciu1#su30" defaultPolicy="fill" booleanOperator="and"/>
-      <Link id="sv2#page12#mciu1#ln87" name="Flow87" to="sv2#cnu5" type="normal" validate="true">
+      <Link id="sv2#page12#mciu1#ln87" name="Add into Collection" to="sv2#cnu5" type="normal" validate="true">
         <LinkParameter id="sv2#page12#mciu1#ln87#par190" name="Checked oid_publication_KeyCondition34 [oid_publication] [Publications] [Source]" source="ent2#att2Checked" target="sv2#cnu5#su61#kcond34.ent2#att2"/>
         <LinkParameter id="sv2#page12#mciu1#ln87#par191" name="oid_collection_PASSING_KeyCondition35 [oid_collection] [Collections] [Target]" sourceLinkParameter="sv2#page12#dau3#ln69#par138" target="sv2#cnu5#su62#kcond35.ent3#att3"/>
         <LinkParameter id="sv2#page12#mciu1#ln87#par206" name="Checked oid_publication_PASSING" source="ent2#att2Checked" passing="true"/>
       </Link>
     </MultiChoiceIndexUnit>
-    <IndexUnit gr:x="190" gr:y="15" id="sv2#page12#inu20" name="Publications in This Collection" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1" linkOrder="sv2#page12#inu20#ln78">
+    <IndexUnit gr:x="190" gr:y="15" id="sv2#page12#inu20" name="Publications in This Collection" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1" linkOrder="sv2#page12#inu20#ln2">
       <Selector id="sv2#page12#inu20#su33" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#page12#inu20#su33#rcond20" name="RoleCondition20" predicate="in" implied="false" role="rel6#role11"/>
       </Selector>
-      <Link id="sv2#page12#inu20#ln78" name="Remove from Collection" to="sv2#dcnu2" type="normal" validate="true">
-        <LinkParameter id="sv2#page12#inu20#ln78#par144" name="oid_publication_KeyCondition26 [oid_publication] [Publications] [Source]" source="data[].ent2#att2" target="sv2#dcnu2#su45#kcond26.ent2#att2"/>
-        <LinkParameter id="sv2#page12#inu20#ln78#par145" name="oid_collection_PASSING_KeyCondition27 [oid_collection] [Collections] [Target]" sourceLinkParameter="sv2#page12#dau3#ln71#par143" target="sv2#dcnu2#su46#kcond27.ent3#att3"/>
+      <Link id="sv2#page12#inu20#ln2" name="Remove from Collection" to="sv2#miu4" type="normal" validate="true">
+        <LinkParameter id="sv2#page12#inu20#ln2#par68" name="oid_collection_PASSING_collection_oid" sourceLinkParameter="sv2#page12#dau3#ln71#par143" target="sv2#miu4.mov2#opm4#icu4#icp5"/>
+        <LinkParameter id="sv2#page12#inu20#ln2#par140" name="oid_publication_publication_oid" source="data[].ent2#att2" target="sv2#miu4.mov2#opm4#icu4#icp4"/>
       </Link>
     </IndexUnit>
   </ContentUnits>
@@ -77,7 +77,7 @@
           <layout:Attribute attribute="ent2#att6"/>
           <layout:Attribute attribute="ent2#att7"/>
           <layout:Attribute attribute="ent2#att1"/>
-          <layout:Link link="sv2#page12#inu20#ln78"/>
+          <layout:Link link="sv2#page12#inu20#ln2"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
