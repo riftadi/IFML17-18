@@ -129,6 +129,14 @@
     <SwitchUnit gr:x="90" gr:y="455" id="sv2#switch3" name="isExternal">
       <OKLink id="sv2#switch3#oln61" name="OKFlow61" to="sv2#mlu1" code="1">
         <LinkParameter id="sv2#switch3#oln61#par61" name="email_PASSING_Mail - To" sourceLinkParameter="sv2#lpu3#oln32#par46" target="sv2#mlu1.to"/>
+        <LinkParameter id="sv2#switch3#oln61#par141" name="Your authored publication is uploaded on our system._Mail - Body" sourceValue="Your authored publication is uploaded on our system." target="sv2#mlu1.body"/>
+        <LinkParameter id="sv2#switch3#oln61#par144" name="IFML17-18_Mail - From" sourceValue="IFML17-18" target="sv2#mlu1.from"/>
+        <LinkParameter id="sv2#switch3#oln61#par145" name="Authored Publication Uploaded_Mail - Subject" sourceValue="Authored Publication Uploaded" target="sv2#mlu1.subject"/>
+        <LinkParameter id="sv2#switch3#oln61#par146" name="smtp.gmail.com_SMTP Server - Host" sourceValue="smtp.gmail.com" target="sv2#mlu1.serverHost"/>
+        <LinkParameter id="sv2#switch3#oln61#par148" name="s4pis3hat_SMTP Server - Password" target="sv2#mlu1.serverPassword" blank="true"/>
+        <LinkParameter id="sv2#switch3#oln61#par149" name="25_SMTP Server - Port" sourceValue="25" target="sv2#mlu1.serverPort"/>
+        <LinkParameter id="sv2#switch3#oln61#par154" name="true_SMTP Server - Use SSL" sourceValue="true" target="sv2#mlu1.serverUseSsl"/>
+        <LinkParameter id="sv2#switch3#oln61#par155" name="invisibleghozz@gmail.com_SMTP Server - Username" target="sv2#mlu1.serverUsername" blank="true"/>
       </OKLink>
       <OKLink id="sv2#switch3#oln64" name="OKFlow64" to="sv2#cru9" code="0">
         <LinkParameter id="sv2#switch3#oln64#par236" name="You have a new publication authorization request._Content" sourceValue="You have a new publication authorization request." target="sv2#cru9.ent1#att15"/>

@@ -69,7 +69,7 @@
         <LinkParameter id="sv2#page6#mciu23#ln114#par158" name="Checked oid_collection_PASSING_KeyCondition14 [oid_collection] [Collections] [Source]" sourceLinkParameter="sv2#page6#pwu4#ln111#par153" target="sv2#dcnu1#su47#kcond14.ent3#att3"/>
         <LinkParameter id="sv2#page6#mciu23#ln114#par159" name="Checked oid_publication_KeyCondition15 [oid_publication] [Publications] [Target]" source="ent2#att2Checked" target="sv2#dcnu1#su48#kcond15.ent2#att2"/>
       </Link>
-      <Link id="sv2#page6#mciu23#ln61" name="Show Details" to="sv2#page8#dau2" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#page6#mciu23#ln61" name="Show Details" to="sv2#page8#dau2" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-502,-225,362,405"/>
     </MultiChoiceIndexUnit>
     <MultiChoiceIndexUnit gr:x="1120" gr:y="210" id="sv2#page6#mciu24" name="Share with" entity="User" displayAttributes="User#att28" linkOrder="sv2#page6#mciu24#ln118">
       <Link id="sv2#page6#mciu24#ln118" name="Share" to="sv2#cnu3" type="normal" validate="true">
