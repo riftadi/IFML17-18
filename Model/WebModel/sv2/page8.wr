@@ -41,7 +41,7 @@
     <DataUnit gr:x="225" gr:y="10" id="sv2#page8#dau7" name="Download PDF" entity="ent2" displayAttributes="ent2#att5 ent2#att11">
       <Selector id="sv2#page8#dau7#su28" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#page8#dau7#su28#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
-        <AttributesCondition id="sv2#page8#dau7#su28#acond2" name="AttCondition2" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att33" value="True"/>
+        <AttributesCondition id="sv2#page8#dau7#su28#acond2" name="AttCondition2" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att33" value="true"/>
       </Selector>
     </DataUnit>
   </ContentUnits>

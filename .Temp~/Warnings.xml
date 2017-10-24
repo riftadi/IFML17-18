@@ -17,9 +17,17 @@
     <Message>The passing parameter 'UserCtxParam.oid_user_PASSING' is declared but never used</Message>  
     <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv2#page7#enu7#ln54#par225'</Resolution> 
   </Warning>  
-  <Warning xpath="id('sv2#lpu3#oln32#par47')" rootXPath="id('sv2')" key="UNUSED_PASSING_PARAMETER" label="Name_PASSING"> 
-    <Message>The passing parameter 'Name_PASSING' is declared but never used</Message>  
-    <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv2#lpu3#oln32#par47'</Resolution> 
+  <Warning xpath="id('sv2#page6#pwu4#ln21#par166')" rootXPath="id('sv2')" key="UNUSED_PASSING_PARAMETER" label="oid_collection_PASSING"> 
+    <Message>The passing parameter 'oid_collection_PASSING' is declared but never used</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv2#page6#pwu4#ln21#par166'</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv2#page28#enu15#ln98#par219')" rootXPath="id('sv2')" key="UNUSED_PASSING_PARAMETER" label="oid_publication_PASSING"> 
+    <Message>The passing parameter 'oid_publication_PASSING' is declared but never used</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv2#page28#enu15#ln98#par219'</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv2#lpu3#oln32#par164')" rootXPath="id('sv2')" key="UNUSED_PASSING_PARAMETER" label="Next Element (isExtArray)_PASSING"> 
+    <Message>The passing parameter 'Next Element (isExtArray)_PASSING' is declared but never used</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv2#lpu3#oln32#par164'</Resolution> 
   </Warning>  
   <Warning xpath="id('sv2#mlu1#oln62')" rootXPath="id('sv2')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="OKFlow62"> 
     <Message>Neither explicit nor implicit parameters' bindings could be found for the flow 'OKFlow62'</Message>  
@@ -28,6 +36,18 @@
   <Warning xpath="id('sv2#cru9#oln65')" rootXPath="id('sv2')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="OKFlow65"> 
     <Message>Neither explicit nor implicit parameters' bindings could be found for the flow 'OKFlow65'</Message>  
     <Resolution class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" attribute="automaticCoupling" value="">Remove the 'Automatic Coupling' property</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv2#seu6#oln31#par42')" rootXPath="id('sv2')" key="UNUSED_PASSING_PARAMETER" label="email_PASSING"> 
+    <Message>The passing parameter 'email_PASSING' is declared but never used</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv2#seu6#oln31#par42'</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv2#seu6#oln31#par43')" rootXPath="id('sv2')" key="UNUSED_PASSING_PARAMETER" label="Name_PASSING"> 
+    <Message>The passing parameter 'Name_PASSING' is declared but never used</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv2#seu6#oln31#par43'</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv2#seu6#oln31#par44')" rootXPath="id('sv2')" key="UNUSED_PASSING_PARAMETER" label="oid_user_PASSING"> 
+    <Message>The passing parameter 'oid_user_PASSING' is declared but never used</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv2#seu6#oln31#par44'</Resolution> 
   </Warning>  
   <Warning xpath="id('sv2#mlu1#kln13')" rootXPath="id('sv2')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="KOFlow13"> 
     <Message>Neither explicit nor implicit parameters' bindings could be found for the flow 'KOFlow13'</Message>  
@@ -45,35 +65,14 @@
   <Warning xpath="id('sv2#cru8')" rootXPath="id('sv2')" error="false" label="Add collection" key="NO_OUTGOING_KO_LINKS"> 
     <Message>No outgoing KO flow(s) for the operation 'Add collection'</Message> 
   </Warning>  
-  <Warning xpath="id('sv2#mfu3')" rootXPath="id('sv2')" error="false" label="Edit collection details" key="NO_OUTGOING_OK_LINKS"> 
-    <Message>No outgoing OK flow(s) for the operation 'Edit collection details'</Message> 
-  </Warning>  
   <Warning xpath="id('sv2#mfu3')" rootXPath="id('sv2')" error="false" label="Edit collection details" key="NO_OUTGOING_KO_LINKS"> 
     <Message>No outgoing KO flow(s) for the operation 'Edit collection details'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#mfu4')" rootXPath="id('sv2')" error="false" label="Add keyword" key="NO_OUTGOING_OK_LINKS"> 
-    <Message>No outgoing OK flow(s) for the operation 'Add keyword'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#mfu4')" rootXPath="id('sv2')" error="false" label="Add keyword" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO flow(s) for the operation 'Add keyword'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#cru10')" rootXPath="id('sv2')" error="false" label="New keyword" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO flow(s) for the operation 'New keyword'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#dcnu1')" rootXPath="id('sv2')" error="false" label="Remove from collection" key="NO_OUTGOING_OK_LINKS"> 
-    <Message>No outgoing OK flow(s) for the operation 'Remove from collection'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#dcnu1')" rootXPath="id('sv2')" error="false" label="Remove from collection" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO flow(s) for the operation 'Remove from collection'</Message> 
   </Warning>  
   <Warning xpath="id('sv2#cnu1')" rootXPath="id('sv2')" error="false" label="Add to collection" key="NO_OUTGOING_KO_LINKS"> 
     <Message>No outgoing KO flow(s) for the operation 'Add to collection'</Message> 
   </Warning>  
   <Warning xpath="id('sv2#cnu2')" rootXPath="id('sv2')" error="false" label="Add to collection" key="NO_OUTGOING_KO_LINKS"> 
     <Message>No outgoing KO flow(s) for the operation 'Add to collection'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#cnu3')" rootXPath="id('sv2')" error="false" label="Share collection" key="NO_OUTGOING_OK_LINKS"> 
-    <Message>No outgoing OK flow(s) for the operation 'Share collection'</Message> 
   </Warning>  
   <Warning xpath="id('sv2#cnu3')" rootXPath="id('sv2')" error="false" label="Share collection" key="NO_OUTGOING_KO_LINKS"> 
     <Message>No outgoing KO flow(s) for the operation 'Share collection'</Message> 
@@ -105,6 +104,9 @@
   <Warning xpath="id('sv2#cnu5')" rootXPath="id('sv2')" error="false" label="Add Publications to Collection" key="NO_OUTGOING_KO_LINKS"> 
     <Message>No outgoing KO flow(s) for the operation 'Add Publications to Collection'</Message> 
   </Warning>  
+  <Warning xpath="id('sv2#switch3')" rootXPath="id('sv2')" error="true" label="isExternal"> 
+    <Message>The code '1' marks multiple OK flows of the operation 'isExternal'</Message> 
+  </Warning>  
   <Warning error="false" xpath="id('sv2#switch3')" rootXPath="id('sv2')" key="MISSING_NO_CODE_OK_LINK" label="isExternal"> 
     <Message>No default OK flow is specified for the component 'isExternal'</Message> 
   </Warning>  
@@ -132,35 +134,38 @@
   <Warning xpath="id('sv2#seu6')" rootXPath="id('sv2')" error="false" label="Authors Selector" key="NO_OUTGOING_KO_LINKS"> 
     <Message>No outgoing KO flow(s) for the operation 'Authors Selector'</Message> 
   </Warning>  
+  <Warning xpath="id('sv2#dlu5')" rootXPath="id('sv2')" error="false" label="Delete notification" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO flow(s) for the operation 'Delete notification'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv2#cnu4')" rootXPath="id('sv2')" error="false" label="Collection to keyword" key="NO_OUTGOING_OK_LINKS"> 
+    <Message>No outgoing OK flow(s) for the operation 'Collection to keyword'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv2#cnu4')" rootXPath="id('sv2')" error="false" label="Collection to keyword" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO flow(s) for the operation 'Collection to keyword'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv2#mfu4')" rootXPath="id('sv2')" error="false" label="Update Publication" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO flow(s) for the operation 'Update Publication'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv2#rcnu1')" rootXPath="id('sv2')" error="false" label="Update Keywords" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO flow(s) for the operation 'Update Keywords'</Message> 
+  </Warning>  
+  <Warning xpath="id('sv2#cru2')" rootXPath="id('sv2')" error="false" label="AddComment" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO flow(s) for the operation 'AddComment'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv2#page15#inu3')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="View publication"> 
+    <Message>Sorting attribute are unspecified for the component 'View publication'</Message> 
+  </Warning>  
   <Warning error="false" xpath="id('sv2#page12#mciu1')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Add Publications"> 
     <Message>Sorting attribute are unspecified for the component 'Add Publications'</Message> 
   </Warning>  
   <Warning error="false" xpath="id('sv2#page12#inu20')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Publications in This Collection"> 
     <Message>Sorting attribute are unspecified for the component 'Publications in This Collection'</Message> 
   </Warning>  
-  <Warning error="false" xpath="id('sv2#page4#inu18')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Your Notifications"> 
-    <Message>Sorting attribute are unspecified for the component 'Your Notifications'</Message> 
-  </Warning>  
   <Warning error="false" xpath="id('sv2#page7#inu9')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Owned Publications"> 
     <Message>Sorting attribute are unspecified for the component 'Owned Publications'</Message> 
   </Warning>  
   <Warning error="false" xpath="id('sv2#page7#inu22')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Authored Publications"> 
     <Message>Sorting attribute are unspecified for the component 'Authored Publications'</Message> 
-  </Warning>  
-  <Warning error="false" xpath="id('sv2#page6#pwu4')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Your collections"> 
-    <Message>Sorting attribute are unspecified for the component 'Your collections'</Message> 
-  </Warning>  
-  <Warning error="false" xpath="id('sv2#page6#mciu23')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="View/Remove from collection"> 
-    <Message>Sorting attribute are unspecified for the component 'View/Remove from collection'</Message> 
-  </Warning>  
-  <Warning error="false" xpath="id('sv2#page6#mciu24')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Share with"> 
-    <Message>Sorting attribute are unspecified for the component 'Share with'</Message> 
-  </Warning>  
-  <Warning error="false" xpath="id('sv2#page6#mciu25')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Collections shared with you"> 
-    <Message>Sorting attribute are unspecified for the component 'Collections shared with you'</Message> 
-  </Warning>  
-  <Warning error="false" xpath="id('sv2#page8#mdu2')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Comments"> 
-    <Message>Sorting attribute are unspecified for the component 'Comments'</Message> 
   </Warning>  
   <Warning error="false" xpath="id('sv2#page13#pwu1')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Publications in This Collection"> 
     <Message>Sorting attribute are unspecified for the component 'Publications in This Collection'</Message> 
@@ -180,10 +185,37 @@
   <Warning error="false" xpath="id('sv2#page18#alt6#page22#alt8#page24#mciu21')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Select collection"> 
     <Message>Sorting attribute are unspecified for the component 'Select collection'</Message> 
   </Warning>  
+  <Warning error="false" xpath="id('sv2#page9#inu1')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="External Authors List"> 
+    <Message>Sorting attribute are unspecified for the component 'External Authors List'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv2#page9#inu7')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Keywords List"> 
+    <Message>Sorting attribute are unspecified for the component 'Keywords List'</Message> 
+  </Warning>  
   <Warning error="false" xpath="id('sv2#page10#inu14')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="My Comments"> 
     <Message>Sorting attribute are unspecified for the component 'My Comments'</Message> 
   </Warning>  
   <Warning error="false" xpath="id('sv2#page10#inu17')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Comments on Your Publications"> 
     <Message>Sorting attribute are unspecified for the component 'Comments on Your Publications'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv2#page4#inu18')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Your Notifications"> 
+    <Message>Sorting attribute are unspecified for the component 'Your Notifications'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv2#page4#inu8')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Your Keywords"> 
+    <Message>Sorting attribute are unspecified for the component 'Your Keywords'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv2#page6#pwu4')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Your collections"> 
+    <Message>Sorting attribute are unspecified for the component 'Your collections'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv2#page6#mciu25')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Collections shared with you"> 
+    <Message>Sorting attribute are unspecified for the component 'Collections shared with you'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv2#page6#alt1#page26#mciu2')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Share with"> 
+    <Message>Sorting attribute are unspecified for the component 'Share with'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv2#page8#mdu2')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Comments"> 
+    <Message>Sorting attribute are unspecified for the component 'Comments'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv2#page28#mdu1')" rootXPath="id('sv2')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Comments"> 
+    <Message>Sorting attribute are unspecified for the component 'Comments'</Message> 
   </Warning> 
 </Warnings>

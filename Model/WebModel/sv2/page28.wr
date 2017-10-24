@@ -1,0 +1,133 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page28" name="Publication Details (No Modify)" gr:x="3045" gr:y="80" linkOrder="sv2#page28#ln86">
+  <ContentUnits>
+    <DataUnit id="sv2#page28#dau8" name="Publication Details" gr:x="25" gr:y="0" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att16 ent2#att1 ent2#att4">
+      <Selector id="sv2#page28#dau8#su48" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page28#dau8#su48#kcond32" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page28#dau8#ln78" name="Flow29" to="sv2#page28#enu15" type="transport" validate="true">
+        <LinkParameter id="sv2#page28#dau8#ln78#par193" name="oid_publication_PASSING" source="data.ent2#att2" passing="true"/>
+      </Link>
+      <Link id="sv2#page28#dau8#ln79" name="Flow32" to="sv2#page28#mdu1" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page28#dau8#ln81" name="Flow57" to="sv2#page28#dau9" type="transport" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <EntryUnit id="sv2#page28#enu15" name="Add Comment" linkOrder="sv2#page28#enu15#ln98" gr:x="0" gr:y="140" entity="ent5">
+      <Field id="sv2#page28#enu15#fld38" name="Title" type="string" modifiable="true"/>
+      <Field id="sv2#page28#enu15#fld39" name="Content" type="text" modifiable="true" contentType="text/html"/>
+      <Link id="sv2#page28#enu15#ln98" name="Add Comment" to="sv2#cru2" type="normal" validate="true">
+        <LinkParameter id="sv2#page28#enu15#ln98#par205" name="Content_Content" source="sv2#page28#enu15#fld39" target="sv2#cru2.ent5#att26"/>
+        <LinkParameter id="sv2#page28#enu15#ln98#par207" name="oid_publication_PASSING_Publications.oid_publication(CommentsToPublications)" sourceLinkParameter="sv2#page28#dau8#ln78#par193" target="sv2#cru2.rel10#role19.ent2#att2"/>
+        <LinkParameter id="sv2#page28#enu15#ln98#par216" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv2#page28#tmu9#ln84#par203" target="sv2#cru2.ent5#att27"/>
+        <LinkParameter id="sv2#page28#enu15#ln98#par217" name="Title_Title" source="sv2#page28#enu15#fld38" target="sv2#cru2.ent5#att25"/>
+        <LinkParameter id="sv2#page28#enu15#ln98#par218" name="UserCtxParam.oid_user_PASSING_User.oid_user(CommentsToUser)" sourceLinkParameter="sv2#page28#gtu1#ln83#par201" target="sv2#cru2.rel15#role29.userOID"/>
+        <LinkParameter id="sv2#page28#enu15#ln98#par219" name="oid_publication_PASSING" sourceLinkParameter="sv2#page28#dau8#ln78#par193" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit id="sv2#page28#gtu1" name="GetCurrentUser" gr:x="140" gr:y="215" contextParameters="UserCtxParam">
+      <Link id="sv2#page28#gtu1#ln83" name="Flow28" to="sv2#page28#enu15" type="transport" validate="true">
+        <LinkParameter id="sv2#page28#gtu1#ln83#par201" name="UserCtxParam.oid_user_PASSING" source="sv2#page28#gtu1.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <TimeUnit id="sv2#page28#tmu9" name="GetCurrentTime" gr:x="65" gr:y="300">
+      <Link id="sv2#page28#tmu9#ln84" name="Flow31" to="sv2#page28#enu15" type="transport" validate="true">
+        <LinkParameter id="sv2#page28#tmu9#ln84#par203" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
+      </Link>
+    </TimeUnit>
+    <MultiDataUnit id="sv2#page28#mdu1" name="Comments" gr:x="220" gr:y="115" entity="ent5" displayAttributes="ent5#att25 ent5#att26 ent5#att27 ent5#att17">
+      <Selector id="sv2#page28#mdu1#su56" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page28#mdu1#su56#rcond11" name="RoleCondition9" predicate="in" implied="false" role="rel10#role20"/>
+      </Selector>
+    </MultiDataUnit>
+    <DataUnit id="sv2#page28#dau9" name="Download PDF" gr:x="225" gr:y="10" entity="ent2" displayAttributes="ent2#att5 ent2#att11">
+      <Selector id="sv2#page28#dau9#su57" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page28#dau9#su57#kcond33" name="KeyCondition14" predicate="in" implied="false"/>
+        <AttributesCondition id="sv2#page28#dau9#su57#acond3" name="AttCondition2" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att33" value="true"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page28#dau8">
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att16"/>
+          <layout:Attribute attribute="ent2#att1"/>
+          <layout:Attribute attribute="ent2#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page28#enu15">
+          <layout:Field field="sv2#page28#enu15#fld38"/>
+          <layout:Field field="sv2#page28#enu15#fld39"/>
+          <layout:Link link="sv2#page28#enu15#ln98"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page28#mdu1">
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att26"/>
+          <layout:Attribute attribute="ent5#att27"/>
+          <layout:Attribute attribute="ent5#att17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page28#dau9">
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page28#ln86" name="Logout" to="sv2#miu2" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-594,226,1376,-64"/>
+</Page>

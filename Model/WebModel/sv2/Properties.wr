@@ -115,6 +115,12 @@
     <SwitchUnit gr:x="90" gr:y="455" id="sv2#switch3" name="isExternal">
       <OKLink id="sv2#switch3#oln61" name="OKFlow61" to="sv2#mlu1" code="1">
         <LinkParameter id="sv2#switch3#oln61#par61" name="email_PASSING_Mail - To" sourceLinkParameter="sv2#lpu3#oln32#par169" target="sv2#mlu1.to"/>
+        <LinkParameter id="sv2#switch3#oln61#par229" name="smtp.gmail.com_SMTP Server - Host" sourceValue="smtp.gmail.com" target="sv2#mlu1.serverHost"/>
+        <LinkParameter id="sv2#switch3#oln61#par230" name="password_SMTP Server - Password" sourceValue="password" target="sv2#mlu1.serverPassword"/>
+        <LinkParameter id="sv2#switch3#oln61#par231" name="25_SMTP Server - Port" sourceValue="25" target="sv2#mlu1.serverPort"/>
+        <LinkParameter id="sv2#switch3#oln61#par232" name="_SMTP Server - Protocol" blank="true" target="sv2#mlu1.serverProtocol"/>
+        <LinkParameter id="sv2#switch3#oln61#par233" name="true_SMTP Server - Use SSL" sourceValue="true" target="sv2#mlu1.serverUseSsl"/>
+        <LinkParameter id="sv2#switch3#oln61#par234" name="sender@gmail.com_SMTP Server - Username" sourceValue="sender@gmail.com" target="sv2#mlu1.serverUsername"/>
       </OKLink>
       <OKLink id="sv2#switch3#oln64" name="OKFlow64" to="sv2#cru9" code="0">
         <LinkParameter id="sv2#switch3#oln64#par236" name="You have a new publication authorization request._Content" sourceValue="Your authored publication is uploaded into our platform." target="sv2#cru9.ent1#att15"/>
@@ -189,5 +195,8 @@
       </TargetSelector>
       <OKLink id="sv2#rcnu1#oln35" name="OKFlow35" to="sv2#page4" automaticCoupling="true"/>
     </ReconnectUnit>
+    <CreateUnit id="sv2#cru2" name="AddComment" gr:x="2910" gr:y="210" entity="ent5">
+      <OKLink id="sv2#cru2#oln36" name="OKFlow8" to="sv2#page28#dau8"/>
+    </CreateUnit>
   </OperationUnits>
 </SiteView>

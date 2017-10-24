@@ -68,7 +68,7 @@
       <Selector id="sv2#page7#inu22#su69" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#page7#inu22#su69#rcond28" name="RoleCondition28" predicate="in" implied="false" role="rel12#role24"/>
       </Selector>
-      <Link id="sv2#page7#inu22#ln96" name="Show Publication" to="sv2#page8#dau2" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#page7#inu22#ln96" name="Show Publication" to="sv2#page28#dau8" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
     <MultiMessageUnit gr:x="10" gr:y="40" id="sv2#page7#mssu3" name="Email Sent">
       <Placeholder id="sv2#page7#mssu3#ph1" name="Author Name"/>

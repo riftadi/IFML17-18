@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2785" gr:y="150" id="sv2#page13" name="Collection Details" linkOrder="sv2#page13#ln76">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2600" gr:y="-150" id="sv2#page13" name="Collection Details" linkOrder="sv2#page13#ln76">
   <ContentUnits>
     <DataUnit gr:x="50" gr:y="0" id="sv2#page13#dau4" name="Collection Details" entity="ent3" displayAttributes="ent3#att20 ent3#att21 ent3#att23">
       <Selector id="sv2#page13#dau4#su36" defaultPolicy="fill" booleanOperator="and">
@@ -7,7 +7,7 @@
       <Link id="sv2#page13#dau4#ln73" name="Flow73" to="sv2#page13#pwu1" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv2#page13#dau4#ln75" name="Flow75" to="sv2#page13#inu21" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
-    <PowerIndexUnit gr:x="0" gr:y="210" id="sv2#page13#pwu1" name="Publications in This Collection" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att11 ent2#att1 ent2#att4">
+    <PowerIndexUnit gr:x="0" gr:y="210" id="sv2#page13#pwu1" name="Publications in This Collection" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1 ent2#att4">
       <Selector id="sv2#page13#pwu1#su39" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#page13#pwu1#su39#rcond23" name="RoleCondition23" predicate="in" implied="false" role="rel6#role11"/>
       </Selector>
@@ -45,7 +45,6 @@
           <layout:Attribute attribute="ent2#att5"/>
           <layout:Attribute attribute="ent2#att6"/>
           <layout:Attribute attribute="ent2#att7"/>
-          <layout:Attribute attribute="ent2#att11"/>
           <layout:Attribute attribute="ent2#att1"/>
           <layout:Attribute attribute="ent2#att4"/>
         </layout:Unit>
