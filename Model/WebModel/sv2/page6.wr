@@ -54,11 +54,11 @@
         <LinkParameter id="sv2#page6#enu12#ln103#par134" name="Title_Title" source="sv2#page6#enu12#fld24" target="sv2#mfu3.ent3#att20"/>
       </Link>
     </EntryUnit>
-    <EntryUnit gr:x="470" gr:y="210" id="sv2#page6#enu13" name="Add keyword" linkOrder="sv2#page6#enu13#ln107">
+    <EntryUnit gr:x="470" gr:y="210" id="sv2#page6#enu13" name="Add keyword" linkOrder="sv2#page6#enu13#ln14">
       <Field id="sv2#page6#enu13#fld26" name="keyword" type="string" modifiable="true"/>
-      <Link id="sv2#page6#enu13#ln107" name="Add" to="sv2#cru10" type="normal" validate="true">
-        <LinkParameter id="sv2#page6#enu13#ln107#par139" name="Checked oid_collection_PASSING" sourceLinkParameter="sv2#page6#pwu4#ln105#par135" passing="true"/>
-        <LinkParameter id="sv2#page6#enu13#ln107#par147" name="keyword_Name" source="sv2#page6#enu13#fld26" target="sv2#cru10.ent4#att10"/>
+      <Link id="sv2#page6#enu13#ln14" name="Flow14" to="sv2#cnu6" type="normal" validate="true">
+        <LinkParameter id="sv2#page6#enu13#ln14#par184" name="keyword_KeyCondition24 [Name] [Keywords] [Source]" source="sv2#page6#enu13#fld26" target="sv2#cnu6#su13#kcond24.ent4#att10"/>
+        <LinkParameter id="sv2#page6#enu13#ln14#par185" name="Checked oid_collection_PASSING_KeyCondition28 [oid_collection] [Collections] [Target]" sourceLinkParameter="sv2#page6#pwu4#ln105#par135" target="sv2#cnu6#su14#kcond28.ent3#att3"/>
       </Link>
     </EntryUnit>
     <MultiChoiceIndexUnit gr:x="860" gr:y="205" id="sv2#page6#mciu23" name="View/Remove from collection" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1" linkOrder="sv2#page6#mciu23#ln114 sv2#page6#mciu23#ln61">
@@ -148,7 +148,7 @@
       <layout:Cell colspan="6">
         <layout:Unit unitId="sv2#page6#enu13">
           <layout:Field field="sv2#page6#enu13#fld26"/>
-          <layout:Link link="sv2#page6#enu13#ln107"/>
+          <layout:Link link="sv2#page6#enu13#ln14"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

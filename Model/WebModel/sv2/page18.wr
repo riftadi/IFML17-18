@@ -260,7 +260,7 @@
       <ContentUnits>
         <MultiChoiceIndexUnit gr:x="0" gr:y="125" id="sv2#page18#alt6#page22#mciu20" name="Text search result" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1" linkOrder="sv2#page18#alt6#page22#mciu20#ln94">
           <Selector id="sv2#page18#alt6#page22#mciu20#su34" defaultPolicy="emptyAlwaysApplied" booleanOperator="or">
-            <AttributesCondition id="sv2#page18#alt6#page22#mciu20#su34#acond28" name="keywordcondition" predicate="contains" booleanOperator="or" implied="true" attributes="rel11#role21.ent4#att10" ignoreCase="true"/>
+            <AttributesCondition id="sv2#page18#alt6#page22#mciu20#su34#acond28" name="keywordcondition" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="rel3#role6.ent4#att10"/>
             <AttributesCondition id="sv2#page18#alt6#page22#mciu20#su34#acond29" name="abstractcondition" predicate="contains" booleanOperator="or" implied="true" attributes="ent2#att4" ignoreCase="true"/>
             <AttributesCondition id="sv2#page18#alt6#page22#mciu20#su34#acond30" name="titlecondition" predicate="contains" booleanOperator="or" implied="true" attributes="ent2#att5" ignoreCase="true"/>
           </Selector>

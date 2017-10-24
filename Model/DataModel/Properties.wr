@@ -51,7 +51,7 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="db" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ifml1718" username="riftadi" schema="public">
+  <db:Database id="db2" name="db" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/ifml1718" username="postgres" schema="public" cryptedPassword="true" password="cm9vdA==">
   </db:Database>
   <Entity gr:x="210" gr:y="330" id="ent2" name="Publications" duration="persistent" attributeOrder="ent2#att2 ent2#att5 ent2#att6 ent2#att7 ent2#att11 ent2#att16 ent2#att1 ent2#att4 ent2#att12" db:database="db2" db:table="publications">
     <Attribute id="ent2#att2" key="true" name="oid_publication" type="integer" db:column="oid_publication"/>
@@ -71,9 +71,8 @@
     <Attribute id="ent3#att23" name="Timestamp" type="timestamp" db:column="timestamp"/>
     <Attribute id="ent3#att22" name="Owner" type="string" derivationQuery="simpleImported::Self.rel5#role9.User#att28"/>
   </Entity>
-  <Entity gr:x="20" gr:y="575" id="ent4" name="Keywords" duration="persistent" attributeOrder="ent4#att9 ent4#att10 ent4#att18" db:database="db2" db:table="keywords">
-    <Attribute id="ent4#att9" key="true" name="oid_keyword" type="integer" db:column="oid_keyword"/>
-    <Attribute id="ent4#att10" name="Name" type="string" db:column="name" key="false"/>
+  <Entity gr:x="20" gr:y="575" id="ent4" name="Keywords" duration="persistent" attributeOrder="ent4#att10 ent4#att18" db:database="db2" db:table="keywords">
+    <Attribute id="ent4#att10" name="Name" type="string" db:column="name" key="true"/>
     <Attribute id="ent4#att18" name="Timestamp" type="timestamp" db:column="timestamp"/>
   </Entity>
   <Entity gr:x="520" gr:y="235" id="ent5" name="Comments" duration="persistent" attributeOrder="ent5#att24 ent5#att25 ent5#att26 ent5#att27 ent5#att17 ent5#att19" db:database="db2" db:table="comments">
@@ -85,12 +84,8 @@
     <Attribute id="ent5#att19" name="Publication Name" type="string" derivationQuery="simpleImported::Self.rel10#role19.ent2#att5"/>
   </Entity>
   <Relationship id="rel8" name="Collections_Keywords" sourceEntity="ent3" targetEntity="ent4" gr:bendpoints="-203,136,272,5" db:database="db2" db:table="collections_keywords">
-    <RelationshipRole1 id="rel8#role15" name="CollectionsToKeywords" maxCard="N">
-      <db:JoinColumn attribute="ent3#att3" name="collections_oid_collection"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel8#role16" name="KeywordsToCollections" maxCard="N">
-      <db:JoinColumn attribute="ent4#att9" name="keywords_oid_keyword"/>
-    </RelationshipRole2>
+    <RelationshipRole1 id="rel8#role15" name="CollectionsToKeywords" maxCard="N"/>
+    <RelationshipRole2 id="rel8#role16" name="KeywordsToCollections" maxCard="N"/>
   </Relationship>
   <Relationship id="rel10" name="Comments_Publications" sourceEntity="ent5" targetEntity="ent2" db:database="db2" db:table="comments">
     <RelationshipRole1 id="rel10#role19" name="CommentsToPublications" maxCard="1">
@@ -98,14 +93,6 @@
     </RelationshipRole1>
     <RelationshipRole2 id="rel10#role20" name="PublicationsToComments" maxCard="N">
       <db:JoinColumn attribute="ent2#att2" name="oid_publication"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel11" name="Publications_Keywords" sourceEntity="ent2" targetEntity="ent4" db:database="db2" db:table="publications_keywords">
-    <RelationshipRole1 id="rel11#role21" name="PublicationsToKeywords" maxCard="N">
-      <db:JoinColumn attribute="ent2#att2" name="publications_oid_publication"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel11#role22" name="KeywordsToPublications" maxCard="N">
-      <db:JoinColumn attribute="ent4#att9" name="keywords_oid_keyword"/>
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel12" name="List_of_Authors" sourceEntity="ent2" targetEntity="User" gr:bendpoints="-53,-136,122,138" db:database="db2" db:table="list_of_authors">
@@ -130,14 +117,6 @@
     </RelationshipRole1>
     <RelationshipRole2 id="rel15#role30" name="UserToComments" maxCard="N">
       <db:JoinColumn attribute="userOID" name="oid_user"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel18" name="User_Keywords" sourceEntity="User" targetEntity="ent4" db:database="db2" db:table="user_keywords">
-    <RelationshipRole1 id="rel18#role35" name="UserToKeywords" maxCard="N">
-      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel18#role36" name="KeywordsToUser" maxCard="N">
-      <db:JoinColumn attribute="ent4#att9" name="keywords_oid_keyword"/>
     </RelationshipRole2>
   </Relationship>
   <Entity gr:x="800" gr:y="270" id="ent1" name="Notifications" duration="persistent" attributeOrder="ent1#att8 ent1#att13 ent1#att14 ent1#att15" db:database="db2" db:table="notifications">
@@ -184,6 +163,22 @@
     </RelationshipRole1>
     <RelationshipRole2 id="rel6#role12" name="PublicationsToCollections" maxCard="N">
       <db:JoinColumn attribute="ent2#att2" name="publications_oid_publication"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel3" name="Keywords_Publications" sourceEntity="ent4" targetEntity="ent2" db:database="db2" db:table="keywords_publications">
+    <RelationshipRole1 id="rel3#role5" name="KeywordsToPublications" maxCard="N">
+      <db:JoinColumn attribute="ent4#att10" name="keywords_name"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3#role6" name="PublicationsToKeywords" maxCard="N">
+      <db:JoinColumn attribute="ent2#att2" name="publications_oid_publication"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel7" name="Keywords_User" sourceEntity="ent4" targetEntity="User" db:database="db2" db:table="keywords_user">
+    <RelationshipRole1 id="rel7#role13" name="KeywordsToUser" maxCard="N">
+      <db:JoinColumn attribute="ent4#att10" name="keywords_name"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel7#role14" name="UserToKeywords" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>
