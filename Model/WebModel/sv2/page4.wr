@@ -1,13 +1,9 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-185" gr:y="5" id="sv2#page4" name="Home (Researcher)" linkOrder="sv2#page4#ln4" ajaxEnabled="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-60" gr:y="5" id="sv2#page4" name="Home (Researcher)" linkOrder="sv2#page4#ln4" ajaxEnabled="true">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv2#page4#inu18" name="Your Notifications" entity="ent1" displayAttributes="ent1#att15" linkOrder="sv2#page4#inu18#ln16">
+    <IndexUnit gr:x="0" gr:y="0" id="sv2#page4#inu18" name="Your Notifications" entity="ent1" displayAttributes="ent1#att15">
       <Selector id="sv2#page4#inu18#su25" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#page4#inu18#su25#rcond16" name="RoleCondition16" predicate="in" implied="false" role="rel1#role2"/>
       </Selector>
-      <Link id="sv2#page4#inu18#ln16" name="Read" to="sv2#page4#dau6" type="normal" validate="true">
-        <LinkParameter id="sv2#page4#inu18#ln16#par187" name="notification_oid_PASSING" source="data[].ent1#att8" passing="true"/>
-        <LinkParameter id="sv2#page4#inu18#ln16#par194" name="notification_oid_KeyCondition29 [notification_oid]" source="data[].ent1#att8" target="sv2#page4#dau6#su19#kcond29.ent1#att8"/>
-      </Link>
     </IndexUnit>
     <GetUnit gr:x="185" gr:y="125" id="sv2#page4#gtu7" name="GetCurrentUser" contextParameters="UserCtxParam">
       <Link id="sv2#page4#gtu7#ln60" name="Flow60" to="sv2#page4#inu18" automaticCoupling="true" type="transport" validate="true"/>
@@ -17,14 +13,6 @@
       <Selector id="sv2#page4#dau5#su12" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#page4#dau5#su12#kcond22" name="KeyCondition22" predicate="in" implied="false"/>
       </Selector>
-    </DataUnit>
-    <DataUnit gr:x="205" gr:y="0" id="sv2#page4#dau6" name="New publication details" entity="ent1" linkOrder="sv2#page4#dau6#ln17" displayAttributes="ent1#att15">
-      <Selector id="sv2#page4#dau6#su19" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv2#page4#dau6#su19#kcond29" name="KeyCondition29" predicate="in" implied="false"/>
-      </Selector>
-      <Link id="sv2#page4#dau6#ln17" name="Done" to="sv2#dlu5" type="normal" validate="true">
-        <LinkParameter id="sv2#page4#dau6#ln17#par188" name="notification_oid_PASSING_KeyCondition30 [notification_oid]" sourceLinkParameter="sv2#page4#inu18#ln16#par187" target="sv2#dlu5#su20#kcond30.ent1#att8"/>
-      </Link>
     </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -289,26 +277,6 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page4#inu18">
-          <layout:Attribute attribute="ent1#att15"/>
-          <layout:Link link="sv2#page4#inu18#ln16"/>
-        </layout:Unit>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page4#dau6">
-          <layout:Link link="sv2#page4#dau6#ln17"/>
           <layout:Attribute attribute="ent1#att15"/>
         </layout:Unit>
       </layout:Cell>

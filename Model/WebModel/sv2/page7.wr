@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="645" gr:y="0" id="sv2#page7" name="Publications" landmark="true" linkOrder="sv2#page7#ln40" ajaxEnabled="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="645" gr:y="0" id="sv2#page7" name="Publications" landmark="true" linkOrder="sv2#page7#ln40">
   <ContentUnits>
     <IndexUnit gr:x="370" gr:y="110" id="sv2#page7#inu9" name="Owned Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1 ent2#att4" linkOrder="sv2#page7#inu9#ln22 sv2#page7#inu9#ln59">
       <Selector id="sv2#page7#inu9#su10" defaultPolicy="fill" booleanOperator="and">
@@ -25,6 +25,7 @@
       <Link id="sv2#page7#enu7#ln54" name="Add" to="sv2#cru5" type="normal" validate="true">
         <LinkParameter id="sv2#page7#enu7#ln54#par98" name="Abstract_Abstract" source="sv2#page7#enu7#fld31" target="sv2#cru5.ent2#att4"/>
         <LinkParameter id="sv2#page7#enu7#ln54#par99" name="false_isClaimed" sourceValue="false" target="sv2#cru5.ent2#att12"/>
+        <LinkParameter id="sv2#page7#enu7#ln54#par100" name="Keywords_Keywords.oid_keyword(PublicationsToKeywords)" source="sv2#page7#enu7#msfld4" target="sv2#cru5.rel11#role21.ent4#att9"/>
         <LinkParameter id="sv2#page7#enu7#ln54#par101" name="PDF File_PDF_file" source="sv2#page7#enu7#fld32" target="sv2#cru5.ent2#att11"/>
         <LinkParameter id="sv2#page7#enu7#ln54#par102" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv2#page7#tmu7#ln51#par90" target="sv2#cru5.ent2#att16"/>
         <LinkParameter id="sv2#page7#enu7#ln54#par103" name="Title_Title" source="sv2#page7#enu7#fld28" target="sv2#cru5.ent2#att5"/>
@@ -36,12 +37,10 @@
         <LinkParameter id="sv2#page7#enu7#ln54#par223" name="Current/Input Timestamp_PASSING" sourceLinkParameter="sv2#page7#tmu7#ln51#par90" passing="true"/>
         <LinkParameter id="sv2#page7#enu7#ln54#par224" name="Key [oid_publication]_PASSING" source="key.ent2#att2" passing="true"/>
         <LinkParameter id="sv2#page7#enu7#ln54#par225" name="UserCtxParam.oid_user_PASSING" sourceLinkParameter="sv2#page7#gtu3#ln53#par95" passing="true"/>
-        <LinkParameter id="sv2#page7#enu7#ln54#par26" name="Keywords_Keywords.Name(PublicationsToKeywords)" source="sv2#page7#enu7#msfld4" target="sv2#cru5.rel3#role6.ent4#att10"/>
-        <LinkParameter id="sv2#page7#enu7#ln54#par97" name="Keywords_PASSING" source="sv2#page7#enu7#msfld4" passing="true"/>
       </Link>
       <MultiSelectionField id="sv2#page7#enu7#msfld4" name="Keywords" type="string"/>
     </EntryUnit>
-    <TimeUnit gr:x="40" gr:y="190" id="sv2#page7#tmu7" name="Time7">
+    <TimeUnit gr:x="25" gr:y="240" id="sv2#page7#tmu7" name="Time7">
       <Link id="sv2#page7#tmu7#ln51" name="Flow51" to="sv2#page7#enu7" type="transport" validate="true">
         <LinkParameter id="sv2#page7#tmu7#ln51#par90" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
       </Link>
@@ -60,7 +59,7 @@
     <SelectorUnit gr:x="355" gr:y="335" id="sv2#page7#seu3" name="Keywords Selector" entity="ent4">
       <Link id="sv2#page7#seu3#ln55" name="Flow55" to="sv2#page7#enu7" type="transport" validate="true">
         <LinkParameter id="sv2#page7#seu3#ln55#par96" name="Name_Keywords [label]" source="ent4#att10Array" target="sv2#page7#enu7#msfld4_label"/>
-        <LinkParameter id="sv2#page7#seu3#ln55#par174" name="Name_Keywords [output]" source="ent4#att10Array" target="sv2#page7#enu7#msfld4_output"/>
+        <LinkParameter id="sv2#page7#seu3#ln55#par97" name="oid_keyword_Keywords [output]" source="ent4#att9Array" target="sv2#page7#enu7#msfld4_output"/>
       </Link>
     </SelectorUnit>
     <EntryUnit gr:x="140" gr:y="40" id="sv2#page7#enu11" name="Add External Author" linkOrder="sv2#page7#enu11#ln56">
@@ -72,7 +71,7 @@
         <LinkParameter id="sv2#page7#enu11#ln56#par137" name="true_isExternal" sourceValue="1" target="sv2#cru6.User#att32"/>
       </Link>
     </EntryUnit>
-    <EntryUnit gr:x="0" gr:y="90" id="sv2#page7#enu14" name="Add Keyword" linkOrder="sv2#page7#enu14#ln58">
+    <EntryUnit gr:x="0" gr:y="130" id="sv2#page7#enu14" name="Add Keyword" linkOrder="sv2#page7#enu14#ln58">
       <Field id="sv2#page7#enu14#fld36" name="Keyword" type="string" modifiable="true"/>
       <Link id="sv2#page7#enu14#ln58" name="Add" to="sv2#cru7" type="normal" validate="true">
         <LinkParameter id="sv2#page7#enu14#ln58#par111" name="Keyword_Name" source="sv2#page7#enu14#fld36" target="sv2#cru7.ent4#att10"/>
@@ -201,20 +200,6 @@
           <layout:Link link="sv2#page7#inu22#ln96"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

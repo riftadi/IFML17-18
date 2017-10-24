@@ -12,7 +12,7 @@
         <RelationshipRoleCondition id="sv2#page13#pwu1#su39#rcond23" name="RoleCondition23" predicate="in" implied="false" role="rel6#role11"/>
       </Selector>
     </PowerIndexUnit>
-    <IndexUnit gr:x="225" gr:y="95" id="sv2#page13#inu21" name="Keywords in This Collection" entity="ent4" displayAttributes="ent4#att10">
+    <IndexUnit gr:x="190" gr:y="105" id="sv2#page13#inu21" name="Keywords in This Collection" entity="ent4" displayAttributes="ent4#att10">
       <Selector id="sv2#page13#inu21#su43" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#page13#inu21#su43#rcond24" name="RoleCondition24" predicate="in" implied="false" role="rel8#role15"/>
       </Selector>
