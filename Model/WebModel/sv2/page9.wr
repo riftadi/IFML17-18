@@ -1,26 +1,33 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1205" gr:y="-170" id="sv2#page9" name="Add to database" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1165" gr:y="-175" id="sv2#page9" name="Add to database" landmark="true">
   <ContentUnits>
-    <EntryUnit id="sv2#page9#enu3" name="Add Keyword" linkOrder="sv2#page9#enu3#ln7" gr:x="125" gr:y="85">
+    <EntryUnit id="sv2#page9#enu3" name="Add Keyword" linkOrder="sv2#page9#enu3#ln7" gr:x="140" gr:y="85">
       <Field id="sv2#page9#enu3#fld8" name="Keyword" type="string" modifiable="true"/>
       <Link id="sv2#page9#enu3#ln7" name="Add" to="sv2#cru7" type="normal" validate="true">
         <LinkParameter id="sv2#page9#enu3#ln7#par5" name="Keyword_Name" source="sv2#page9#enu3#fld8" target="sv2#cru7.ent4#att10"/>
         <LinkParameter id="sv2#page9#enu3#ln7#par111" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv2#page9#tmu2#ln10#par110" target="sv2#cru7.ent4#att18"/>
       </Link>
     </EntryUnit>
-    <TimeUnit id="sv2#page9#tmu2" name="Time7" gr:x="20" gr:y="80">
+    <TimeUnit id="sv2#page9#tmu2" name="Time7" gr:x="35" gr:y="80">
       <Link id="sv2#page9#tmu2#ln10" name="Flow57" to="sv2#page9#enu3" type="transport" validate="true">
         <LinkParameter id="sv2#page9#tmu2#ln10#par110" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
       </Link>
     </TimeUnit>
-    <EntryUnit id="sv2#page9#enu4" name="Add External Author" linkOrder="sv2#page9#enu4#ln12" gr:x="0" gr:y="0">
+    <EntryUnit id="sv2#page9#enu4" name="Add External Author" linkOrder="sv2#page9#enu4#ln12" gr:x="15" gr:y="0">
       <Field id="sv2#page9#enu4#fld9" name="Name" type="string" modifiable="true"/>
       <Field id="sv2#page9#enu4#fld10" name="Email" type="string" modifiable="true"/>
       <Link id="sv2#page9#enu4#ln12" name="Add" to="sv2#cru6" type="normal" validate="true">
         <LinkParameter id="sv2#page9#enu4#ln12#par112" name="Email_email" source="sv2#page9#enu4#fld10" target="sv2#cru6.email"/>
         <LinkParameter id="sv2#page9#enu4#ln12#par137" name="Name_Name" source="sv2#page9#enu4#fld9" target="sv2#cru6.User#att28"/>
         <LinkParameter id="sv2#page9#enu4#ln12#par141" name="true_isExternal" target="sv2#cru6.User#att32" sourceValue="1"/>
+        <LinkParameter id="sv2#page9#enu4#ln12#par192" name="0_Reputation" sourceValue="0" target="sv2#cru6.User#att31"/>
       </Link>
     </EntryUnit>
+    <IndexUnit gr:x="0" gr:y="160" id="sv2#page9#inu1" name="External Authors List" entity="User" displayAttributes="email User#att28">
+      <Selector id="sv2#page9#inu1#su27" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#page9#inu1#su27#acond1" name="AttCondition1" predicate="eq" booleanOperator="or" implied="false" attributes="User#att32" value="1"/>
+      </Selector>
+    </IndexUnit>
+    <IndexUnit gr:x="120" gr:y="270" id="sv2#page9#inu7" name="Keywords List" entity="ent4" displayAttributes="ent4#att10"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -48,6 +55,43 @@
           <layout:Field field="sv2#page9#enu4#fld9"/>
           <layout:Field field="sv2#page9#enu4#fld10"/>
           <layout:Link link="sv2#page9#enu4#ln12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page9#inu1">
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page9#inu7">
+          <layout:Attribute attribute="ent4#att10"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

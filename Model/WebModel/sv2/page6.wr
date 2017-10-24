@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1470" gr:y="485" id="sv2#page6" name="Collections" landmark="true" linkOrder="sv2#page6#ln39">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1415" gr:y="565" id="sv2#page6" name="Collections" landmark="true" linkOrder="sv2#page6#ln39">
   <ContentUnits>
-    <GetUnit gr:x="250" gr:y="160" id="sv2#page6#gtu2" name="GetCurrUser" contextParameters="UserCtxParam">
+    <GetUnit gr:x="350" gr:y="295" id="sv2#page6#gtu2" name="GetCurrUser" contextParameters="UserCtxParam">
       <Link id="sv2#page6#gtu2#ln35" name="Flow35" to="sv2#page6#pwu4" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv2#page6#gtu2#ln41" name="Flow41" to="sv2#page6#enu8" type="transport" validate="true">
         <LinkParameter id="sv2#page6#gtu2#ln41#par74" name="UserCtxParam.oid_user_PASSING" source="sv2#page6#gtu2.UserCtxParam" passing="true"/>
@@ -19,7 +19,7 @@
         <LinkParameter id="sv2#page6#enu8#ln43#par79" name="UserCtxParam.oid_user_PASSING_User.oid_user(CollectionsToUser_2)" sourceLinkParameter="sv2#page6#gtu2#ln41#par74" target="sv2#cru8.rel5#role9.userOID"/>
       </Link>
     </EntryUnit>
-    <TimeUnit gr:x="10" gr:y="65" id="sv2#page6#tmu4" name="Time">
+    <TimeUnit gr:x="35" gr:y="40" id="sv2#page6#tmu4" name="Time">
       <Link id="sv2#page6#tmu4#ln42" name="Flow42" to="sv2#page6#enu8" type="transport" validate="true">
         <LinkParameter id="sv2#page6#tmu4#ln42#par75" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
       </Link>

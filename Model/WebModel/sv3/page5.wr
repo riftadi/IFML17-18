@@ -12,12 +12,15 @@
       </Link>
     </IndexUnit>
     <IndexUnit gr:x="180" gr:y="300" id="sv3#page5#inu5" name="List of Collections" entity="ent3" distinct="true" displayAttributes="ent3#att20 ent3#att21 ent3#att22 rel6#role11.ent2#att5"/>
-    <IndexUnit gr:x="40" gr:y="390" id="sv3#page5#inu6" name="List of Keywords" entity="ent4" displayAttributes="ent4#att10"/>
+    <IndexUnit gr:x="40" gr:y="390" id="sv3#page5#inu6" name="List of Keywords" entity="ent4" displayAttributes="ent4#att10" linkOrder="sv3#page5#inu6#ln58">
+      <Link id="sv3#page5#inu6#ln58" name="Delete Keyword" to="sv3#dlu6" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
     <IndexUnit gr:x="155" gr:y="115" id="sv3#page5#inu19" name="List of Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att16 ent2#att1" linkOrder="sv3#page5#inu19#ln64">
       <Link id="sv3#page5#inu19#ln64" name="Delete Publication" to="sv3#dlu2" type="normal" validate="true">
         <LinkParameter id="sv3#page5#inu19#ln64#par113" name="oid_publication_KeyCondition3 [oid_publication]" source="data[].ent2#att2" target="sv3#dlu2#su4#kcond3.ent2#att2"/>
         <LinkParameter id="sv3#page5#inu19#ln64#par115" name="PublicationOwner.oid_user_PASSING" source="data[].rel14#role27_userOID" passing="true"/>
         <LinkParameter id="sv3#page5#inu19#ln64#par120" name="Current/Input Timestamp_PASSING" sourceLinkParameter="sv3#tmu3#ln65#par119" passing="true"/>
+        <LinkParameter id="sv3#page5#inu19#ln64#par181" name="oid_publication_PASSING" source="data[].ent2#att2" passing="true"/>
       </Link>
     </IndexUnit>
   </ContentUnits>
@@ -107,6 +110,7 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page5#inu6">
           <layout:Attribute attribute="ent4#att10"/>
+          <layout:Link link="sv3#page5#inu6#ln58"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -145,5 +149,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Link id="sv3#page5#ln6" name="Logout" to="sv3#miu3" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="332,269,-413,0"/>
+  <Link id="sv3#page5#ln6" name="Logout" to="sv3#miu3" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="399,163,-351,-22"/>
 </Page>

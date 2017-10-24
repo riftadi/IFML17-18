@@ -193,7 +193,8 @@ CREATE TABLE publications (
     "timestamp" timestamp without time zone,
     abstract text,
     isclaimed boolean,
-    user_oid_user integer
+    user_oid_user integer,
+    ispdfpublic boolean
 );
 
 
@@ -260,8 +261,8 @@ ALTER TABLE user_keywords OWNER TO riftadi;
 --
 
 COPY collections (oid_collection, title, description, "timestamp", user_oid_user) FROM stdin;
-1	First Collection	First and foremost	2017-10-15 12:26:23.331331	1
-2	Test2's Best Collection	My precious collection	2017-10-22 21:48:50.726	2
+1	My Precious Collection	The greatest collection ever	2017-10-15 12:26:23.331331	1
+2	My Best Collection	The best ever	2017-10-22 21:48:50.726	2
 \.
 
 
@@ -272,6 +273,8 @@ COPY collections (oid_collection, title, description, "timestamp", user_oid_user
 COPY collections_keywords (collections_oid_collection, keywords_oid_keyword) FROM stdin;
 1	1
 1	2
+2	4
+2	3
 \.
 
 
@@ -280,6 +283,11 @@ COPY collections_keywords (collections_oid_collection, keywords_oid_keyword) FRO
 --
 
 COPY collections_publications (collections_oid_collection, publications_oid_publication) FROM stdin;
+1	100
+1	103
+1	110
+2	104
+2	108
 \.
 
 
@@ -298,9 +306,9 @@ COPY collections_user (collections_oid_collection, user_oid_user) FROM stdin;
 --
 
 COPY comments (oid_comment, title, content, "timestamp", oid_publication, oid_user) FROM stdin;
-104	Hi	<p>User 1 commenting on pub 2</p>\r\n	2017-10-22 19:39:16.781	100	1
 100	Good	<p>This publication is good!</p>\r\n	2017-10-22 20:11:21.992	100	2
-103	Hi	<p>hmm this is strange, but not</p>\r\n	2017-10-22 20:11:26.244	101	1
+103	Hi	<p>Hmm, this should not be here.. but I&#39;m not sure... What do you think?</p>\r\n	2017-10-24 17:27:18.966	101	1
+104	User 1 commenting on pub 2	<p>I don&#39;t what to say, whatever</p>\r\n	2017-10-24 17:27:59.582	100	1
 \.
 
 
@@ -332,6 +340,9 @@ COPY keywords (oid_keyword, name, "timestamp") FROM stdin;
 1	machine learning	2017-10-15 12:22:47.963565
 2	pattern recognition	2017-10-15 12:23:09.852503
 3	ai techniques	2017-10-22 20:34:48.347
+4	data visualization	2017-10-24 17:12:12.017
+5	web science	2017-10-24 17:12:12.017
+6	web engineering	2017-10-24 17:12:12.017
 \.
 
 
@@ -348,10 +359,13 @@ COPY list_of_authors (publications_oid_publication, user_oid_user) FROM stdin;
 103	20
 104	2
 104	20
-105	3
-105	20
 106	2
 106	20
+108	2
+108	20
+110	2
+110	3
+110	20
 \.
 
 
@@ -370,9 +384,8 @@ COPY module (oid, moduleid, modulename) FROM stdin;
 --
 
 COPY notifications (notification_oid, "timestamp", isprocessed, user_oid_user, publications_oid_publication, content) FROM stdin;
-1	\N	f	2	100	Your comment is deleted by administrator. Please contact administrator for more info.
-2	\N	f	1	\N	Your publication is deleted by administrator. Please contact administrator for more info.
-3	2017-10-23 11:10:22.234	f	2	106	You have a new publication authorization request.
+2	2017-10-24 16:19:58.177	f	2	110	Your authored publication is uploaded into our platform.
+4	2017-10-24 16:36:09.854	f	3	\N	Your authored publication is uploaded into our platform.
 \.
 
 
@@ -380,14 +393,15 @@ COPY notifications (notification_oid, "timestamp", isprocessed, user_oid_user, p
 -- Data for Name: publications; Type: TABLE DATA; Schema: public; Owner: riftadi
 --
 
-COPY publications (oid_publication, title, venue, year, pdf_file, "timestamp", abstract, isclaimed, user_oid_user) FROM stdin;
-100	Publication 1	Delft	2017	\N	2017-10-15 11:39:19.822024	asduafduiasdfafdsa	t	1
-101	Publication 2	Berlin	2016	\N	2017-10-15 12:22:30.312881	asdfafsaf	t	2
-102	Interesting Publication	Delft	2017	\N	2017-10-22 22:52:06.191	<p>asdfaf</p>\r\n	f	3
-103	Interesting Pub 3	Delft	2017	\N	2017-10-23 01:05:46.889	<p>sadadsa</p>\r\n	f	20
-104	Pub4	Delft	2017	\N	2017-10-23 11:03:30.404	<p>safda</p>\r\n	f	2
-105	pub555	delft	2017	\N	2017-10-23 11:05:54.305	<p>dfgsdfag</p>\r\n	f	3
-106	pub555	delft	2017	\N	2017-10-23 11:10:22.234	<p>sadfa</p>\r\n	f	2
+COPY publications (oid_publication, title, venue, year, pdf_file, "timestamp", abstract, isclaimed, user_oid_user, ispdfpublic) FROM stdin;
+101	Publication 2	Berlin	2016	\N	2017-10-15 12:22:30.312881	asdfafsaf	t	2	t
+100	Alternating Offer Protocols For Multilateral Negotiations	Delft	2012	upload/ent2/1/AlternatingOfferProtocolsForMultilateralNegotiations.pdf	2017-10-24 17:26:28.653	<p>This is the abstract for&nbsp;Alternating Offer Protocols For Multilateral Negotiations.</p>\r\n	t	1	t
+103	Interesting Pub 3	Amsterdam	1998	\N	2017-10-23 01:05:46.889	<p>sadadsa</p>\r\n	f	20	t
+102	Interesting Publication	Utrecht	2010	\N	2017-10-22 22:52:06.191	<p>asdfaf</p>\r\n	f	3	t
+106	Publication 6	Leiden	2002	\N	2017-10-23 11:10:22.234	<p>sadfa</p>\r\n	f	2	t
+104	Publication 4	Delft	2013	\N	2017-10-23 11:03:30.404	<p>safda</p>\r\n	f	2	t
+110	Publication External 3	Den Haag	2015	\N	2017-10-24 16:19:58.177	<p>sadfas</p>\r\n	f	20	t
+108	Publication External1	Delft	2009	\N	2017-10-24 16:01:33.157	<p>sadfa</p>\r\n	f	20	t
 \.
 
 
@@ -404,8 +418,11 @@ COPY publications_keywords (publications_oid_publication, keywords_oid_keyword) 
 103	2
 103	3
 104	3
-105	2
 106	3
+108	1
+108	2
+110	1
+110	3
 \.
 
 
@@ -414,10 +431,11 @@ COPY publications_keywords (publications_oid_publication, keywords_oid_keyword) 
 --
 
 COPY "user" (oid_user, username, password, email, name, affiliation, "timestamp", reputation, group_oid, isexternal) FROM stdin;
-2	test2	test2	test2@tud.nl	Test User 2	TUD	2017-10-15 11:41:57.877333	0	2	0
-1	test1	test1	test1@tud.nl	Test User 1	TUD	2017-10-15 10:47:41.997	0	2	0
-20	\N	\N	ext1@tud.nl	External Author 1	\N	\N	0	\N	1
-3	test3	test3	test3@tud.nl	Test User 3	TUD	2017-10-15 12:21:35.565796	0	2	0
+1	test1	test1	test1@tud.nl	Test User 1	TUD	2017-10-15 10:47:41.997	1	2	0
+3	test3	test3	test3@tud.nl	Test User 3	TUD	2017-10-15 12:21:35.565796	1	2	0
+2	test2	test2	test2@tud.nl	Test User 2	TUD	2017-10-15 11:41:57.877333	3	2	0
+20	\N	\N	ext1@tud.nl	External Author 1	\N	2017-10-24 17:32:30.951149	4	\N	1
+101	\N	\N	ext2@tud.nl	External Author 2	\N	2017-10-24 17:32:39.086096	\N	\N	1
 100	super	super	super@tud.nl	Super Admin	TUD	2017-10-15 10:55:48.826935	\N	1	0
 \.
 
@@ -435,9 +453,11 @@ COPY user_group (user_oid, group_oid) FROM stdin;
 --
 
 COPY user_keywords (user_oid_user, keywords_oid_keyword) FROM stdin;
-2	1
 1	1
-2	2
+1	2
+1	4
+2	3
+2	5
 \.
 
 

@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1470" gr:y="60" id="sv2#page8" name="Publication Details" linkOrder="sv2#page8#ln44">
   <ContentUnits>
-    <DataUnit gr:x="25" gr:y="0" id="sv2#page8#dau2" name="Publication Details" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att11 ent2#att16 ent2#att1 ent2#att4">
+    <DataUnit gr:x="25" gr:y="0" id="sv2#page8#dau2" name="Publication Details" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att16 ent2#att1 ent2#att4" linkOrder="sv2#page8#dau2#ln8">
       <Selector id="sv2#page8#dau2#su11" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#page8#dau2#su11#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
@@ -8,6 +8,8 @@
         <LinkParameter id="sv2#page8#dau2#ln29#par69" name="oid_publication_PASSING" source="data.ent2#att2" passing="true"/>
       </Link>
       <Link id="sv2#page8#dau2#ln32" name="Flow32" to="sv2#page8#mdu2" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#page8#dau2#ln8" name="Modify Details" to="sv2#page27#enu13" type="normal" validate="true" automaticCoupling="true"/>
+      <Link id="sv2#page8#dau2#ln57" name="Flow57" to="sv2#page8#dau7" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
     <EntryUnit gr:x="0" gr:y="140" id="sv2#page8#enu5" name="Add Comment" entity="ent5" linkOrder="sv2#page8#enu5#ln30">
       <Field id="sv2#page8#enu5#fld16" name="Title" type="string" modifiable="true"/>
@@ -36,15 +38,21 @@
         <RelationshipRoleCondition id="sv2#page8#mdu2#su15#rcond9" name="RoleCondition9" predicate="in" implied="false" role="rel10#role20"/>
       </Selector>
     </MultiDataUnit>
+    <DataUnit gr:x="225" gr:y="10" id="sv2#page8#dau7" name="Download PDF" entity="ent2" displayAttributes="ent2#att5 ent2#att11">
+      <Selector id="sv2#page8#dau7#su28" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page8#dau7#su28#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+        <AttributesCondition id="sv2#page8#dau7#su28#acond2" name="AttCondition2" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att33" value="True"/>
+      </Selector>
+    </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page8#dau2">
+          <layout:Link link="sv2#page8#dau2#ln8"/>
           <layout:Attribute attribute="ent2#att5"/>
           <layout:Attribute attribute="ent2#att6"/>
           <layout:Attribute attribute="ent2#att7"/>
-          <layout:Attribute attribute="ent2#att11"/>
           <layout:Attribute attribute="ent2#att16"/>
           <layout:Attribute attribute="ent2#att1"/>
           <layout:Attribute attribute="ent2#att4"/>
@@ -104,7 +112,12 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page8#dau7">
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att11"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

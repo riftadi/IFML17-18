@@ -7,7 +7,7 @@
       </Selector>
       <OKLink id="sv3#dlu1#oln7" name="OKFlow7" to="sv3#page5#inu2" automaticCoupling="true" gr:bendpoints="-187,-18,203,-33"/>
     </DeleteUnit>
-    <DeleteUnit gr:x="650" gr:y="265" id="sv3#dlu2" name="Delete Publication" entity="ent2">
+    <DeleteUnit gr:x="615" gr:y="265" id="sv3#dlu2" name="Delete Publication" entity="ent2">
       <Selector id="sv3#dlu2#su4" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#dlu2#su4#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
@@ -16,6 +16,7 @@
         <LinkParameter id="sv3#dlu2#oln5#par54" name="Your publication is deleted by administrator. Please contact administrator for more info._Content" sourceValue="Your publication is deleted by administrator. Please contact administrator for more info." target="sv3#cru3.ent1#att15"/>
         <LinkParameter id="sv3#dlu2#oln5#par128" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv3#page5#inu19#ln64#par120" target="sv3#cru3.ent1#att13"/>
         <LinkParameter id="sv3#dlu2#oln5#par129" name="PublicationOwner.oid_user_PASSING_User.oid_user(NotificationsToUser)" sourceLinkParameter="sv3#page5#inu19#ln64#par115" target="sv3#cru3.rel1#role1.userOID"/>
+        <LinkParameter id="sv3#dlu2#oln5#par182" name="oid_publication_PASSING_Publications.oid_publication(NotificationsToPublications)" sourceLinkParameter="sv3#page5#inu19#ln64#par181" target="sv3#cru3.rel2#role3.ent2#att2"/>
       </OKLink>
     </DeleteUnit>
     <DeleteUnit gr:x="620" gr:y="390" id="sv3#dlu3" name="Delete Comment" entity="ent5">
@@ -39,5 +40,10 @@
         <LinkParameter id="sv3#tmu3#ln66#par118" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
       </Link>
     </TimeUnit>
+    <DeleteUnit gr:x="510" gr:y="565" id="sv3#dlu6" name="Delete Keyword" entity="ent4">
+      <Selector id="sv3#dlu6#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#dlu6#su29#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+    </DeleteUnit>
   </OperationUnits>
 </SiteView>

@@ -1,6 +1,8 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2735" gr:y="1120" id="sv2#page14" name="Error Page">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2780" gr:y="1130" id="sv2#page14" name="Error Page">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#page14#mssu2" name="Message2"/>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#page14#mssu2" name="Error Msg">
+      <Message xml:space="preserve">There was some unspecified error.</Message>
+    </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

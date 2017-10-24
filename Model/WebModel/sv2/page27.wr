@@ -1,0 +1,76 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2005" gr:y="-105" id="sv2#page27" name="Modify Publication">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="10" id="sv2#page27#enu13" name="Edit Publication" entity="ent2" linkOrder="sv2#page27#enu13#ln17">
+      <Field id="sv2#page27#enu13#fld13" name="Title" type="string" modifiable="true" attribute="ent2#att5" preloaded="true"/>
+      <Field id="sv2#page27#enu13#fld14" name="Venue" type="string" modifiable="true" attribute="ent2#att6" preloaded="true"/>
+      <Field id="sv2#page27#enu13#fld15" name="Year" type="string" modifiable="true" attribute="ent2#att7" preloaded="true"/>
+      <Field id="sv2#page27#enu13#fld33" name="Abstract" type="text" modifiable="true" contentType="text/html" preloaded="true" attribute="ent2#att4"/>
+      <Field id="sv2#page27#enu13#fld34" name="PDF File" type="blob" modifiable="true" attribute="ent2#att11" preloaded="true"/>
+      <Link id="sv2#page27#enu13#ln17" name="Save" to="sv2#mfu4" type="normal" validate="true">
+        <LinkParameter id="sv2#page27#enu13#ln17#par23" name="Abstract_Abstract" source="sv2#page27#enu13#fld33" target="sv2#mfu4.ent2#att4"/>
+        <LinkParameter id="sv2#page27#enu13#ln17#par26" name="Key [oid_publication]_KeyCondition10 [oid_publication]" source="key.ent2#att2" target="sv2#mfu4#su20#kcond10.ent2#att2"/>
+        <LinkParameter id="sv2#page27#enu13#ln17#par108" name="PDF File_PDF_file" source="sv2#page27#enu13#fld34" target="sv2#mfu4.ent2#att11"/>
+        <LinkParameter id="sv2#page27#enu13#ln17#par109" name="Publications Object_Publications Object" source="entityBean" target="sv2#mfu4.entityBeans"/>
+        <LinkParameter id="sv2#page27#enu13#ln17#par135" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv2#page27#tmu8#ln9#par7" target="sv2#mfu4.ent2#att16"/>
+        <LinkParameter id="sv2#page27#enu13#ln17#par139" name="Title_Title" source="sv2#page27#enu13#fld13" target="sv2#mfu4.ent2#att5"/>
+        <LinkParameter id="sv2#page27#enu13#ln17#par144" name="Venue_Venue" source="sv2#page27#enu13#fld14" target="sv2#mfu4.ent2#att6"/>
+        <LinkParameter id="sv2#page27#enu13#ln17#par145" name="Year_Year" source="sv2#page27#enu13#fld15" target="sv2#mfu4.ent2#att7"/>
+        <LinkParameter id="sv2#page27#enu13#ln17#par146" name="Keywords_Keywords.oid_keyword(PublicationsToKeywords)" source="sv2#page27#enu13#msfld1" target="sv2#mfu4.rel11#role21.ent4#att9"/>
+      </Link>
+      <MultiSelectionField id="sv2#page27#enu13#msfld1" name="Keywords" type="string" role="rel11#role21"/>
+      <Field id="sv2#page27#enu13#fld37" name="PDF Publicly Available?" type="boolean" modifiable="true" preloaded="true" attribute="ent2#att33"/>
+    </EntryUnit>
+    <TimeUnit gr:x="145" gr:y="105" id="sv2#page27#tmu8" name="GetCurrentTime">
+      <Link id="sv2#page27#tmu8#ln9" name="Flow9" to="sv2#page27#enu13" type="transport" validate="true">
+        <LinkParameter id="sv2#page27#tmu8#ln9#par7" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
+      </Link>
+    </TimeUnit>
+    <SelectorUnit gr:x="225" gr:y="0" id="sv2#page27#seu1" name="Keywords Selector" entity="ent4">
+      <Link id="sv2#page27#seu1#ln18" name="Flow18" to="sv2#page27#enu13" type="transport" validate="true">
+        <LinkParameter id="sv2#page27#seu1#ln18#par147" name="Name_Keywords [label]" source="ent4#att10Array" target="sv2#page27#enu13#msfld1_label"/>
+        <LinkParameter id="sv2#page27#seu1#ln18#par148" name="oid_keyword_Keywords [output]" source="ent4#att9Array" target="sv2#page27#enu13#msfld1_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page27#enu13">
+          <layout:Link link="sv2#page27#enu13#ln17"/>
+          <layout:Field field="sv2#page27#enu13#fld13"/>
+          <layout:Field field="sv2#page27#enu13#fld14"/>
+          <layout:Field field="sv2#page27#enu13#fld15"/>
+          <layout:Field field="sv2#page27#enu13#fld33"/>
+          <layout:Field field="sv2#page27#enu13#fld34"/>
+          <layout:Field field="sv2#page27#enu13#msfld1"/>
+          <layout:Field field="sv2#page27#enu13#fld37"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

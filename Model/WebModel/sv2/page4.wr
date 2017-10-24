@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-65" gr:y="-80" id="sv2#page4" name="Home (Researcher)" linkOrder="sv2#page4#ln4" ajaxEnabled="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-65" gr:y="-80" id="sv2#page4" name="Home (Researcher)" linkOrder="sv2#page4#ln4" ajaxEnabled="false" landmark="true">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv2#page4#inu18" name="Your Notifications" entity="ent1" displayAttributes="ent1#att15" linkOrder="sv2#page4#inu18#ln14">
       <Selector id="sv2#page4#inu18#su25" defaultPolicy="fill" booleanOperator="and">
@@ -9,8 +9,12 @@
     <GetUnit gr:x="185" gr:y="125" id="sv2#page4#gtu7" name="GetCurrentUser" contextParameters="UserCtxParam">
       <Link id="sv2#page4#gtu7#ln60" name="Flow60" to="sv2#page4#inu18" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv2#page4#gtu7#ln5" name="Flow5" to="sv2#page4#dau5" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#page4#gtu7#ln61" name="Flow61" to="sv2#page4#inu8" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#page4#gtu7#ln68" name="Flow68" to="sv2#page4#seu10" type="transport" validate="true">
+        <LinkParameter id="sv2#page4#gtu7#ln68#par184" name="UserCtxParam.oid_user_PASSING" source="sv2#page4#gtu7.UserCtxParam" passing="true"/>
+      </Link>
     </GetUnit>
-    <DataUnit gr:x="20" gr:y="125" id="sv2#page4#dau5" name="Your Profile" entity="User" displayAttributes="userName email User#att28 User#att29 User#att31">
+    <DataUnit gr:x="20" gr:y="110" id="sv2#page4#dau5" name="Your Profile" entity="User" displayAttributes="userName email User#att28 User#att29 User#att31">
       <Selector id="sv2#page4#dau5#su12" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#page4#dau5#su12#kcond22" name="KeyCondition22" predicate="in" implied="false"/>
       </Selector>
@@ -21,6 +25,26 @@
       </Selector>
       <Link id="sv2#page4#dau6#ln16" name="Delete" to="sv2#dlu5" automaticCoupling="true" type="normal" validate="true"/>
     </DataUnit>
+    <IndexUnit gr:x="15" gr:y="225" id="sv2#page4#inu8" name="Your Keywords" entity="ent4" displayAttributes="ent4#att10">
+      <Selector id="sv2#page4#inu8#su38" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page4#inu8#su38#rcond7" name="RoleCondition7" predicate="in" implied="false" role="rel18#role35"/>
+      </Selector>
+    </IndexUnit>
+    <EntryUnit gr:x="165" gr:y="230" id="sv2#page4#enu14" name="Edit Your Keywords" entity="User" linkOrder="sv2#page4#enu14#ln70">
+      <MultiSelectionField id="sv2#page4#enu14#msfld5" name="Keywords" type="string" role="rel18#role35"/>
+      <Link id="sv2#page4#enu14#ln70" name="Save" to="sv2#rcnu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page4#enu14#ln70#par188" name="Keywords_KeyCondition29 [oid_keyword] [Keywords] [ConnectSource]" source="sv2#page4#enu14#msfld5" target="sv2#rcnu1#su44#kcond29.ent4#att9"/>
+        <LinkParameter id="sv2#page4#enu14#ln70#par189" name="Key [oid_user]_KeyCondition30 [oid_user] [User] [ConnectTarget]" source="key.userOID" target="sv2#rcnu1#su47#kcond30.userOID"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="335" gr:y="160" id="sv2#page4#seu10" name="Keywords Selector" entity="ent4">
+      <Selector id="sv2#page4#seu10#su42" defaultPolicy="fill" booleanOperator="and"/>
+      <Link id="sv2#page4#seu10#ln63" name="Flow63" to="sv2#page4#enu14" type="transport" validate="true">
+        <LinkParameter id="sv2#page4#seu10#ln63#par185" name="UserCtxParam.oid_user_PASSING_Key Condition [oid_user]" sourceLinkParameter="sv2#page4#gtu7#ln68#par184" target="sv2#page4#enu14.userOID"/>
+        <LinkParameter id="sv2#page4#seu10#ln63#par186" name="Name_Keywords [label]" source="ent4#att10Array" target="sv2#page4#enu14#msfld5_label"/>
+        <LinkParameter id="sv2#page4#seu10#ln63#par187" name="oid_keyword_Keywords [output]" source="ent4#att9Array" target="sv2#page4#enu14#msfld5_output"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -317,6 +341,43 @@
           <layout:Attribute attribute="User#att28"/>
           <layout:Attribute attribute="User#att29"/>
           <layout:Attribute attribute="User#att31"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#inu8">
+          <layout:Attribute attribute="ent4#att10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#enu14">
+          <layout:Field field="sv2#page4#enu14#msfld5"/>
+          <layout:Link link="sv2#page4#enu14#ln70"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1765" gr:y="825" id="sv2#page16" name="Add keyword to collection">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1660" gr:y="1110" id="sv2#page16" name="Add keyword to collection">
   <ContentUnits>
     <EntryUnit id="sv2#page16#enu11" name="Add keyword" linkOrder="sv2#page16#enu11#ln23" gr:x="0" gr:y="0">
       <Field id="sv2#page16#enu11#fld12" name="Note" type="string" modifiable="false" preloaded="true">
