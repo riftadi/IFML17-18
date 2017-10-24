@@ -1,0 +1,34 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2335" gr:y="770" id="sv2#page15" name="View publication">
+  <ContentUnits>
+    <IndexUnit id="sv2#page15#inu3" name="View publication" linkOrder="sv2#page15#inu3#ln20" gr:x="0" gr:y="0" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1">
+      <Selector id="sv2#page15#inu3#su21" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page15#inu3#su21#rcond6" name="publications in" role="rel6#role11" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page15#inu3#ln20" name="Show Details" to="sv2#page8#dau2" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page15#inu3">
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att1"/>
+          <layout:Link link="sv2#page15#inu3#ln20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

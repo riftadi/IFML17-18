@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2740" gr:y="535" id="sv2#page12" name="Manage Publications in Collection">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2925" gr:y="515" id="sv2#page12" name="Manage Publications in Collection">
   <ContentUnits>
     <DataUnit gr:x="0" gr:y="0" id="sv2#page12#dau3" name="Collection Details" entity="ent3" displayAttributes="ent3#att20 ent3#att21">
       <Selector id="sv2#page12#dau3#su26" defaultPolicy="fill" booleanOperator="and">

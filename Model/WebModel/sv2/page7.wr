@@ -1,20 +1,20 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="645" gr:y="0" id="sv2#page7" name="Publications" landmark="true" linkOrder="sv2#page7#ln40">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="715" gr:y="-5" id="sv2#page7" name="Publications" landmark="true" linkOrder="sv2#page7#ln40">
   <ContentUnits>
-    <IndexUnit gr:x="370" gr:y="110" id="sv2#page7#inu9" name="Owned Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1 ent2#att4" linkOrder="sv2#page7#inu9#ln22 sv2#page7#inu9#ln59">
+    <IndexUnit gr:x="230" gr:y="110" id="sv2#page7#inu9" name="Owned Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1 ent2#att4" linkOrder="sv2#page7#inu9#ln22 sv2#page7#inu9#ln59">
       <Selector id="sv2#page7#inu9#su10" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#page7#inu9#su10#rcond5" name="RoleCondition5" predicate="in" implied="false" role="rel14#role28"/>
       </Selector>
       <Link id="sv2#page7#inu9#ln22" name="Show Publication" to="sv2#page8#dau2" type="normal" validate="true" automaticCoupling="true"/>
       <Link id="sv2#page7#inu9#ln59" name="Delete" to="sv2#dlu7" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
-    <GetUnit gr:x="160" gr:y="130" id="sv2#page7#gtu3" name="GetCurrentUser" contextParameters="UserCtxParam">
+    <GetUnit gr:x="20" gr:y="130" id="sv2#page7#gtu3" name="GetCurrentUser" contextParameters="UserCtxParam">
       <Link id="sv2#page7#gtu3#ln13" name="Flow13" to="sv2#page7#inu9" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv2#page7#gtu3#ln53" name="Flow53" to="sv2#page7#enu7" type="transport" validate="true">
         <LinkParameter id="sv2#page7#gtu3#ln53#par95" name="UserCtxParam.oid_user_PASSING" source="sv2#page7#gtu3.UserCtxParam" passing="true"/>
       </Link>
       <Link id="sv2#page7#gtu3#ln93" name="Flow93" to="sv2#page7#inu22" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <EntryUnit gr:x="155" gr:y="250" id="sv2#page7#enu7" name="Add Publication" entity="ent2" linkOrder="sv2#page7#enu7#ln54">
+    <EntryUnit gr:x="15" gr:y="250" id="sv2#page7#enu7" name="Add Publication" entity="ent2" linkOrder="sv2#page7#enu7#ln54">
       <Field id="sv2#page7#enu7#fld28" name="Title" type="string" modifiable="true"/>
       <Field id="sv2#page7#enu7#fld29" name="Venue" type="string" modifiable="true"/>
       <Field id="sv2#page7#enu7#fld30" name="Year" type="string" modifiable="true"/>
@@ -39,16 +39,16 @@
         <LinkParameter id="sv2#page7#enu7#ln54#par225" name="UserCtxParam.oid_user_PASSING" sourceLinkParameter="sv2#page7#gtu3#ln53#par95" passing="true"/>
       </Link>
       <MultiSelectionField id="sv2#page7#enu7#msfld4" name="Keywords" type="string"/>
+      <Field id="sv2#page7#enu7#fld11" name="Note:" type="string" modifiable="false" preloaded="true">
+        <Slot id="sv2#page7#enu7#fld11#slot1" name="Slot1" label="true" output="true" value="If author or keyword is not found, please add them first on our 'Add to database' tab"/>
+      </Field>
     </EntryUnit>
-    <TimeUnit gr:x="25" gr:y="240" id="sv2#page7#tmu7" name="Time7">
+    <TimeUnit gr:x="40" gr:y="395" id="sv2#page7#tmu7" name="Time7">
       <Link id="sv2#page7#tmu7#ln51" name="Flow51" to="sv2#page7#enu7" type="transport" validate="true">
         <LinkParameter id="sv2#page7#tmu7#ln51#par90" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
       </Link>
-      <Link id="sv2#page7#tmu7#ln57" name="Flow57" to="sv2#page7#enu14" type="transport" validate="true">
-        <LinkParameter id="sv2#page7#tmu7#ln57#par110" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
-      </Link>
     </TimeUnit>
-    <SelectorUnit gr:x="385" gr:y="235" id="sv2#page7#seu2" name="Authors Selector" entity="User">
+    <SelectorUnit gr:x="245" gr:y="235" id="sv2#page7#seu2" name="Authors Selector" entity="User">
       <Link id="sv2#page7#seu2#ln52" name="Flow52" to="sv2#page7#enu7" type="transport" validate="true">
         <LinkParameter id="sv2#page7#seu2#ln52#par91" name="Name_First Author/Owner [label]" source="User#att28Array" target="sv2#page7#enu7#sfld3_label"/>
         <LinkParameter id="sv2#page7#seu2#ln52#par92" name="oid_user_First Author/Owner [output]" source="userOIDArray" target="sv2#page7#enu7#sfld3_output"/>
@@ -56,29 +56,13 @@
         <LinkParameter id="sv2#page7#seu2#ln52#par94" name="oid_user_Authors [output]" source="userOIDArray" target="sv2#page7#enu7#msfld3_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit gr:x="355" gr:y="335" id="sv2#page7#seu3" name="Keywords Selector" entity="ent4">
+    <SelectorUnit gr:x="215" gr:y="335" id="sv2#page7#seu3" name="Keywords Selector" entity="ent4">
       <Link id="sv2#page7#seu3#ln55" name="Flow55" to="sv2#page7#enu7" type="transport" validate="true">
         <LinkParameter id="sv2#page7#seu3#ln55#par96" name="Name_Keywords [label]" source="ent4#att10Array" target="sv2#page7#enu7#msfld4_label"/>
         <LinkParameter id="sv2#page7#seu3#ln55#par97" name="oid_keyword_Keywords [output]" source="ent4#att9Array" target="sv2#page7#enu7#msfld4_output"/>
       </Link>
     </SelectorUnit>
-    <EntryUnit gr:x="140" gr:y="40" id="sv2#page7#enu11" name="Add External Author" linkOrder="sv2#page7#enu11#ln56">
-      <Field id="sv2#page7#enu11#fld34" name="Name" type="string" modifiable="true"/>
-      <Field id="sv2#page7#enu11#fld35" name="Email" type="string" modifiable="true"/>
-      <Link id="sv2#page7#enu11#ln56" name="Add" to="sv2#cru6" type="normal" validate="true">
-        <LinkParameter id="sv2#page7#enu11#ln56#par108" name="Email_email" source="sv2#page7#enu11#fld35" target="sv2#cru6.email"/>
-        <LinkParameter id="sv2#page7#enu11#ln56#par109" name="Name_Name" source="sv2#page7#enu11#fld34" target="sv2#cru6.User#att28"/>
-        <LinkParameter id="sv2#page7#enu11#ln56#par137" name="true_isExternal" sourceValue="1" target="sv2#cru6.User#att32"/>
-      </Link>
-    </EntryUnit>
-    <EntryUnit gr:x="0" gr:y="130" id="sv2#page7#enu14" name="Add Keyword" linkOrder="sv2#page7#enu14#ln58">
-      <Field id="sv2#page7#enu14#fld36" name="Keyword" type="string" modifiable="true"/>
-      <Link id="sv2#page7#enu14#ln58" name="Add" to="sv2#cru7" type="normal" validate="true">
-        <LinkParameter id="sv2#page7#enu14#ln58#par111" name="Keyword_Name" source="sv2#page7#enu14#fld36" target="sv2#cru7.ent4#att10"/>
-        <LinkParameter id="sv2#page7#enu14#ln58#par112" name="Current/Input Timestamp_PASSING_Timestamp" sourceLinkParameter="sv2#page7#tmu7#ln57#par110" target="sv2#cru7.ent4#att18"/>
-      </Link>
-    </EntryUnit>
-    <IndexUnit gr:x="335" gr:y="0" id="sv2#page7#inu22" name="Authored Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1 ent2#att4" linkOrder="sv2#page7#inu22#ln96">
+    <IndexUnit gr:x="195" gr:y="0" id="sv2#page7#inu22" name="Authored Publications" entity="ent2" displayAttributes="ent2#att5 ent2#att6 ent2#att7 ent2#att1 ent2#att4" linkOrder="sv2#page7#inu22#ln96">
       <Selector id="sv2#page7#inu22#su69" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#page7#inu22#su69#rcond28" name="RoleCondition28" predicate="in" implied="false" role="rel12#role24"/>
       </Selector>
@@ -136,6 +120,7 @@
           <layout:Field field="sv2#page7#enu7#sfld3"/>
           <layout:Field field="sv2#page7#enu7#msfld3"/>
           <layout:Field field="sv2#page7#enu7#msfld4"/>
+          <layout:Field field="sv2#page7#enu7#fld11" layout:fieldLayout="WRDefault/FieldValue"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -151,13 +136,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page7#enu11">
-          <layout:Field field="sv2#page7#enu11#fld34"/>
-          <layout:Field field="sv2#page7#enu11#fld35"/>
-          <layout:Link link="sv2#page7#enu11#ln56"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -171,12 +150,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page7#enu14">
-          <layout:Field field="sv2#page7#enu14#fld36"/>
-          <layout:Link link="sv2#page7#enu14#ln58"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
